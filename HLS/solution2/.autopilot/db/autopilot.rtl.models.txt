@@ -1,0 +1,15 @@
+top_mac_muladd_5nbkb
+top_mac_muladd_5ncud
+top_fadd_32ns_32ndEe
+top_fmul_32ns_32neOg
+Load_Fire_WEIGHT1fYi
+Load_Fire_IFM_0
+top_OFM_0
+top_BIAS_DB
+top_CRTL_BUS_s_axi
+LOAD_WEIGHT_DMA
+LOAD_IFM
+FIRE3
+Load_Fire
+OFM_STORE
+top

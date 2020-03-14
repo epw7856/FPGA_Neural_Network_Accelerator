@@ -1,0 +1,167 @@
+
+
+================================================================
+== Vivado HLS Report for 'Load_Fire'
+================================================================
+* Date:           Tue Jun 11 17:40:05 2019
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        LURAM-Test
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.75|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  9175|  9175|  9175|  9175|   none  |
+    +------+------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+------+------+----------+-----------+-----------+------+----------+
+        |          |   Latency   | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|  min |  max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+------+------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |  9174|  9174|      1529|          -|          -|     6|    no    |
+        +----------+------+------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (tmp)
+3 --> 
+	2  / true
+
+* FSM state operations: 
+
+ <State 1> : 0.66ns
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([169 x i26]* %OFM_0_V, [169 x i26]* %OFM_1_V, [169 x i26]* %OFM_2_V, [169 x i26]* %OFM_3_V, [169 x i26]* %OFM_4_V, [169 x i26]* %OFM_5_V, [169 x i26]* %OFM_6_V, [169 x i26]* %OFM_7_V, [1 x i8]* @p_str1, [13 x i8]* @p_str21, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([121 x i8]* @WEIGHT1_DB_V_0_0, [121 x i8]* @WEIGHT1_DB_V_0_1, [121 x i8]* @WEIGHT1_DB_V_0_2, [121 x i8]* @WEIGHT1_DB_V_0_3, [121 x i8]* @WEIGHT1_DB_V_0_4, [121 x i8]* @WEIGHT1_DB_V_0_5, [121 x i8]* @WEIGHT1_DB_V_0_6, [121 x i8]* @WEIGHT1_DB_V_1_0, [121 x i8]* @WEIGHT1_DB_V_1_1, [121 x i8]* @WEIGHT1_DB_V_1_2, [121 x i8]* @WEIGHT1_DB_V_1_3, [121 x i8]* @WEIGHT1_DB_V_1_4, [121 x i8]* @WEIGHT1_DB_V_1_5, [121 x i8]* @WEIGHT1_DB_V_1_6, [121 x i8]* @WEIGHT1_DB_V_2_0, [121 x i8]* @WEIGHT1_DB_V_2_1, [121 x i8]* @WEIGHT1_DB_V_2_2, [121 x i8]* @WEIGHT1_DB_V_2_3, [121 x i8]* @WEIGHT1_DB_V_2_4, [121 x i8]* @WEIGHT1_DB_V_2_5, [121 x i8]* @WEIGHT1_DB_V_2_6, [121 x i8]* @WEIGHT1_DB_V_3_0, [121 x i8]* @WEIGHT1_DB_V_3_1, [121 x i8]* @WEIGHT1_DB_V_3_2, [121 x i8]* @WEIGHT1_DB_V_3_3, [121 x i8]* @WEIGHT1_DB_V_3_4, [121 x i8]* @WEIGHT1_DB_V_3_5, [121 x i8]* @WEIGHT1_DB_V_3_6, [121 x i8]* @WEIGHT1_DB_V_4_0, [121 x i8]* @WEIGHT1_DB_V_4_1, [121 x i8]* @WEIGHT1_DB_V_4_2, [121 x i8]* @WEIGHT1_DB_V_4_3, [121 x i8]* @WEIGHT1_DB_V_4_4, [121 x i8]* @WEIGHT1_DB_V_4_5, [121 x i8]* @WEIGHT1_DB_V_4_6, [121 x i8]* @WEIGHT1_DB_V_5_0, [121 x i8]* @WEIGHT1_DB_V_5_1, [121 x i8]* @WEIGHT1_DB_V_5_2, [121 x i8]* @WEIGHT1_DB_V_5_3, [121 x i8]* @WEIGHT1_DB_V_5_4, [121 x i8]* @WEIGHT1_DB_V_5_5, [121 x i8]* @WEIGHT1_DB_V_5_6, [121 x i8]* @WEIGHT1_DB_V_6_0, [121 x i8]* @WEIGHT1_DB_V_6_1, [121 x i8]* @WEIGHT1_DB_V_6_2, [121 x i8]* @WEIGHT1_DB_V_6_3, [121 x i8]* @WEIGHT1_DB_V_6_4, [121 x i8]* @WEIGHT1_DB_V_6_5, [121 x i8]* @WEIGHT1_DB_V_6_6, [121 x i8]* @WEIGHT1_DB_V_7_0, [121 x i8]* @WEIGHT1_DB_V_7_1, [121 x i8]* @WEIGHT1_DB_V_7_2, [121 x i8]* @WEIGHT1_DB_V_7_3, [121 x i8]* @WEIGHT1_DB_V_7_4, [121 x i8]* @WEIGHT1_DB_V_7_5, [121 x i8]* @WEIGHT1_DB_V_7_6, [1 x i8]* @p_str1, [14 x i8]* @p_str19, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([121 x i8]* @WEIGHT1_V_0_0, [121 x i8]* @WEIGHT1_V_0_1, [121 x i8]* @WEIGHT1_V_0_2, [121 x i8]* @WEIGHT1_V_0_3, [121 x i8]* @WEIGHT1_V_0_4, [121 x i8]* @WEIGHT1_V_0_5, [121 x i8]* @WEIGHT1_V_0_6, [121 x i8]* @WEIGHT1_V_1_0, [121 x i8]* @WEIGHT1_V_1_1, [121 x i8]* @WEIGHT1_V_1_2, [121 x i8]* @WEIGHT1_V_1_3, [121 x i8]* @WEIGHT1_V_1_4, [121 x i8]* @WEIGHT1_V_1_5, [121 x i8]* @WEIGHT1_V_1_6, [121 x i8]* @WEIGHT1_V_2_0, [121 x i8]* @WEIGHT1_V_2_1, [121 x i8]* @WEIGHT1_V_2_2, [121 x i8]* @WEIGHT1_V_2_3, [121 x i8]* @WEIGHT1_V_2_4, [121 x i8]* @WEIGHT1_V_2_5, [121 x i8]* @WEIGHT1_V_2_6, [121 x i8]* @WEIGHT1_V_3_0, [121 x i8]* @WEIGHT1_V_3_1, [121 x i8]* @WEIGHT1_V_3_2, [121 x i8]* @WEIGHT1_V_3_3, [121 x i8]* @WEIGHT1_V_3_4, [121 x i8]* @WEIGHT1_V_3_5, [121 x i8]* @WEIGHT1_V_3_6, [121 x i8]* @WEIGHT1_V_4_0, [121 x i8]* @WEIGHT1_V_4_1, [121 x i8]* @WEIGHT1_V_4_2, [121 x i8]* @WEIGHT1_V_4_3, [121 x i8]* @WEIGHT1_V_4_4, [121 x i8]* @WEIGHT1_V_4_5, [121 x i8]* @WEIGHT1_V_4_6, [121 x i8]* @WEIGHT1_V_5_0, [121 x i8]* @WEIGHT1_V_5_1, [121 x i8]* @WEIGHT1_V_5_2, [121 x i8]* @WEIGHT1_V_5_3, [121 x i8]* @WEIGHT1_V_5_4, [121 x i8]* @WEIGHT1_V_5_5, [121 x i8]* @WEIGHT1_V_5_6, [121 x i8]* @WEIGHT1_V_6_0, [121 x i8]* @WEIGHT1_V_6_1, [121 x i8]* @WEIGHT1_V_6_2, [121 x i8]* @WEIGHT1_V_6_3, [121 x i8]* @WEIGHT1_V_6_4, [121 x i8]* @WEIGHT1_V_6_5, [121 x i8]* @WEIGHT1_V_6_6, [121 x i8]* @WEIGHT1_V_7_0, [121 x i8]* @WEIGHT1_V_7_1, [121 x i8]* @WEIGHT1_V_7_2, [121 x i8]* @WEIGHT1_V_7_3, [121 x i8]* @WEIGHT1_V_7_4, [121 x i8]* @WEIGHT1_V_7_5, [121 x i8]* @WEIGHT1_V_7_6, [1 x i8]* @p_str1, [14 x i8]* @p_str19, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i56* %input_dma_I_V_data, i1* %input_dma_I_V_last, [5 x i8]* @p_str17, i32 0, i32 0, [5 x i8]* @p_str18, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i56* %input_dma_W_V_data, i1* %input_dma_W_V_last, [5 x i8]* @p_str17, i32 0, i32 0, [5 x i8]* @p_str18, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%custom_Tc_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %custom_Tc)"
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%custom_Tr_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %custom_Tr)"
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%custom_k_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %custom_k)"
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%N_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %N)"
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%col_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %col)"
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%row_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %row)"
+ST_1 : Operation 15 [1/1] (0.65ns)   --->   "br label %1" [LURAM-Test/TEST_REF.cpp:157]
+
+ <State 2> : 8.61ns
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%idx = phi i32 [ 0, %0 ], [ %idx_1, %5 ]"
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%i = phi i32 [ 0, %0 ], [ %i_3, %5 ]"
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%tmp_31 = trunc i32 %idx to i1" [LURAM-Test/TEST_REF.cpp:157]
+ST_2 : Operation 19 [1/1] (0.99ns)   --->   "%tmp = icmp slt i32 %i, %N_read" [LURAM-Test/TEST_REF.cpp:157]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 20 [1/1] (1.01ns)   --->   "%idx_1 = add nsw i32 1, %idx" [LURAM-Test/TEST_REF.cpp:168]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "br i1 %tmp, label %2, label %6" [LURAM-Test/TEST_REF.cpp:157]
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%tmp_16 = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str14)" [LURAM-Test/TEST_REF.cpp:157]
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i32 6, i32 6, i32 6, [1 x i8]* @p_str1) nounwind" [LURAM-Test/TEST_REF.cpp:158]
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "br i1 %tmp_31, label %4, label %3" [LURAM-Test/TEST_REF.cpp:159]
+ST_2 : Operation 25 [2/2] (8.60ns)   --->   "call fastcc void @LOAD_WEIGHT_DMA(i56* %input_dma_W_V_data, i1* %input_dma_W_V_last, [121 x i8]* @WEIGHT1_V_0_0, [121 x i8]* @WEIGHT1_V_0_1, [121 x i8]* @WEIGHT1_V_0_2, [121 x i8]* @WEIGHT1_V_0_3, [121 x i8]* @WEIGHT1_V_0_4, [121 x i8]* @WEIGHT1_V_0_5, [121 x i8]* @WEIGHT1_V_0_6, [121 x i8]* @WEIGHT1_V_1_0, [121 x i8]* @WEIGHT1_V_1_1, [121 x i8]* @WEIGHT1_V_1_2, [121 x i8]* @WEIGHT1_V_1_3, [121 x i8]* @WEIGHT1_V_1_4, [121 x i8]* @WEIGHT1_V_1_5, [121 x i8]* @WEIGHT1_V_1_6, [121 x i8]* @WEIGHT1_V_2_0, [121 x i8]* @WEIGHT1_V_2_1, [121 x i8]* @WEIGHT1_V_2_2, [121 x i8]* @WEIGHT1_V_2_3, [121 x i8]* @WEIGHT1_V_2_4, [121 x i8]* @WEIGHT1_V_2_5, [121 x i8]* @WEIGHT1_V_2_6, [121 x i8]* @WEIGHT1_V_3_0, [121 x i8]* @WEIGHT1_V_3_1, [121 x i8]* @WEIGHT1_V_3_2, [121 x i8]* @WEIGHT1_V_3_3, [121 x i8]* @WEIGHT1_V_3_4, [121 x i8]* @WEIGHT1_V_3_5, [121 x i8]* @WEIGHT1_V_3_6, [121 x i8]* @WEIGHT1_V_4_0, [121 x i8]* @WEIGHT1_V_4_1, [121 x i8]* @WEIGHT1_V_4_2, [121 x i8]* @WEIGHT1_V_4_3, [121 x i8]* @WEIGHT1_V_4_4, [121 x i8]* @WEIGHT1_V_4_5, [121 x i8]* @WEIGHT1_V_4_6, [121 x i8]* @WEIGHT1_V_5_0, [121 x i8]* @WEIGHT1_V_5_1, [121 x i8]* @WEIGHT1_V_5_2, [121 x i8]* @WEIGHT1_V_5_3, [121 x i8]* @WEIGHT1_V_5_4, [121 x i8]* @WEIGHT1_V_5_5, [121 x i8]* @WEIGHT1_V_5_6, [121 x i8]* @WEIGHT1_V_6_0, [121 x i8]* @WEIGHT1_V_6_1, [121 x i8]* @WEIGHT1_V_6_2, [121 x i8]* @WEIGHT1_V_6_3, [121 x i8]* @WEIGHT1_V_6_4, [121 x i8]* @WEIGHT1_V_6_5, [121 x i8]* @WEIGHT1_V_6_6, [121 x i8]* @WEIGHT1_V_7_0, [121 x i8]* @WEIGHT1_V_7_1, [121 x i8]* @WEIGHT1_V_7_2, [121 x i8]* @WEIGHT1_V_7_3, [121 x i8]* @WEIGHT1_V_7_4, [121 x i8]* @WEIGHT1_V_7_5, [121 x i8]* @WEIGHT1_V_7_6, i32 %custom_k_read)"   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 26 [2/2] (4.07ns)   --->   "call fastcc void @LOAD_IFM(i56* %input_dma_I_V_data, i1* %input_dma_I_V_last, [169 x i26]* @IFM_V_0, [169 x i26]* @IFM_V_1, [169 x i26]* @IFM_V_2, [169 x i26]* @IFM_V_3, [169 x i26]* @IFM_V_4, [169 x i26]* @IFM_V_5, [169 x i26]* @IFM_V_6, i32 %custom_Tr_read, i32 %custom_Tc_read)"   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 27 [2/2] (5.18ns)   --->   "call fastcc void @FIRE4([121 x i8]* @WEIGHT1_DB_V_0_0, [121 x i8]* @WEIGHT1_DB_V_0_1, [121 x i8]* @WEIGHT1_DB_V_0_2, [121 x i8]* @WEIGHT1_DB_V_0_3, [121 x i8]* @WEIGHT1_DB_V_0_4, [121 x i8]* @WEIGHT1_DB_V_0_5, [121 x i8]* @WEIGHT1_DB_V_0_6, [121 x i8]* @WEIGHT1_DB_V_1_0, [121 x i8]* @WEIGHT1_DB_V_1_1, [121 x i8]* @WEIGHT1_DB_V_1_2, [121 x i8]* @WEIGHT1_DB_V_1_3, [121 x i8]* @WEIGHT1_DB_V_1_4, [121 x i8]* @WEIGHT1_DB_V_1_5, [121 x i8]* @WEIGHT1_DB_V_1_6, [121 x i8]* @WEIGHT1_DB_V_2_0, [121 x i8]* @WEIGHT1_DB_V_2_1, [121 x i8]* @WEIGHT1_DB_V_2_2, [121 x i8]* @WEIGHT1_DB_V_2_3, [121 x i8]* @WEIGHT1_DB_V_2_4, [121 x i8]* @WEIGHT1_DB_V_2_5, [121 x i8]* @WEIGHT1_DB_V_2_6, [121 x i8]* @WEIGHT1_DB_V_3_0, [121 x i8]* @WEIGHT1_DB_V_3_1, [121 x i8]* @WEIGHT1_DB_V_3_2, [121 x i8]* @WEIGHT1_DB_V_3_3, [121 x i8]* @WEIGHT1_DB_V_3_4, [121 x i8]* @WEIGHT1_DB_V_3_5, [121 x i8]* @WEIGHT1_DB_V_3_6, [121 x i8]* @WEIGHT1_DB_V_4_0, [121 x i8]* @WEIGHT1_DB_V_4_1, [121 x i8]* @WEIGHT1_DB_V_4_2, [121 x i8]* @WEIGHT1_DB_V_4_3, [121 x i8]* @WEIGHT1_DB_V_4_4, [121 x i8]* @WEIGHT1_DB_V_4_5, [121 x i8]* @WEIGHT1_DB_V_4_6, [121 x i8]* @WEIGHT1_DB_V_5_0, [121 x i8]* @WEIGHT1_DB_V_5_1, [121 x i8]* @WEIGHT1_DB_V_5_2, [121 x i8]* @WEIGHT1_DB_V_5_3, [121 x i8]* @WEIGHT1_DB_V_5_4, [121 x i8]* @WEIGHT1_DB_V_5_5, [121 x i8]* @WEIGHT1_DB_V_5_6, [121 x i8]* @WEIGHT1_DB_V_6_0, [121 x i8]* @WEIGHT1_DB_V_6_1, [121 x i8]* @WEIGHT1_DB_V_6_2, [121 x i8]* @WEIGHT1_DB_V_6_3, [121 x i8]* @WEIGHT1_DB_V_6_4, [121 x i8]* @WEIGHT1_DB_V_6_5, [121 x i8]* @WEIGHT1_DB_V_6_6, [121 x i8]* @WEIGHT1_DB_V_7_0, [121 x i8]* @WEIGHT1_DB_V_7_1, [121 x i8]* @WEIGHT1_DB_V_7_2, [121 x i8]* @WEIGHT1_DB_V_7_3, [121 x i8]* @WEIGHT1_DB_V_7_4, [121 x i8]* @WEIGHT1_DB_V_7_5, [121 x i8]* @WEIGHT1_DB_V_7_6, [169 x i26]* @IFM_DB_V_0, [169 x i26]* @IFM_DB_V_1, [169 x i26]* @IFM_DB_V_2, [169 x i26]* @IFM_DB_V_3, [169 x i26]* @IFM_DB_V_4, [169 x i26]* @IFM_DB_V_5, [169 x i26]* @IFM_DB_V_6, [169 x i26]* %OFM_0_V, [169 x i26]* %OFM_1_V, [169 x i26]* %OFM_2_V, [169 x i26]* %OFM_3_V, [169 x i26]* %OFM_4_V, [169 x i26]* %OFM_5_V, [169 x i26]* %OFM_6_V, [169 x i26]* %OFM_7_V, i32 %row_read, i32 %col_read, i32 %custom_k_read, i32 %custom_Tr_read, i32 %custom_Tc_read)" [LURAM-Test/TEST_REF.cpp:162]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 28 [2/2] (8.60ns)   --->   "call fastcc void @LOAD_WEIGHT_DMA(i56* %input_dma_W_V_data, i1* %input_dma_W_V_last, [121 x i8]* @WEIGHT1_DB_V_0_0, [121 x i8]* @WEIGHT1_DB_V_0_1, [121 x i8]* @WEIGHT1_DB_V_0_2, [121 x i8]* @WEIGHT1_DB_V_0_3, [121 x i8]* @WEIGHT1_DB_V_0_4, [121 x i8]* @WEIGHT1_DB_V_0_5, [121 x i8]* @WEIGHT1_DB_V_0_6, [121 x i8]* @WEIGHT1_DB_V_1_0, [121 x i8]* @WEIGHT1_DB_V_1_1, [121 x i8]* @WEIGHT1_DB_V_1_2, [121 x i8]* @WEIGHT1_DB_V_1_3, [121 x i8]* @WEIGHT1_DB_V_1_4, [121 x i8]* @WEIGHT1_DB_V_1_5, [121 x i8]* @WEIGHT1_DB_V_1_6, [121 x i8]* @WEIGHT1_DB_V_2_0, [121 x i8]* @WEIGHT1_DB_V_2_1, [121 x i8]* @WEIGHT1_DB_V_2_2, [121 x i8]* @WEIGHT1_DB_V_2_3, [121 x i8]* @WEIGHT1_DB_V_2_4, [121 x i8]* @WEIGHT1_DB_V_2_5, [121 x i8]* @WEIGHT1_DB_V_2_6, [121 x i8]* @WEIGHT1_DB_V_3_0, [121 x i8]* @WEIGHT1_DB_V_3_1, [121 x i8]* @WEIGHT1_DB_V_3_2, [121 x i8]* @WEIGHT1_DB_V_3_3, [121 x i8]* @WEIGHT1_DB_V_3_4, [121 x i8]* @WEIGHT1_DB_V_3_5, [121 x i8]* @WEIGHT1_DB_V_3_6, [121 x i8]* @WEIGHT1_DB_V_4_0, [121 x i8]* @WEIGHT1_DB_V_4_1, [121 x i8]* @WEIGHT1_DB_V_4_2, [121 x i8]* @WEIGHT1_DB_V_4_3, [121 x i8]* @WEIGHT1_DB_V_4_4, [121 x i8]* @WEIGHT1_DB_V_4_5, [121 x i8]* @WEIGHT1_DB_V_4_6, [121 x i8]* @WEIGHT1_DB_V_5_0, [121 x i8]* @WEIGHT1_DB_V_5_1, [121 x i8]* @WEIGHT1_DB_V_5_2, [121 x i8]* @WEIGHT1_DB_V_5_3, [121 x i8]* @WEIGHT1_DB_V_5_4, [121 x i8]* @WEIGHT1_DB_V_5_5, [121 x i8]* @WEIGHT1_DB_V_5_6, [121 x i8]* @WEIGHT1_DB_V_6_0, [121 x i8]* @WEIGHT1_DB_V_6_1, [121 x i8]* @WEIGHT1_DB_V_6_2, [121 x i8]* @WEIGHT1_DB_V_6_3, [121 x i8]* @WEIGHT1_DB_V_6_4, [121 x i8]* @WEIGHT1_DB_V_6_5, [121 x i8]* @WEIGHT1_DB_V_6_6, [121 x i8]* @WEIGHT1_DB_V_7_0, [121 x i8]* @WEIGHT1_DB_V_7_1, [121 x i8]* @WEIGHT1_DB_V_7_2, [121 x i8]* @WEIGHT1_DB_V_7_3, [121 x i8]* @WEIGHT1_DB_V_7_4, [121 x i8]* @WEIGHT1_DB_V_7_5, [121 x i8]* @WEIGHT1_DB_V_7_6, i32 %custom_k_read)"   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 29 [2/2] (4.07ns)   --->   "call fastcc void @LOAD_IFM(i56* %input_dma_I_V_data, i1* %input_dma_I_V_last, [169 x i26]* @IFM_DB_V_0, [169 x i26]* @IFM_DB_V_1, [169 x i26]* @IFM_DB_V_2, [169 x i26]* @IFM_DB_V_3, [169 x i26]* @IFM_DB_V_4, [169 x i26]* @IFM_DB_V_5, [169 x i26]* @IFM_DB_V_6, i32 %custom_Tr_read, i32 %custom_Tc_read)"   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 30 [2/2] (5.18ns)   --->   "call fastcc void @FIRE4([121 x i8]* @WEIGHT1_V_0_0, [121 x i8]* @WEIGHT1_V_0_1, [121 x i8]* @WEIGHT1_V_0_2, [121 x i8]* @WEIGHT1_V_0_3, [121 x i8]* @WEIGHT1_V_0_4, [121 x i8]* @WEIGHT1_V_0_5, [121 x i8]* @WEIGHT1_V_0_6, [121 x i8]* @WEIGHT1_V_1_0, [121 x i8]* @WEIGHT1_V_1_1, [121 x i8]* @WEIGHT1_V_1_2, [121 x i8]* @WEIGHT1_V_1_3, [121 x i8]* @WEIGHT1_V_1_4, [121 x i8]* @WEIGHT1_V_1_5, [121 x i8]* @WEIGHT1_V_1_6, [121 x i8]* @WEIGHT1_V_2_0, [121 x i8]* @WEIGHT1_V_2_1, [121 x i8]* @WEIGHT1_V_2_2, [121 x i8]* @WEIGHT1_V_2_3, [121 x i8]* @WEIGHT1_V_2_4, [121 x i8]* @WEIGHT1_V_2_5, [121 x i8]* @WEIGHT1_V_2_6, [121 x i8]* @WEIGHT1_V_3_0, [121 x i8]* @WEIGHT1_V_3_1, [121 x i8]* @WEIGHT1_V_3_2, [121 x i8]* @WEIGHT1_V_3_3, [121 x i8]* @WEIGHT1_V_3_4, [121 x i8]* @WEIGHT1_V_3_5, [121 x i8]* @WEIGHT1_V_3_6, [121 x i8]* @WEIGHT1_V_4_0, [121 x i8]* @WEIGHT1_V_4_1, [121 x i8]* @WEIGHT1_V_4_2, [121 x i8]* @WEIGHT1_V_4_3, [121 x i8]* @WEIGHT1_V_4_4, [121 x i8]* @WEIGHT1_V_4_5, [121 x i8]* @WEIGHT1_V_4_6, [121 x i8]* @WEIGHT1_V_5_0, [121 x i8]* @WEIGHT1_V_5_1, [121 x i8]* @WEIGHT1_V_5_2, [121 x i8]* @WEIGHT1_V_5_3, [121 x i8]* @WEIGHT1_V_5_4, [121 x i8]* @WEIGHT1_V_5_5, [121 x i8]* @WEIGHT1_V_5_6, [121 x i8]* @WEIGHT1_V_6_0, [121 x i8]* @WEIGHT1_V_6_1, [121 x i8]* @WEIGHT1_V_6_2, [121 x i8]* @WEIGHT1_V_6_3, [121 x i8]* @WEIGHT1_V_6_4, [121 x i8]* @WEIGHT1_V_6_5, [121 x i8]* @WEIGHT1_V_6_6, [121 x i8]* @WEIGHT1_V_7_0, [121 x i8]* @WEIGHT1_V_7_1, [121 x i8]* @WEIGHT1_V_7_2, [121 x i8]* @WEIGHT1_V_7_3, [121 x i8]* @WEIGHT1_V_7_4, [121 x i8]* @WEIGHT1_V_7_5, [121 x i8]* @WEIGHT1_V_7_6, [169 x i26]* @IFM_V_0, [169 x i26]* @IFM_V_1, [169 x i26]* @IFM_V_2, [169 x i26]* @IFM_V_3, [169 x i26]* @IFM_V_4, [169 x i26]* @IFM_V_5, [169 x i26]* @IFM_V_6, [169 x i26]* %OFM_0_V, [169 x i26]* %OFM_1_V, [169 x i26]* %OFM_2_V, [169 x i26]* %OFM_3_V, [169 x i26]* %OFM_4_V, [169 x i26]* %OFM_5_V, [169 x i26]* %OFM_6_V, [169 x i26]* %OFM_7_V, i32 %row_read, i32 %col_read, i32 %custom_k_read, i32 %custom_Tr_read, i32 %custom_Tc_read)" [LURAM-Test/TEST_REF.cpp:166]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "ret void" [LURAM-Test/TEST_REF.cpp:170]
+
+ <State 3> : 1.02ns
+ST_3 : Operation 32 [1/2] (0.00ns)   --->   "call fastcc void @LOAD_WEIGHT_DMA(i56* %input_dma_W_V_data, i1* %input_dma_W_V_last, [121 x i8]* @WEIGHT1_V_0_0, [121 x i8]* @WEIGHT1_V_0_1, [121 x i8]* @WEIGHT1_V_0_2, [121 x i8]* @WEIGHT1_V_0_3, [121 x i8]* @WEIGHT1_V_0_4, [121 x i8]* @WEIGHT1_V_0_5, [121 x i8]* @WEIGHT1_V_0_6, [121 x i8]* @WEIGHT1_V_1_0, [121 x i8]* @WEIGHT1_V_1_1, [121 x i8]* @WEIGHT1_V_1_2, [121 x i8]* @WEIGHT1_V_1_3, [121 x i8]* @WEIGHT1_V_1_4, [121 x i8]* @WEIGHT1_V_1_5, [121 x i8]* @WEIGHT1_V_1_6, [121 x i8]* @WEIGHT1_V_2_0, [121 x i8]* @WEIGHT1_V_2_1, [121 x i8]* @WEIGHT1_V_2_2, [121 x i8]* @WEIGHT1_V_2_3, [121 x i8]* @WEIGHT1_V_2_4, [121 x i8]* @WEIGHT1_V_2_5, [121 x i8]* @WEIGHT1_V_2_6, [121 x i8]* @WEIGHT1_V_3_0, [121 x i8]* @WEIGHT1_V_3_1, [121 x i8]* @WEIGHT1_V_3_2, [121 x i8]* @WEIGHT1_V_3_3, [121 x i8]* @WEIGHT1_V_3_4, [121 x i8]* @WEIGHT1_V_3_5, [121 x i8]* @WEIGHT1_V_3_6, [121 x i8]* @WEIGHT1_V_4_0, [121 x i8]* @WEIGHT1_V_4_1, [121 x i8]* @WEIGHT1_V_4_2, [121 x i8]* @WEIGHT1_V_4_3, [121 x i8]* @WEIGHT1_V_4_4, [121 x i8]* @WEIGHT1_V_4_5, [121 x i8]* @WEIGHT1_V_4_6, [121 x i8]* @WEIGHT1_V_5_0, [121 x i8]* @WEIGHT1_V_5_1, [121 x i8]* @WEIGHT1_V_5_2, [121 x i8]* @WEIGHT1_V_5_3, [121 x i8]* @WEIGHT1_V_5_4, [121 x i8]* @WEIGHT1_V_5_5, [121 x i8]* @WEIGHT1_V_5_6, [121 x i8]* @WEIGHT1_V_6_0, [121 x i8]* @WEIGHT1_V_6_1, [121 x i8]* @WEIGHT1_V_6_2, [121 x i8]* @WEIGHT1_V_6_3, [121 x i8]* @WEIGHT1_V_6_4, [121 x i8]* @WEIGHT1_V_6_5, [121 x i8]* @WEIGHT1_V_6_6, [121 x i8]* @WEIGHT1_V_7_0, [121 x i8]* @WEIGHT1_V_7_1, [121 x i8]* @WEIGHT1_V_7_2, [121 x i8]* @WEIGHT1_V_7_3, [121 x i8]* @WEIGHT1_V_7_4, [121 x i8]* @WEIGHT1_V_7_5, [121 x i8]* @WEIGHT1_V_7_6, i32 %custom_k_read)"   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 33 [1/2] (0.00ns)   --->   "call fastcc void @LOAD_IFM(i56* %input_dma_I_V_data, i1* %input_dma_I_V_last, [169 x i26]* @IFM_V_0, [169 x i26]* @IFM_V_1, [169 x i26]* @IFM_V_2, [169 x i26]* @IFM_V_3, [169 x i26]* @IFM_V_4, [169 x i26]* @IFM_V_5, [169 x i26]* @IFM_V_6, i32 %custom_Tr_read, i32 %custom_Tc_read)"   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 34 [1/2] (0.00ns)   --->   "call fastcc void @FIRE4([121 x i8]* @WEIGHT1_DB_V_0_0, [121 x i8]* @WEIGHT1_DB_V_0_1, [121 x i8]* @WEIGHT1_DB_V_0_2, [121 x i8]* @WEIGHT1_DB_V_0_3, [121 x i8]* @WEIGHT1_DB_V_0_4, [121 x i8]* @WEIGHT1_DB_V_0_5, [121 x i8]* @WEIGHT1_DB_V_0_6, [121 x i8]* @WEIGHT1_DB_V_1_0, [121 x i8]* @WEIGHT1_DB_V_1_1, [121 x i8]* @WEIGHT1_DB_V_1_2, [121 x i8]* @WEIGHT1_DB_V_1_3, [121 x i8]* @WEIGHT1_DB_V_1_4, [121 x i8]* @WEIGHT1_DB_V_1_5, [121 x i8]* @WEIGHT1_DB_V_1_6, [121 x i8]* @WEIGHT1_DB_V_2_0, [121 x i8]* @WEIGHT1_DB_V_2_1, [121 x i8]* @WEIGHT1_DB_V_2_2, [121 x i8]* @WEIGHT1_DB_V_2_3, [121 x i8]* @WEIGHT1_DB_V_2_4, [121 x i8]* @WEIGHT1_DB_V_2_5, [121 x i8]* @WEIGHT1_DB_V_2_6, [121 x i8]* @WEIGHT1_DB_V_3_0, [121 x i8]* @WEIGHT1_DB_V_3_1, [121 x i8]* @WEIGHT1_DB_V_3_2, [121 x i8]* @WEIGHT1_DB_V_3_3, [121 x i8]* @WEIGHT1_DB_V_3_4, [121 x i8]* @WEIGHT1_DB_V_3_5, [121 x i8]* @WEIGHT1_DB_V_3_6, [121 x i8]* @WEIGHT1_DB_V_4_0, [121 x i8]* @WEIGHT1_DB_V_4_1, [121 x i8]* @WEIGHT1_DB_V_4_2, [121 x i8]* @WEIGHT1_DB_V_4_3, [121 x i8]* @WEIGHT1_DB_V_4_4, [121 x i8]* @WEIGHT1_DB_V_4_5, [121 x i8]* @WEIGHT1_DB_V_4_6, [121 x i8]* @WEIGHT1_DB_V_5_0, [121 x i8]* @WEIGHT1_DB_V_5_1, [121 x i8]* @WEIGHT1_DB_V_5_2, [121 x i8]* @WEIGHT1_DB_V_5_3, [121 x i8]* @WEIGHT1_DB_V_5_4, [121 x i8]* @WEIGHT1_DB_V_5_5, [121 x i8]* @WEIGHT1_DB_V_5_6, [121 x i8]* @WEIGHT1_DB_V_6_0, [121 x i8]* @WEIGHT1_DB_V_6_1, [121 x i8]* @WEIGHT1_DB_V_6_2, [121 x i8]* @WEIGHT1_DB_V_6_3, [121 x i8]* @WEIGHT1_DB_V_6_4, [121 x i8]* @WEIGHT1_DB_V_6_5, [121 x i8]* @WEIGHT1_DB_V_6_6, [121 x i8]* @WEIGHT1_DB_V_7_0, [121 x i8]* @WEIGHT1_DB_V_7_1, [121 x i8]* @WEIGHT1_DB_V_7_2, [121 x i8]* @WEIGHT1_DB_V_7_3, [121 x i8]* @WEIGHT1_DB_V_7_4, [121 x i8]* @WEIGHT1_DB_V_7_5, [121 x i8]* @WEIGHT1_DB_V_7_6, [169 x i26]* @IFM_DB_V_0, [169 x i26]* @IFM_DB_V_1, [169 x i26]* @IFM_DB_V_2, [169 x i26]* @IFM_DB_V_3, [169 x i26]* @IFM_DB_V_4, [169 x i26]* @IFM_DB_V_5, [169 x i26]* @IFM_DB_V_6, [169 x i26]* %OFM_0_V, [169 x i26]* %OFM_1_V, [169 x i26]* %OFM_2_V, [169 x i26]* %OFM_3_V, [169 x i26]* %OFM_4_V, [169 x i26]* %OFM_5_V, [169 x i26]* %OFM_6_V, [169 x i26]* %OFM_7_V, i32 %row_read, i32 %col_read, i32 %custom_k_read, i32 %custom_Tr_read, i32 %custom_Tc_read)" [LURAM-Test/TEST_REF.cpp:162]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "br label %5" [LURAM-Test/TEST_REF.cpp:163]
+ST_3 : Operation 36 [1/2] (0.00ns)   --->   "call fastcc void @LOAD_WEIGHT_DMA(i56* %input_dma_W_V_data, i1* %input_dma_W_V_last, [121 x i8]* @WEIGHT1_DB_V_0_0, [121 x i8]* @WEIGHT1_DB_V_0_1, [121 x i8]* @WEIGHT1_DB_V_0_2, [121 x i8]* @WEIGHT1_DB_V_0_3, [121 x i8]* @WEIGHT1_DB_V_0_4, [121 x i8]* @WEIGHT1_DB_V_0_5, [121 x i8]* @WEIGHT1_DB_V_0_6, [121 x i8]* @WEIGHT1_DB_V_1_0, [121 x i8]* @WEIGHT1_DB_V_1_1, [121 x i8]* @WEIGHT1_DB_V_1_2, [121 x i8]* @WEIGHT1_DB_V_1_3, [121 x i8]* @WEIGHT1_DB_V_1_4, [121 x i8]* @WEIGHT1_DB_V_1_5, [121 x i8]* @WEIGHT1_DB_V_1_6, [121 x i8]* @WEIGHT1_DB_V_2_0, [121 x i8]* @WEIGHT1_DB_V_2_1, [121 x i8]* @WEIGHT1_DB_V_2_2, [121 x i8]* @WEIGHT1_DB_V_2_3, [121 x i8]* @WEIGHT1_DB_V_2_4, [121 x i8]* @WEIGHT1_DB_V_2_5, [121 x i8]* @WEIGHT1_DB_V_2_6, [121 x i8]* @WEIGHT1_DB_V_3_0, [121 x i8]* @WEIGHT1_DB_V_3_1, [121 x i8]* @WEIGHT1_DB_V_3_2, [121 x i8]* @WEIGHT1_DB_V_3_3, [121 x i8]* @WEIGHT1_DB_V_3_4, [121 x i8]* @WEIGHT1_DB_V_3_5, [121 x i8]* @WEIGHT1_DB_V_3_6, [121 x i8]* @WEIGHT1_DB_V_4_0, [121 x i8]* @WEIGHT1_DB_V_4_1, [121 x i8]* @WEIGHT1_DB_V_4_2, [121 x i8]* @WEIGHT1_DB_V_4_3, [121 x i8]* @WEIGHT1_DB_V_4_4, [121 x i8]* @WEIGHT1_DB_V_4_5, [121 x i8]* @WEIGHT1_DB_V_4_6, [121 x i8]* @WEIGHT1_DB_V_5_0, [121 x i8]* @WEIGHT1_DB_V_5_1, [121 x i8]* @WEIGHT1_DB_V_5_2, [121 x i8]* @WEIGHT1_DB_V_5_3, [121 x i8]* @WEIGHT1_DB_V_5_4, [121 x i8]* @WEIGHT1_DB_V_5_5, [121 x i8]* @WEIGHT1_DB_V_5_6, [121 x i8]* @WEIGHT1_DB_V_6_0, [121 x i8]* @WEIGHT1_DB_V_6_1, [121 x i8]* @WEIGHT1_DB_V_6_2, [121 x i8]* @WEIGHT1_DB_V_6_3, [121 x i8]* @WEIGHT1_DB_V_6_4, [121 x i8]* @WEIGHT1_DB_V_6_5, [121 x i8]* @WEIGHT1_DB_V_6_6, [121 x i8]* @WEIGHT1_DB_V_7_0, [121 x i8]* @WEIGHT1_DB_V_7_1, [121 x i8]* @WEIGHT1_DB_V_7_2, [121 x i8]* @WEIGHT1_DB_V_7_3, [121 x i8]* @WEIGHT1_DB_V_7_4, [121 x i8]* @WEIGHT1_DB_V_7_5, [121 x i8]* @WEIGHT1_DB_V_7_6, i32 %custom_k_read)"   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 37 [1/2] (0.00ns)   --->   "call fastcc void @LOAD_IFM(i56* %input_dma_I_V_data, i1* %input_dma_I_V_last, [169 x i26]* @IFM_DB_V_0, [169 x i26]* @IFM_DB_V_1, [169 x i26]* @IFM_DB_V_2, [169 x i26]* @IFM_DB_V_3, [169 x i26]* @IFM_DB_V_4, [169 x i26]* @IFM_DB_V_5, [169 x i26]* @IFM_DB_V_6, i32 %custom_Tr_read, i32 %custom_Tc_read)"   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 38 [1/2] (0.00ns)   --->   "call fastcc void @FIRE4([121 x i8]* @WEIGHT1_V_0_0, [121 x i8]* @WEIGHT1_V_0_1, [121 x i8]* @WEIGHT1_V_0_2, [121 x i8]* @WEIGHT1_V_0_3, [121 x i8]* @WEIGHT1_V_0_4, [121 x i8]* @WEIGHT1_V_0_5, [121 x i8]* @WEIGHT1_V_0_6, [121 x i8]* @WEIGHT1_V_1_0, [121 x i8]* @WEIGHT1_V_1_1, [121 x i8]* @WEIGHT1_V_1_2, [121 x i8]* @WEIGHT1_V_1_3, [121 x i8]* @WEIGHT1_V_1_4, [121 x i8]* @WEIGHT1_V_1_5, [121 x i8]* @WEIGHT1_V_1_6, [121 x i8]* @WEIGHT1_V_2_0, [121 x i8]* @WEIGHT1_V_2_1, [121 x i8]* @WEIGHT1_V_2_2, [121 x i8]* @WEIGHT1_V_2_3, [121 x i8]* @WEIGHT1_V_2_4, [121 x i8]* @WEIGHT1_V_2_5, [121 x i8]* @WEIGHT1_V_2_6, [121 x i8]* @WEIGHT1_V_3_0, [121 x i8]* @WEIGHT1_V_3_1, [121 x i8]* @WEIGHT1_V_3_2, [121 x i8]* @WEIGHT1_V_3_3, [121 x i8]* @WEIGHT1_V_3_4, [121 x i8]* @WEIGHT1_V_3_5, [121 x i8]* @WEIGHT1_V_3_6, [121 x i8]* @WEIGHT1_V_4_0, [121 x i8]* @WEIGHT1_V_4_1, [121 x i8]* @WEIGHT1_V_4_2, [121 x i8]* @WEIGHT1_V_4_3, [121 x i8]* @WEIGHT1_V_4_4, [121 x i8]* @WEIGHT1_V_4_5, [121 x i8]* @WEIGHT1_V_4_6, [121 x i8]* @WEIGHT1_V_5_0, [121 x i8]* @WEIGHT1_V_5_1, [121 x i8]* @WEIGHT1_V_5_2, [121 x i8]* @WEIGHT1_V_5_3, [121 x i8]* @WEIGHT1_V_5_4, [121 x i8]* @WEIGHT1_V_5_5, [121 x i8]* @WEIGHT1_V_5_6, [121 x i8]* @WEIGHT1_V_6_0, [121 x i8]* @WEIGHT1_V_6_1, [121 x i8]* @WEIGHT1_V_6_2, [121 x i8]* @WEIGHT1_V_6_3, [121 x i8]* @WEIGHT1_V_6_4, [121 x i8]* @WEIGHT1_V_6_5, [121 x i8]* @WEIGHT1_V_6_6, [121 x i8]* @WEIGHT1_V_7_0, [121 x i8]* @WEIGHT1_V_7_1, [121 x i8]* @WEIGHT1_V_7_2, [121 x i8]* @WEIGHT1_V_7_3, [121 x i8]* @WEIGHT1_V_7_4, [121 x i8]* @WEIGHT1_V_7_5, [121 x i8]* @WEIGHT1_V_7_6, [169 x i26]* @IFM_V_0, [169 x i26]* @IFM_V_1, [169 x i26]* @IFM_V_2, [169 x i26]* @IFM_V_3, [169 x i26]* @IFM_V_4, [169 x i26]* @IFM_V_5, [169 x i26]* @IFM_V_6, [169 x i26]* %OFM_0_V, [169 x i26]* %OFM_1_V, [169 x i26]* %OFM_2_V, [169 x i26]* %OFM_3_V, [169 x i26]* %OFM_4_V, [169 x i26]* %OFM_5_V, [169 x i26]* %OFM_6_V, [169 x i26]* %OFM_7_V, i32 %row_read, i32 %col_read, i32 %custom_k_read, i32 %custom_Tr_read, i32 %custom_Tc_read)" [LURAM-Test/TEST_REF.cpp:166]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "br label %5"
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str14, i32 %tmp_16)" [LURAM-Test/TEST_REF.cpp:169]
+ST_3 : Operation 41 [1/1] (1.01ns)   --->   "%i_3 = add nsw i32 %i, 7" [LURAM-Test/TEST_REF.cpp:157]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "br label %1" [LURAM-Test/TEST_REF.cpp:157]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0.656ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('idx') with incoming values : ('idx', LURAM-Test/TEST_REF.cpp:168) [158]  (0.656 ns)
+
+ <State 2>: 8.61ns
+The critical path consists of the following:
+	'call' operation to 'LOAD_WEIGHT_DMA' [169]  (8.61 ns)
+
+ <State 3>: 1.02ns
+The critical path consists of the following:
+	'add' operation ('i', LURAM-Test/TEST_REF.cpp:157) [180]  (1.02 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

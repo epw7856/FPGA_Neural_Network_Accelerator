@@ -1,0 +1,873 @@
+<stg><name>top</name>
+
+
+<trans_list>
+
+<trans id="59" from="1" to="2">
+<condition id="9">
+<or_exp><and_exp><literal name="tmp" val="0"/>
+</and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="60" from="1" to="3">
+<condition id="8">
+<or_exp><and_exp><literal name="tmp" val="1"/>
+</and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="62" from="2" to="4">
+<condition id="12">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="64" from="3" to="4">
+<condition id="15">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1057" bw="0" op_0_bw="0" op_1_bw="64">
+<![CDATA[
+:0  call void (...)* @_ssdm_op_SpecBitsMap(i64* %output_dma_O_V_data), !map !56
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1058" bw="0" op_0_bw="0" op_1_bw="64">
+<![CDATA[
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i64* %input_dma_I_V_data), !map !63
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1059" bw="0" op_0_bw="0" op_1_bw="64">
+<![CDATA[
+:2  call void (...)* @_ssdm_op_SpecBitsMap(i64* %input_dma_W_V_data), !map !70
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1060" bw="0" op_0_bw="0" op_1_bw="1">
+<![CDATA[
+:3  call void (...)* @_ssdm_op_SpecBitsMap(i1* %input_dma_W_V_last), !map !77
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="9" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1061" bw="0" op_0_bw="0" op_1_bw="1">
+<![CDATA[
+:4  call void (...)* @_ssdm_op_SpecBitsMap(i1* %input_dma_I_V_last), !map !81
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="10" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1062" bw="0" op_0_bw="0" op_1_bw="32">
+<![CDATA[
+:5  call void (...)* @_ssdm_op_SpecBitsMap(float* %input_dma_B_V_data), !map !85
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="11" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1063" bw="0" op_0_bw="0" op_1_bw="1">
+<![CDATA[
+:6  call void (...)* @_ssdm_op_SpecBitsMap(i1* %input_dma_B_V_last), !map !89
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="12" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1064" bw="0" op_0_bw="0" op_1_bw="1">
+<![CDATA[
+:7  call void (...)* @_ssdm_op_SpecBitsMap(i1* %output_dma_O_V_last), !map !93
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="13" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1065" bw="0" op_0_bw="0" op_1_bw="32">
+<![CDATA[
+:8  call void (...)* @_ssdm_op_SpecBitsMap(i32 %row), !map !97
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="14" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1066" bw="0" op_0_bw="0" op_1_bw="32">
+<![CDATA[
+:9  call void (...)* @_ssdm_op_SpecBitsMap(i32 %col), !map !103
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="15" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1067" bw="0" op_0_bw="0" op_1_bw="32">
+<![CDATA[
+:10  call void (...)* @_ssdm_op_SpecBitsMap(i32 %flag), !map !107
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="16" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1068" bw="0" op_0_bw="0" op_1_bw="32">
+<![CDATA[
+:11  call void (...)* @_ssdm_op_SpecBitsMap(i32 %num), !map !111
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="17" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1069" bw="0" op_0_bw="0" op_1_bw="32">
+<![CDATA[
+:12  call void (...)* @_ssdm_op_SpecBitsMap(i32 %N), !map !115
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="18" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1070" bw="0" op_0_bw="0" op_1_bw="32">
+<![CDATA[
+:13  call void (...)* @_ssdm_op_SpecBitsMap(i32 %custom_k), !map !119
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="19" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1071" bw="0" op_0_bw="0" op_1_bw="32">
+<![CDATA[
+:14  call void (...)* @_ssdm_op_SpecBitsMap(i32 %custom_Tr), !map !123
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="20" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1072" bw="0" op_0_bw="0" op_1_bw="32">
+<![CDATA[
+:15  call void (...)* @_ssdm_op_SpecBitsMap(i32 %custom_Tc), !map !127
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="21" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1073" bw="0" op_0_bw="0" op_1_bw="0">
+<![CDATA[
+:16  call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @top_str) nounwind
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="22" st_id="1" stage="1" lat="1">
+<core>s_axilite</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1074" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:17  %custom_Tc_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %custom_Tc)
+
+]]></Node>
+<StgValue><ssdm name="custom_Tc_read"/></StgValue>
+</operation>
+
+<operation id="23" st_id="1" stage="1" lat="1">
+<core>s_axilite</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1075" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:18  %custom_Tr_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %custom_Tr)
+
+]]></Node>
+<StgValue><ssdm name="custom_Tr_read"/></StgValue>
+</operation>
+
+<operation id="24" st_id="1" stage="1" lat="1">
+<core>s_axilite</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1076" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:19  %custom_k_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %custom_k)
+
+]]></Node>
+<StgValue><ssdm name="custom_k_read"/></StgValue>
+</operation>
+
+<operation id="25" st_id="1" stage="1" lat="1">
+<core>s_axilite</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1077" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:20  %N_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %N)
+
+]]></Node>
+<StgValue><ssdm name="N_read"/></StgValue>
+</operation>
+
+<operation id="26" st_id="1" stage="1" lat="1">
+<core>s_axilite</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1078" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:21  %num_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %num)
+
+]]></Node>
+<StgValue><ssdm name="num_read"/></StgValue>
+</operation>
+
+<operation id="27" st_id="1" stage="1" lat="1">
+<core>s_axilite</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1079" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:22  %col_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %col)
+
+]]></Node>
+<StgValue><ssdm name="col_read"/></StgValue>
+</operation>
+
+<operation id="28" st_id="1" stage="1" lat="1">
+<core>s_axilite</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1080" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:23  %row_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %row)
+
+]]></Node>
+<StgValue><ssdm name="row_read"/></StgValue>
+</operation>
+
+<operation id="29" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1081" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
+<![CDATA[
+:24  call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str16, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="30" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1082" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
+<![CDATA[
+:25  call void (...)* @_ssdm_op_SpecInterface(i32 %row, [10 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str16, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="31" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1083" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
+<![CDATA[
+:26  call void (...)* @_ssdm_op_SpecInterface(i32 %col, [10 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str16, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="32" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1084" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
+<![CDATA[
+:27  call void (...)* @_ssdm_op_SpecInterface(i32 %flag, [10 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str16, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="33" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1085" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
+<![CDATA[
+:28  call void (...)* @_ssdm_op_SpecInterface(i32 %num, [10 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str16, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="34" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1086" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
+<![CDATA[
+:29  call void (...)* @_ssdm_op_SpecInterface(i32 %N, [10 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str16, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="35" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1087" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
+<![CDATA[
+:30  call void (...)* @_ssdm_op_SpecInterface(i32 %custom_k, [10 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str16, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="36" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1088" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
+<![CDATA[
+:31  call void (...)* @_ssdm_op_SpecInterface(i32 %custom_Tr, [10 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str16, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="37" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1089" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
+<![CDATA[
+:32  call void (...)* @_ssdm_op_SpecInterface(i32 %custom_Tc, [10 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str16, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="38" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1090" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="1" op_3_bw="0" op_4_bw="32" op_5_bw="32" op_6_bw="0" op_7_bw="32" op_8_bw="32" op_9_bw="0" op_10_bw="0" op_11_bw="0" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="0" op_17_bw="0">
+<![CDATA[
+:33  call void (...)* @_ssdm_op_SpecInterface(i64* %input_dma_W_V_data, i1* %input_dma_W_V_last, [5 x i8]* @p_str17, i32 1, i32 1, [5 x i8]* @p_str18, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="39" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1091" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="1" op_3_bw="0" op_4_bw="32" op_5_bw="32" op_6_bw="0" op_7_bw="32" op_8_bw="32" op_9_bw="0" op_10_bw="0" op_11_bw="0" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="0" op_17_bw="0">
+<![CDATA[
+:34  call void (...)* @_ssdm_op_SpecInterface(i64* %input_dma_I_V_data, i1* %input_dma_I_V_last, [5 x i8]* @p_str17, i32 1, i32 1, [5 x i8]* @p_str18, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="40" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1092" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="1" op_3_bw="0" op_4_bw="32" op_5_bw="32" op_6_bw="0" op_7_bw="32" op_8_bw="32" op_9_bw="0" op_10_bw="0" op_11_bw="0" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="0" op_17_bw="0">
+<![CDATA[
+:35  call void (...)* @_ssdm_op_SpecInterface(float* %input_dma_B_V_data, i1* %input_dma_B_V_last, [5 x i8]* @p_str17, i32 1, i32 1, [5 x i8]* @p_str18, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="41" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1093" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="1" op_3_bw="0" op_4_bw="32" op_5_bw="32" op_6_bw="0" op_7_bw="32" op_8_bw="32" op_9_bw="0" op_10_bw="0" op_11_bw="0" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="0" op_17_bw="0">
+<![CDATA[
+:36  call void (...)* @_ssdm_op_SpecInterface(i64* %output_dma_O_V_data, i1* %output_dma_O_V_last, [5 x i8]* @p_str17, i32 1, i32 1, [5 x i8]* @p_str18, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="42" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1094" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="32" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32" op_27_bw="32" op_28_bw="32" op_29_bw="32" op_30_bw="32" op_31_bw="32" op_32_bw="32" op_33_bw="32" op_34_bw="32" op_35_bw="32" op_36_bw="32" op_37_bw="32" op_38_bw="32" op_39_bw="32" op_40_bw="32" op_41_bw="32" op_42_bw="32" op_43_bw="32" op_44_bw="32" op_45_bw="32" op_46_bw="32" op_47_bw="32" op_48_bw="32" op_49_bw="32" op_50_bw="32" op_51_bw="32" op_52_bw="32" op_53_bw="32" op_54_bw="32" op_55_bw="32" op_56_bw="32" op_57_bw="32" op_58_bw="32" op_59_bw="32" op_60_bw="32" op_61_bw="32" op_62_bw="32" op_63_bw="32" op_64_bw="32" op_65_bw="32" op_66_bw="32" op_67_bw="32" op_68_bw="32" op_69_bw="32" op_70_bw="32" op_71_bw="32" op_72_bw="32" op_73_bw="32" op_74_bw="32" op_75_bw="32" op_76_bw="32" op_77_bw="32" op_78_bw="32" op_79_bw="32" op_80_bw="32" op_81_bw="32" op_82_bw="32" op_83_bw="32" op_84_bw="32" op_85_bw="32" op_86_bw="32" op_87_bw="32" op_88_bw="32" op_89_bw="32" op_90_bw="32" op_91_bw="32" op_92_bw="32" op_93_bw="32" op_94_bw="32" op_95_bw="32" op_96_bw="32" op_97_bw="32" op_98_bw="32" op_99_bw="32" op_100_bw="32" op_101_bw="32" op_102_bw="32" op_103_bw="32" op_104_bw="32" op_105_bw="32" op_106_bw="32" op_107_bw="32" op_108_bw="32" op_109_bw="32" op_110_bw="32" op_111_bw="32" op_112_bw="32" op_113_bw="32" op_114_bw="32" op_115_bw="32" op_116_bw="32" op_117_bw="32" op_118_bw="32" op_119_bw="32" op_120_bw="32" op_121_bw="32" op_122_bw="32" op_123_bw="32" op_124_bw="32" op_125_bw="32" op_126_bw="32" op_127_bw="32" op_128_bw="32" op_129_bw="32" op_130_bw="32" op_131_bw="32" op_132_bw="32" op_133_bw="32" op_134_bw="32" op_135_bw="32" op_136_bw="32" op_137_bw="32" op_138_bw="32" op_139_bw="32" op_140_bw="32" op_141_bw="32" op_142_bw="32" op_143_bw="32" op_144_bw="32" op_145_bw="32" op_146_bw="32" op_147_bw="32" op_148_bw="32" op_149_bw="32" op_150_bw="32" op_151_bw="32" op_152_bw="32" op_153_bw="32" op_154_bw="32" op_155_bw="32" op_156_bw="32" op_157_bw="32" op_158_bw="32" op_159_bw="32" op_160_bw="32" op_161_bw="32" op_162_bw="32" op_163_bw="32" op_164_bw="32" op_165_bw="32" op_166_bw="32" op_167_bw="32" op_168_bw="32" op_169_bw="32" op_170_bw="32" op_171_bw="32" op_172_bw="32" op_173_bw="32" op_174_bw="32" op_175_bw="32" op_176_bw="32" op_177_bw="32" op_178_bw="32" op_179_bw="32" op_180_bw="32" op_181_bw="32" op_182_bw="32" op_183_bw="32" op_184_bw="32" op_185_bw="32" op_186_bw="32" op_187_bw="32" op_188_bw="32" op_189_bw="32" op_190_bw="32" op_191_bw="32" op_192_bw="32" op_193_bw="32" op_194_bw="32" op_195_bw="32" op_196_bw="32" op_197_bw="32" op_198_bw="32" op_199_bw="32" op_200_bw="32" op_201_bw="32" op_202_bw="32" op_203_bw="32" op_204_bw="32" op_205_bw="32" op_206_bw="32" op_207_bw="32" op_208_bw="32" op_209_bw="32" op_210_bw="32" op_211_bw="32" op_212_bw="32" op_213_bw="32" op_214_bw="32" op_215_bw="32" op_216_bw="32" op_217_bw="32" op_218_bw="32" op_219_bw="32" op_220_bw="32" op_221_bw="32" op_222_bw="32" op_223_bw="32" op_224_bw="32" op_225_bw="32" op_226_bw="32" op_227_bw="32" op_228_bw="32" op_229_bw="32" op_230_bw="32" op_231_bw="32" op_232_bw="32" op_233_bw="32" op_234_bw="32" op_235_bw="32" op_236_bw="32" op_237_bw="32" op_238_bw="32" op_239_bw="32" op_240_bw="32" op_241_bw="32" op_242_bw="32" op_243_bw="32" op_244_bw="32" op_245_bw="32" op_246_bw="32" op_247_bw="32" op_248_bw="32" op_249_bw="32" op_250_bw="32" op_251_bw="32" op_252_bw="32" op_253_bw="32" op_254_bw="32" op_255_bw="32" op_256_bw="32" op_257_bw="32" op_258_bw="32" op_259_bw="32" op_260_bw="32" op_261_bw="32" op_262_bw="32" op_263_bw="32" op_264_bw="32" op_265_bw="32" op_266_bw="32" op_267_bw="32" op_268_bw="32" op_269_bw="32" op_270_bw="32" op_271_bw="32" op_272_bw="32" op_273_bw="32" op_274_bw="32" op_275_bw="32" op_276_bw="32" op_277_bw="32" op_278_bw="32" op_279_bw="32" op_280_bw="32" op_281_bw="32" op_282_bw="32" op_283_bw="32" op_284_bw="32" op_285_bw="32" op_286_bw="32" op_287_bw="32" op_288_bw="32" op_289_bw="32" op_290_bw="32" op_291_bw="32" op_292_bw="32" op_293_bw="32" op_294_bw="32" op_295_bw="32" op_296_bw="32" op_297_bw="32" op_298_bw="32" op_299_bw="32" op_300_bw="32" op_301_bw="32" op_302_bw="32" op_303_bw="32" op_304_bw="32" op_305_bw="32" op_306_bw="32" op_307_bw="32" op_308_bw="32" op_309_bw="32" op_310_bw="32" op_311_bw="32" op_312_bw="32" op_313_bw="32" op_314_bw="32" op_315_bw="32" op_316_bw="32" op_317_bw="32" op_318_bw="32" op_319_bw="32" op_320_bw="32" op_321_bw="32" op_322_bw="32" op_323_bw="32" op_324_bw="32" op_325_bw="32" op_326_bw="32" op_327_bw="32" op_328_bw="32" op_329_bw="32" op_330_bw="32" op_331_bw="32" op_332_bw="32" op_333_bw="32" op_334_bw="32" op_335_bw="32" op_336_bw="32" op_337_bw="32" op_338_bw="32" op_339_bw="32" op_340_bw="32" op_341_bw="32" op_342_bw="32" op_343_bw="32" op_344_bw="32" op_345_bw="32" op_346_bw="32" op_347_bw="32" op_348_bw="32" op_349_bw="32" op_350_bw="32" op_351_bw="32" op_352_bw="32" op_353_bw="32" op_354_bw="32" op_355_bw="32" op_356_bw="32" op_357_bw="32" op_358_bw="32" op_359_bw="32" op_360_bw="32" op_361_bw="32" op_362_bw="32" op_363_bw="32" op_364_bw="32" op_365_bw="32" op_366_bw="32" op_367_bw="32" op_368_bw="32" op_369_bw="32" op_370_bw="32" op_371_bw="32" op_372_bw="32" op_373_bw="32" op_374_bw="32" op_375_bw="32" op_376_bw="32" op_377_bw="32" op_378_bw="32" op_379_bw="32" op_380_bw="32" op_381_bw="32" op_382_bw="32" op_383_bw="32" op_384_bw="32" op_385_bw="32" op_386_bw="32" op_387_bw="32" op_388_bw="32" op_389_bw="32" op_390_bw="32" op_391_bw="32" op_392_bw="32" op_393_bw="32" op_394_bw="32" op_395_bw="32" op_396_bw="32" op_397_bw="32" op_398_bw="32" op_399_bw="32" op_400_bw="32" op_401_bw="32" op_402_bw="32" op_403_bw="32" op_404_bw="32" op_405_bw="32" op_406_bw="32" op_407_bw="32" op_408_bw="32" op_409_bw="32" op_410_bw="32" op_411_bw="32" op_412_bw="32" op_413_bw="32" op_414_bw="32" op_415_bw="32" op_416_bw="32" op_417_bw="32" op_418_bw="32" op_419_bw="32" op_420_bw="32" op_421_bw="32" op_422_bw="32" op_423_bw="32" op_424_bw="32" op_425_bw="32" op_426_bw="32" op_427_bw="32" op_428_bw="32" op_429_bw="32" op_430_bw="32" op_431_bw="32" op_432_bw="32" op_433_bw="32" op_434_bw="32" op_435_bw="32" op_436_bw="32" op_437_bw="32" op_438_bw="32" op_439_bw="32" op_440_bw="32" op_441_bw="32" op_442_bw="32" op_443_bw="32" op_444_bw="32" op_445_bw="32" op_446_bw="32" op_447_bw="32" op_448_bw="32" op_449_bw="0" op_450_bw="0" op_451_bw="0" op_452_bw="32" op_453_bw="0" op_454_bw="0" op_455_bw="0" op_456_bw="0" op_457_bw="0">
+<![CDATA[
+:37  call void (...)* @_ssdm_op_SpecMemCore([121 x float]* @WEIGHT1_0_0, [121 x float]* @WEIGHT1_0_1, [121 x float]* @WEIGHT1_0_2, [121 x float]* @WEIGHT1_0_3, [121 x float]* @WEIGHT1_0_4, [121 x float]* @WEIGHT1_0_5, [121 x float]* @WEIGHT1_0_6, [121 x float]* @WEIGHT1_1_0, [121 x float]* @WEIGHT1_1_1, [121 x float]* @WEIGHT1_1_2, [121 x float]* @WEIGHT1_1_3, [121 x float]* @WEIGHT1_1_4, [121 x float]* @WEIGHT1_1_5, [121 x float]* @WEIGHT1_1_6, [121 x float]* @WEIGHT1_2_0, [121 x float]* @WEIGHT1_2_1, [121 x float]* @WEIGHT1_2_2, [121 x float]* @WEIGHT1_2_3, [121 x float]* @WEIGHT1_2_4, [121 x float]* @WEIGHT1_2_5, [121 x float]* @WEIGHT1_2_6, [121 x float]* @WEIGHT1_3_0, [121 x float]* @WEIGHT1_3_1, [121 x float]* @WEIGHT1_3_2, [121 x float]* @WEIGHT1_3_3, [121 x float]* @WEIGHT1_3_4, [121 x float]* @WEIGHT1_3_5, [121 x float]* @WEIGHT1_3_6, [121 x float]* @WEIGHT1_4_0, [121 x float]* @WEIGHT1_4_1, [121 x float]* @WEIGHT1_4_2, [121 x float]* @WEIGHT1_4_3, [121 x float]* @WEIGHT1_4_4, [121 x float]* @WEIGHT1_4_5, [121 x float]* @WEIGHT1_4_6, [121 x float]* @WEIGHT1_5_0, [121 x float]* @WEIGHT1_5_1, [121 x float]* @WEIGHT1_5_2, [121 x float]* @WEIGHT1_5_3, [121 x float]* @WEIGHT1_5_4, [121 x float]* @WEIGHT1_5_5, [121 x float]* @WEIGHT1_5_6, [121 x float]* @WEIGHT1_6_0, [121 x float]* @WEIGHT1_6_1, [121 x float]* @WEIGHT1_6_2, [121 x float]* @WEIGHT1_6_3, [121 x float]* @WEIGHT1_6_4, [121 x float]* @WEIGHT1_6_5, [121 x float]* @WEIGHT1_6_6, [121 x float]* @WEIGHT1_7_0, [121 x float]* @WEIGHT1_7_1, [121 x float]* @WEIGHT1_7_2, [121 x float]* @WEIGHT1_7_3, [121 x float]* @WEIGHT1_7_4, [121 x float]* @WEIGHT1_7_5, [121 x float]* @WEIGHT1_7_6, [121 x float]* @WEIGHT1_8_0, [121 x float]* @WEIGHT1_8_1, [121 x float]* @WEIGHT1_8_2, [121 x float]* @WEIGHT1_8_3, [121 x float]* @WEIGHT1_8_4, [121 x float]* @WEIGHT1_8_5, [121 x float]* @WEIGHT1_8_6, [121 x float]* @WEIGHT1_9_0, [121 x float]* @WEIGHT1_9_1, [121 x float]* @WEIGHT1_9_2, [121 x float]* @WEIGHT1_9_3, [121 x float]* @WEIGHT1_9_4, [121 x float]* @WEIGHT1_9_5, [121 x float]* @WEIGHT1_9_6, [121 x float]* @WEIGHT1_10_0, [121 x float]* @WEIGHT1_10_1, [121 x float]* @WEIGHT1_10_2, [121 x float]* @WEIGHT1_10_3, [121 x float]* @WEIGHT1_10_4, [121 x float]* @WEIGHT1_10_5, [121 x float]* @WEIGHT1_10_6, [121 x float]* @WEIGHT1_11_0, [121 x float]* @WEIGHT1_11_1, [121 x float]* @WEIGHT1_11_2, [121 x float]* @WEIGHT1_11_3, [121 x float]* @WEIGHT1_11_4, [121 x float]* @WEIGHT1_11_5, [121 x float]* @WEIGHT1_11_6, [121 x float]* @WEIGHT1_12_0, [121 x float]* @WEIGHT1_12_1, [121 x float]* @WEIGHT1_12_2, [121 x float]* @WEIGHT1_12_3, [121 x float]* @WEIGHT1_12_4, [121 x float]* @WEIGHT1_12_5, [121 x float]* @WEIGHT1_12_6, [121 x float]* @WEIGHT1_13_0, [121 x float]* @WEIGHT1_13_1, [121 x float]* @WEIGHT1_13_2, [121 x float]* @WEIGHT1_13_3, [121 x float]* @WEIGHT1_13_4, [121 x float]* @WEIGHT1_13_5, [121 x float]* @WEIGHT1_13_6, [121 x float]* @WEIGHT1_14_0, [121 x float]* @WEIGHT1_14_1, [121 x float]* @WEIGHT1_14_2, [121 x float]* @WEIGHT1_14_3, [121 x float]* @WEIGHT1_14_4, [121 x float]* @WEIGHT1_14_5, [121 x float]* @WEIGHT1_14_6, [121 x float]* @WEIGHT1_15_0, [121 x float]* @WEIGHT1_15_1, [121 x float]* @WEIGHT1_15_2, [121 x float]* @WEIGHT1_15_3, [121 x float]* @WEIGHT1_15_4, [121 x float]* @WEIGHT1_15_5, [121 x float]* @WEIGHT1_15_6, [121 x float]* @WEIGHT1_16_0, [121 x float]* @WEIGHT1_16_1, [121 x float]* @WEIGHT1_16_2, [121 x float]* @WEIGHT1_16_3, [121 x float]* @WEIGHT1_16_4, [121 x float]* @WEIGHT1_16_5, [121 x float]* @WEIGHT1_16_6, [121 x float]* @WEIGHT1_17_0, [121 x float]* @WEIGHT1_17_1, [121 x float]* @WEIGHT1_17_2, [121 x float]* @WEIGHT1_17_3, [121 x float]* @WEIGHT1_17_4, [121 x float]* @WEIGHT1_17_5, [121 x float]* @WEIGHT1_17_6, [121 x float]* @WEIGHT1_18_0, [121 x float]* @WEIGHT1_18_1, [121 x float]* @WEIGHT1_18_2, [121 x float]* @WEIGHT1_18_3, [121 x float]* @WEIGHT1_18_4, [121 x float]* @WEIGHT1_18_5, [121 x float]* @WEIGHT1_18_6, [121 x float]* @WEIGHT1_19_0, [121 x float]* @WEIGHT1_19_1, [121 x float]* @WEIGHT1_19_2, [121 x float]* @WEIGHT1_19_3, [121 x float]* @WEIGHT1_19_4, [121 x float]* @WEIGHT1_19_5, [121 x float]* @WEIGHT1_19_6, [121 x float]* @WEIGHT1_20_0, [121 x float]* @WEIGHT1_20_1, [121 x float]* @WEIGHT1_20_2, [121 x float]* @WEIGHT1_20_3, [121 x float]* @WEIGHT1_20_4, [121 x float]* @WEIGHT1_20_5, [121 x float]* @WEIGHT1_20_6, [121 x float]* @WEIGHT1_21_0, [121 x float]* @WEIGHT1_21_1, [121 x float]* @WEIGHT1_21_2, [121 x float]* @WEIGHT1_21_3, [121 x float]* @WEIGHT1_21_4, [121 x float]* @WEIGHT1_21_5, [121 x float]* @WEIGHT1_21_6, [121 x float]* @WEIGHT1_22_0, [121 x float]* @WEIGHT1_22_1, [121 x float]* @WEIGHT1_22_2, [121 x float]* @WEIGHT1_22_3, [121 x float]* @WEIGHT1_22_4, [121 x float]* @WEIGHT1_22_5, [121 x float]* @WEIGHT1_22_6, [121 x float]* @WEIGHT1_23_0, [121 x float]* @WEIGHT1_23_1, [121 x float]* @WEIGHT1_23_2, [121 x float]* @WEIGHT1_23_3, [121 x float]* @WEIGHT1_23_4, [121 x float]* @WEIGHT1_23_5, [121 x float]* @WEIGHT1_23_6, [121 x float]* @WEIGHT1_24_0, [121 x float]* @WEIGHT1_24_1, [121 x float]* @WEIGHT1_24_2, [121 x float]* @WEIGHT1_24_3, [121 x float]* @WEIGHT1_24_4, [121 x float]* @WEIGHT1_24_5, [121 x float]* @WEIGHT1_24_6, [121 x float]* @WEIGHT1_25_0, [121 x float]* @WEIGHT1_25_1, [121 x float]* @WEIGHT1_25_2, [121 x float]* @WEIGHT1_25_3, [121 x float]* @WEIGHT1_25_4, [121 x float]* @WEIGHT1_25_5, [121 x float]* @WEIGHT1_25_6, [121 x float]* @WEIGHT1_26_0, [121 x float]* @WEIGHT1_26_1, [121 x float]* @WEIGHT1_26_2, [121 x float]* @WEIGHT1_26_3, [121 x float]* @WEIGHT1_26_4, [121 x float]* @WEIGHT1_26_5, [121 x float]* @WEIGHT1_26_6, [121 x float]* @WEIGHT1_27_0, [121 x float]* @WEIGHT1_27_1, [121 x float]* @WEIGHT1_27_2, [121 x float]* @WEIGHT1_27_3, [121 x float]* @WEIGHT1_27_4, [121 x float]* @WEIGHT1_27_5, [121 x float]* @WEIGHT1_27_6, [121 x float]* @WEIGHT1_28_0, [121 x float]* @WEIGHT1_28_1, [121 x float]* @WEIGHT1_28_2, [121 x float]* @WEIGHT1_28_3, [121 x float]* @WEIGHT1_28_4, [121 x float]* @WEIGHT1_28_5, [121 x float]* @WEIGHT1_28_6, [121 x float]* @WEIGHT1_29_0, [121 x float]* @WEIGHT1_29_1, [121 x float]* @WEIGHT1_29_2, [121 x float]* @WEIGHT1_29_3, [121 x float]* @WEIGHT1_29_4, [121 x float]* @WEIGHT1_29_5, [121 x float]* @WEIGHT1_29_6, [121 x float]* @WEIGHT1_30_0, [121 x float]* @WEIGHT1_30_1, [121 x float]* @WEIGHT1_30_2, [121 x float]* @WEIGHT1_30_3, [121 x float]* @WEIGHT1_30_4, [121 x float]* @WEIGHT1_30_5, [121 x float]* @WEIGHT1_30_6, [121 x float]* @WEIGHT1_31_0, [121 x float]* @WEIGHT1_31_1, [121 x float]* @WEIGHT1_31_2, [121 x float]* @WEIGHT1_31_3, [121 x float]* @WEIGHT1_31_4, [121 x float]* @WEIGHT1_31_5, [121 x float]* @WEIGHT1_31_6, [121 x float]* @WEIGHT1_32_0, [121 x float]* @WEIGHT1_32_1, [121 x float]* @WEIGHT1_32_2, [121 x float]* @WEIGHT1_32_3, [121 x float]* @WEIGHT1_32_4, [121 x float]* @WEIGHT1_32_5, [121 x float]* @WEIGHT1_32_6, [121 x float]* @WEIGHT1_33_0, [121 x float]* @WEIGHT1_33_1, [121 x float]* @WEIGHT1_33_2, [121 x float]* @WEIGHT1_33_3, [121 x float]* @WEIGHT1_33_4, [121 x float]* @WEIGHT1_33_5, [121 x float]* @WEIGHT1_33_6, [121 x float]* @WEIGHT1_34_0, [121 x float]* @WEIGHT1_34_1, [121 x float]* @WEIGHT1_34_2, [121 x float]* @WEIGHT1_34_3, [121 x float]* @WEIGHT1_34_4, [121 x float]* @WEIGHT1_34_5, [121 x float]* @WEIGHT1_34_6, [121 x float]* @WEIGHT1_35_0, [121 x float]* @WEIGHT1_35_1, [121 x float]* @WEIGHT1_35_2, [121 x float]* @WEIGHT1_35_3, [121 x float]* @WEIGHT1_35_4, [121 x float]* @WEIGHT1_35_5, [121 x float]* @WEIGHT1_35_6, [121 x float]* @WEIGHT1_36_0, [121 x float]* @WEIGHT1_36_1, [121 x float]* @WEIGHT1_36_2, [121 x float]* @WEIGHT1_36_3, [121 x float]* @WEIGHT1_36_4, [121 x float]* @WEIGHT1_36_5, [121 x float]* @WEIGHT1_36_6, [121 x float]* @WEIGHT1_37_0, [121 x float]* @WEIGHT1_37_1, [121 x float]* @WEIGHT1_37_2, [121 x float]* @WEIGHT1_37_3, [121 x float]* @WEIGHT1_37_4, [121 x float]* @WEIGHT1_37_5, [121 x float]* @WEIGHT1_37_6, [121 x float]* @WEIGHT1_38_0, [121 x float]* @WEIGHT1_38_1, [121 x float]* @WEIGHT1_38_2, [121 x float]* @WEIGHT1_38_3, [121 x float]* @WEIGHT1_38_4, [121 x float]* @WEIGHT1_38_5, [121 x float]* @WEIGHT1_38_6, [121 x float]* @WEIGHT1_39_0, [121 x float]* @WEIGHT1_39_1, [121 x float]* @WEIGHT1_39_2, [121 x float]* @WEIGHT1_39_3, [121 x float]* @WEIGHT1_39_4, [121 x float]* @WEIGHT1_39_5, [121 x float]* @WEIGHT1_39_6, [121 x float]* @WEIGHT1_40_0, [121 x float]* @WEIGHT1_40_1, [121 x float]* @WEIGHT1_40_2, [121 x float]* @WEIGHT1_40_3, [121 x float]* @WEIGHT1_40_4, [121 x float]* @WEIGHT1_40_5, [121 x float]* @WEIGHT1_40_6, [121 x float]* @WEIGHT1_41_0, [121 x float]* @WEIGHT1_41_1, [121 x float]* @WEIGHT1_41_2, [121 x float]* @WEIGHT1_41_3, [121 x float]* @WEIGHT1_41_4, [121 x float]* @WEIGHT1_41_5, [121 x float]* @WEIGHT1_41_6, [121 x float]* @WEIGHT1_42_0, [121 x float]* @WEIGHT1_42_1, [121 x float]* @WEIGHT1_42_2, [121 x float]* @WEIGHT1_42_3, [121 x float]* @WEIGHT1_42_4, [121 x float]* @WEIGHT1_42_5, [121 x float]* @WEIGHT1_42_6, [121 x float]* @WEIGHT1_43_0, [121 x float]* @WEIGHT1_43_1, [121 x float]* @WEIGHT1_43_2, [121 x float]* @WEIGHT1_43_3, [121 x float]* @WEIGHT1_43_4, [121 x float]* @WEIGHT1_43_5, [121 x float]* @WEIGHT1_43_6, [121 x float]* @WEIGHT1_44_0, [121 x float]* @WEIGHT1_44_1, [121 x float]* @WEIGHT1_44_2, [121 x float]* @WEIGHT1_44_3, [121 x float]* @WEIGHT1_44_4, [121 x float]* @WEIGHT1_44_5, [121 x float]* @WEIGHT1_44_6, [121 x float]* @WEIGHT1_45_0, [121 x float]* @WEIGHT1_45_1, [121 x float]* @WEIGHT1_45_2, [121 x float]* @WEIGHT1_45_3, [121 x float]* @WEIGHT1_45_4, [121 x float]* @WEIGHT1_45_5, [121 x float]* @WEIGHT1_45_6, [121 x float]* @WEIGHT1_46_0, [121 x float]* @WEIGHT1_46_1, [121 x float]* @WEIGHT1_46_2, [121 x float]* @WEIGHT1_46_3, [121 x float]* @WEIGHT1_46_4, [121 x float]* @WEIGHT1_46_5, [121 x float]* @WEIGHT1_46_6, [121 x float]* @WEIGHT1_47_0, [121 x float]* @WEIGHT1_47_1, [121 x float]* @WEIGHT1_47_2, [121 x float]* @WEIGHT1_47_3, [121 x float]* @WEIGHT1_47_4, [121 x float]* @WEIGHT1_47_5, [121 x float]* @WEIGHT1_47_6, [121 x float]* @WEIGHT1_48_0, [121 x float]* @WEIGHT1_48_1, [121 x float]* @WEIGHT1_48_2, [121 x float]* @WEIGHT1_48_3, [121 x float]* @WEIGHT1_48_4, [121 x float]* @WEIGHT1_48_5, [121 x float]* @WEIGHT1_48_6, [121 x float]* @WEIGHT1_49_0, [121 x float]* @WEIGHT1_49_1, [121 x float]* @WEIGHT1_49_2, [121 x float]* @WEIGHT1_49_3, [121 x float]* @WEIGHT1_49_4, [121 x float]* @WEIGHT1_49_5, [121 x float]* @WEIGHT1_49_6, [121 x float]* @WEIGHT1_50_0, [121 x float]* @WEIGHT1_50_1, [121 x float]* @WEIGHT1_50_2, [121 x float]* @WEIGHT1_50_3, [121 x float]* @WEIGHT1_50_4, [121 x float]* @WEIGHT1_50_5, [121 x float]* @WEIGHT1_50_6, [121 x float]* @WEIGHT1_51_0, [121 x float]* @WEIGHT1_51_1, [121 x float]* @WEIGHT1_51_2, [121 x float]* @WEIGHT1_51_3, [121 x float]* @WEIGHT1_51_4, [121 x float]* @WEIGHT1_51_5, [121 x float]* @WEIGHT1_51_6, [121 x float]* @WEIGHT1_52_0, [121 x float]* @WEIGHT1_52_1, [121 x float]* @WEIGHT1_52_2, [121 x float]* @WEIGHT1_52_3, [121 x float]* @WEIGHT1_52_4, [121 x float]* @WEIGHT1_52_5, [121 x float]* @WEIGHT1_52_6, [121 x float]* @WEIGHT1_53_0, [121 x float]* @WEIGHT1_53_1, [121 x float]* @WEIGHT1_53_2, [121 x float]* @WEIGHT1_53_3, [121 x float]* @WEIGHT1_53_4, [121 x float]* @WEIGHT1_53_5, [121 x float]* @WEIGHT1_53_6, [121 x float]* @WEIGHT1_54_0, [121 x float]* @WEIGHT1_54_1, [121 x float]* @WEIGHT1_54_2, [121 x float]* @WEIGHT1_54_3, [121 x float]* @WEIGHT1_54_4, [121 x float]* @WEIGHT1_54_5, [121 x float]* @WEIGHT1_54_6, [121 x float]* @WEIGHT1_55_0, [121 x float]* @WEIGHT1_55_1, [121 x float]* @WEIGHT1_55_2, [121 x float]* @WEIGHT1_55_3, [121 x float]* @WEIGHT1_55_4, [121 x float]* @WEIGHT1_55_5, [121 x float]* @WEIGHT1_55_6, [121 x float]* @WEIGHT1_56_0, [121 x float]* @WEIGHT1_56_1, [121 x float]* @WEIGHT1_56_2, [121 x float]* @WEIGHT1_56_3, [121 x float]* @WEIGHT1_56_4, [121 x float]* @WEIGHT1_56_5, [121 x float]* @WEIGHT1_56_6, [121 x float]* @WEIGHT1_57_0, [121 x float]* @WEIGHT1_57_1, [121 x float]* @WEIGHT1_57_2, [121 x float]* @WEIGHT1_57_3, [121 x float]* @WEIGHT1_57_4, [121 x float]* @WEIGHT1_57_5, [121 x float]* @WEIGHT1_57_6, [121 x float]* @WEIGHT1_58_0, [121 x float]* @WEIGHT1_58_1, [121 x float]* @WEIGHT1_58_2, [121 x float]* @WEIGHT1_58_3, [121 x float]* @WEIGHT1_58_4, [121 x float]* @WEIGHT1_58_5, [121 x float]* @WEIGHT1_58_6, [121 x float]* @WEIGHT1_59_0, [121 x float]* @WEIGHT1_59_1, [121 x float]* @WEIGHT1_59_2, [121 x float]* @WEIGHT1_59_3, [121 x float]* @WEIGHT1_59_4, [121 x float]* @WEIGHT1_59_5, [121 x float]* @WEIGHT1_59_6, [121 x float]* @WEIGHT1_60_0, [121 x float]* @WEIGHT1_60_1, [121 x float]* @WEIGHT1_60_2, [121 x float]* @WEIGHT1_60_3, [121 x float]* @WEIGHT1_60_4, [121 x float]* @WEIGHT1_60_5, [121 x float]* @WEIGHT1_60_6, [121 x float]* @WEIGHT1_61_0, [121 x float]* @WEIGHT1_61_1, [121 x float]* @WEIGHT1_61_2, [121 x float]* @WEIGHT1_61_3, [121 x float]* @WEIGHT1_61_4, [121 x float]* @WEIGHT1_61_5, [121 x float]* @WEIGHT1_61_6, [121 x float]* @WEIGHT1_62_0, [121 x float]* @WEIGHT1_62_1, [121 x float]* @WEIGHT1_62_2, [121 x float]* @WEIGHT1_62_3, [121 x float]* @WEIGHT1_62_4, [121 x float]* @WEIGHT1_62_5, [121 x float]* @WEIGHT1_62_6, [121 x float]* @WEIGHT1_63_0, [121 x float]* @WEIGHT1_63_1, [121 x float]* @WEIGHT1_63_2, [121 x float]* @WEIGHT1_63_3, [121 x float]* @WEIGHT1_63_4, [121 x float]* @WEIGHT1_63_5, [121 x float]* @WEIGHT1_63_6, [1 x i8]* @p_str1, [12 x i8]* @p_str19, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="43" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1095" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="32" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32" op_27_bw="32" op_28_bw="32" op_29_bw="32" op_30_bw="32" op_31_bw="32" op_32_bw="32" op_33_bw="32" op_34_bw="32" op_35_bw="32" op_36_bw="32" op_37_bw="32" op_38_bw="32" op_39_bw="32" op_40_bw="32" op_41_bw="32" op_42_bw="32" op_43_bw="32" op_44_bw="32" op_45_bw="32" op_46_bw="32" op_47_bw="32" op_48_bw="32" op_49_bw="32" op_50_bw="32" op_51_bw="32" op_52_bw="32" op_53_bw="32" op_54_bw="32" op_55_bw="32" op_56_bw="32" op_57_bw="32" op_58_bw="32" op_59_bw="32" op_60_bw="32" op_61_bw="32" op_62_bw="32" op_63_bw="32" op_64_bw="32" op_65_bw="32" op_66_bw="32" op_67_bw="32" op_68_bw="32" op_69_bw="32" op_70_bw="32" op_71_bw="32" op_72_bw="32" op_73_bw="32" op_74_bw="32" op_75_bw="32" op_76_bw="32" op_77_bw="32" op_78_bw="32" op_79_bw="32" op_80_bw="32" op_81_bw="32" op_82_bw="32" op_83_bw="32" op_84_bw="32" op_85_bw="32" op_86_bw="32" op_87_bw="32" op_88_bw="32" op_89_bw="32" op_90_bw="32" op_91_bw="32" op_92_bw="32" op_93_bw="32" op_94_bw="32" op_95_bw="32" op_96_bw="32" op_97_bw="32" op_98_bw="32" op_99_bw="32" op_100_bw="32" op_101_bw="32" op_102_bw="32" op_103_bw="32" op_104_bw="32" op_105_bw="32" op_106_bw="32" op_107_bw="32" op_108_bw="32" op_109_bw="32" op_110_bw="32" op_111_bw="32" op_112_bw="32" op_113_bw="32" op_114_bw="32" op_115_bw="32" op_116_bw="32" op_117_bw="32" op_118_bw="32" op_119_bw="32" op_120_bw="32" op_121_bw="32" op_122_bw="32" op_123_bw="32" op_124_bw="32" op_125_bw="32" op_126_bw="32" op_127_bw="32" op_128_bw="32" op_129_bw="32" op_130_bw="32" op_131_bw="32" op_132_bw="32" op_133_bw="32" op_134_bw="32" op_135_bw="32" op_136_bw="32" op_137_bw="32" op_138_bw="32" op_139_bw="32" op_140_bw="32" op_141_bw="32" op_142_bw="32" op_143_bw="32" op_144_bw="32" op_145_bw="32" op_146_bw="32" op_147_bw="32" op_148_bw="32" op_149_bw="32" op_150_bw="32" op_151_bw="32" op_152_bw="32" op_153_bw="32" op_154_bw="32" op_155_bw="32" op_156_bw="32" op_157_bw="32" op_158_bw="32" op_159_bw="32" op_160_bw="32" op_161_bw="32" op_162_bw="32" op_163_bw="32" op_164_bw="32" op_165_bw="32" op_166_bw="32" op_167_bw="32" op_168_bw="32" op_169_bw="32" op_170_bw="32" op_171_bw="32" op_172_bw="32" op_173_bw="32" op_174_bw="32" op_175_bw="32" op_176_bw="32" op_177_bw="32" op_178_bw="32" op_179_bw="32" op_180_bw="32" op_181_bw="32" op_182_bw="32" op_183_bw="32" op_184_bw="32" op_185_bw="32" op_186_bw="32" op_187_bw="32" op_188_bw="32" op_189_bw="32" op_190_bw="32" op_191_bw="32" op_192_bw="32" op_193_bw="32" op_194_bw="32" op_195_bw="32" op_196_bw="32" op_197_bw="32" op_198_bw="32" op_199_bw="32" op_200_bw="32" op_201_bw="32" op_202_bw="32" op_203_bw="32" op_204_bw="32" op_205_bw="32" op_206_bw="32" op_207_bw="32" op_208_bw="32" op_209_bw="32" op_210_bw="32" op_211_bw="32" op_212_bw="32" op_213_bw="32" op_214_bw="32" op_215_bw="32" op_216_bw="32" op_217_bw="32" op_218_bw="32" op_219_bw="32" op_220_bw="32" op_221_bw="32" op_222_bw="32" op_223_bw="32" op_224_bw="32" op_225_bw="32" op_226_bw="32" op_227_bw="32" op_228_bw="32" op_229_bw="32" op_230_bw="32" op_231_bw="32" op_232_bw="32" op_233_bw="32" op_234_bw="32" op_235_bw="32" op_236_bw="32" op_237_bw="32" op_238_bw="32" op_239_bw="32" op_240_bw="32" op_241_bw="32" op_242_bw="32" op_243_bw="32" op_244_bw="32" op_245_bw="32" op_246_bw="32" op_247_bw="32" op_248_bw="32" op_249_bw="32" op_250_bw="32" op_251_bw="32" op_252_bw="32" op_253_bw="32" op_254_bw="32" op_255_bw="32" op_256_bw="32" op_257_bw="32" op_258_bw="32" op_259_bw="32" op_260_bw="32" op_261_bw="32" op_262_bw="32" op_263_bw="32" op_264_bw="32" op_265_bw="32" op_266_bw="32" op_267_bw="32" op_268_bw="32" op_269_bw="32" op_270_bw="32" op_271_bw="32" op_272_bw="32" op_273_bw="32" op_274_bw="32" op_275_bw="32" op_276_bw="32" op_277_bw="32" op_278_bw="32" op_279_bw="32" op_280_bw="32" op_281_bw="32" op_282_bw="32" op_283_bw="32" op_284_bw="32" op_285_bw="32" op_286_bw="32" op_287_bw="32" op_288_bw="32" op_289_bw="32" op_290_bw="32" op_291_bw="32" op_292_bw="32" op_293_bw="32" op_294_bw="32" op_295_bw="32" op_296_bw="32" op_297_bw="32" op_298_bw="32" op_299_bw="32" op_300_bw="32" op_301_bw="32" op_302_bw="32" op_303_bw="32" op_304_bw="32" op_305_bw="32" op_306_bw="32" op_307_bw="32" op_308_bw="32" op_309_bw="32" op_310_bw="32" op_311_bw="32" op_312_bw="32" op_313_bw="32" op_314_bw="32" op_315_bw="32" op_316_bw="32" op_317_bw="32" op_318_bw="32" op_319_bw="32" op_320_bw="32" op_321_bw="32" op_322_bw="32" op_323_bw="32" op_324_bw="32" op_325_bw="32" op_326_bw="32" op_327_bw="32" op_328_bw="32" op_329_bw="32" op_330_bw="32" op_331_bw="32" op_332_bw="32" op_333_bw="32" op_334_bw="32" op_335_bw="32" op_336_bw="32" op_337_bw="32" op_338_bw="32" op_339_bw="32" op_340_bw="32" op_341_bw="32" op_342_bw="32" op_343_bw="32" op_344_bw="32" op_345_bw="32" op_346_bw="32" op_347_bw="32" op_348_bw="32" op_349_bw="32" op_350_bw="32" op_351_bw="32" op_352_bw="32" op_353_bw="32" op_354_bw="32" op_355_bw="32" op_356_bw="32" op_357_bw="32" op_358_bw="32" op_359_bw="32" op_360_bw="32" op_361_bw="32" op_362_bw="32" op_363_bw="32" op_364_bw="32" op_365_bw="32" op_366_bw="32" op_367_bw="32" op_368_bw="32" op_369_bw="32" op_370_bw="32" op_371_bw="32" op_372_bw="32" op_373_bw="32" op_374_bw="32" op_375_bw="32" op_376_bw="32" op_377_bw="32" op_378_bw="32" op_379_bw="32" op_380_bw="32" op_381_bw="32" op_382_bw="32" op_383_bw="32" op_384_bw="32" op_385_bw="32" op_386_bw="32" op_387_bw="32" op_388_bw="32" op_389_bw="32" op_390_bw="32" op_391_bw="32" op_392_bw="32" op_393_bw="32" op_394_bw="32" op_395_bw="32" op_396_bw="32" op_397_bw="32" op_398_bw="32" op_399_bw="32" op_400_bw="32" op_401_bw="32" op_402_bw="32" op_403_bw="32" op_404_bw="32" op_405_bw="32" op_406_bw="32" op_407_bw="32" op_408_bw="32" op_409_bw="32" op_410_bw="32" op_411_bw="32" op_412_bw="32" op_413_bw="32" op_414_bw="32" op_415_bw="32" op_416_bw="32" op_417_bw="32" op_418_bw="32" op_419_bw="32" op_420_bw="32" op_421_bw="32" op_422_bw="32" op_423_bw="32" op_424_bw="32" op_425_bw="32" op_426_bw="32" op_427_bw="32" op_428_bw="32" op_429_bw="32" op_430_bw="32" op_431_bw="32" op_432_bw="32" op_433_bw="32" op_434_bw="32" op_435_bw="32" op_436_bw="32" op_437_bw="32" op_438_bw="32" op_439_bw="32" op_440_bw="32" op_441_bw="32" op_442_bw="32" op_443_bw="32" op_444_bw="32" op_445_bw="32" op_446_bw="32" op_447_bw="32" op_448_bw="32" op_449_bw="0" op_450_bw="0" op_451_bw="0" op_452_bw="32" op_453_bw="0" op_454_bw="0" op_455_bw="0" op_456_bw="0" op_457_bw="0">
+<![CDATA[
+:38  call void (...)* @_ssdm_op_SpecMemCore([121 x float]* @WEIGHT1_DB_0_0, [121 x float]* @WEIGHT1_DB_0_1, [121 x float]* @WEIGHT1_DB_0_2, [121 x float]* @WEIGHT1_DB_0_3, [121 x float]* @WEIGHT1_DB_0_4, [121 x float]* @WEIGHT1_DB_0_5, [121 x float]* @WEIGHT1_DB_0_6, [121 x float]* @WEIGHT1_DB_1_0, [121 x float]* @WEIGHT1_DB_1_1, [121 x float]* @WEIGHT1_DB_1_2, [121 x float]* @WEIGHT1_DB_1_3, [121 x float]* @WEIGHT1_DB_1_4, [121 x float]* @WEIGHT1_DB_1_5, [121 x float]* @WEIGHT1_DB_1_6, [121 x float]* @WEIGHT1_DB_2_0, [121 x float]* @WEIGHT1_DB_2_1, [121 x float]* @WEIGHT1_DB_2_2, [121 x float]* @WEIGHT1_DB_2_3, [121 x float]* @WEIGHT1_DB_2_4, [121 x float]* @WEIGHT1_DB_2_5, [121 x float]* @WEIGHT1_DB_2_6, [121 x float]* @WEIGHT1_DB_3_0, [121 x float]* @WEIGHT1_DB_3_1, [121 x float]* @WEIGHT1_DB_3_2, [121 x float]* @WEIGHT1_DB_3_3, [121 x float]* @WEIGHT1_DB_3_4, [121 x float]* @WEIGHT1_DB_3_5, [121 x float]* @WEIGHT1_DB_3_6, [121 x float]* @WEIGHT1_DB_4_0, [121 x float]* @WEIGHT1_DB_4_1, [121 x float]* @WEIGHT1_DB_4_2, [121 x float]* @WEIGHT1_DB_4_3, [121 x float]* @WEIGHT1_DB_4_4, [121 x float]* @WEIGHT1_DB_4_5, [121 x float]* @WEIGHT1_DB_4_6, [121 x float]* @WEIGHT1_DB_5_0, [121 x float]* @WEIGHT1_DB_5_1, [121 x float]* @WEIGHT1_DB_5_2, [121 x float]* @WEIGHT1_DB_5_3, [121 x float]* @WEIGHT1_DB_5_4, [121 x float]* @WEIGHT1_DB_5_5, [121 x float]* @WEIGHT1_DB_5_6, [121 x float]* @WEIGHT1_DB_6_0, [121 x float]* @WEIGHT1_DB_6_1, [121 x float]* @WEIGHT1_DB_6_2, [121 x float]* @WEIGHT1_DB_6_3, [121 x float]* @WEIGHT1_DB_6_4, [121 x float]* @WEIGHT1_DB_6_5, [121 x float]* @WEIGHT1_DB_6_6, [121 x float]* @WEIGHT1_DB_7_0, [121 x float]* @WEIGHT1_DB_7_1, [121 x float]* @WEIGHT1_DB_7_2, [121 x float]* @WEIGHT1_DB_7_3, [121 x float]* @WEIGHT1_DB_7_4, [121 x float]* @WEIGHT1_DB_7_5, [121 x float]* @WEIGHT1_DB_7_6, [121 x float]* @WEIGHT1_DB_8_0, [121 x float]* @WEIGHT1_DB_8_1, [121 x float]* @WEIGHT1_DB_8_2, [121 x float]* @WEIGHT1_DB_8_3, [121 x float]* @WEIGHT1_DB_8_4, [121 x float]* @WEIGHT1_DB_8_5, [121 x float]* @WEIGHT1_DB_8_6, [121 x float]* @WEIGHT1_DB_9_0, [121 x float]* @WEIGHT1_DB_9_1, [121 x float]* @WEIGHT1_DB_9_2, [121 x float]* @WEIGHT1_DB_9_3, [121 x float]* @WEIGHT1_DB_9_4, [121 x float]* @WEIGHT1_DB_9_5, [121 x float]* @WEIGHT1_DB_9_6, [121 x float]* @WEIGHT1_DB_10_0, [121 x float]* @WEIGHT1_DB_10_1, [121 x float]* @WEIGHT1_DB_10_2, [121 x float]* @WEIGHT1_DB_10_3, [121 x float]* @WEIGHT1_DB_10_4, [121 x float]* @WEIGHT1_DB_10_5, [121 x float]* @WEIGHT1_DB_10_6, [121 x float]* @WEIGHT1_DB_11_0, [121 x float]* @WEIGHT1_DB_11_1, [121 x float]* @WEIGHT1_DB_11_2, [121 x float]* @WEIGHT1_DB_11_3, [121 x float]* @WEIGHT1_DB_11_4, [121 x float]* @WEIGHT1_DB_11_5, [121 x float]* @WEIGHT1_DB_11_6, [121 x float]* @WEIGHT1_DB_12_0, [121 x float]* @WEIGHT1_DB_12_1, [121 x float]* @WEIGHT1_DB_12_2, [121 x float]* @WEIGHT1_DB_12_3, [121 x float]* @WEIGHT1_DB_12_4, [121 x float]* @WEIGHT1_DB_12_5, [121 x float]* @WEIGHT1_DB_12_6, [121 x float]* @WEIGHT1_DB_13_0, [121 x float]* @WEIGHT1_DB_13_1, [121 x float]* @WEIGHT1_DB_13_2, [121 x float]* @WEIGHT1_DB_13_3, [121 x float]* @WEIGHT1_DB_13_4, [121 x float]* @WEIGHT1_DB_13_5, [121 x float]* @WEIGHT1_DB_13_6, [121 x float]* @WEIGHT1_DB_14_0, [121 x float]* @WEIGHT1_DB_14_1, [121 x float]* @WEIGHT1_DB_14_2, [121 x float]* @WEIGHT1_DB_14_3, [121 x float]* @WEIGHT1_DB_14_4, [121 x float]* @WEIGHT1_DB_14_5, [121 x float]* @WEIGHT1_DB_14_6, [121 x float]* @WEIGHT1_DB_15_0, [121 x float]* @WEIGHT1_DB_15_1, [121 x float]* @WEIGHT1_DB_15_2, [121 x float]* @WEIGHT1_DB_15_3, [121 x float]* @WEIGHT1_DB_15_4, [121 x float]* @WEIGHT1_DB_15_5, [121 x float]* @WEIGHT1_DB_15_6, [121 x float]* @WEIGHT1_DB_16_0, [121 x float]* @WEIGHT1_DB_16_1, [121 x float]* @WEIGHT1_DB_16_2, [121 x float]* @WEIGHT1_DB_16_3, [121 x float]* @WEIGHT1_DB_16_4, [121 x float]* @WEIGHT1_DB_16_5, [121 x float]* @WEIGHT1_DB_16_6, [121 x float]* @WEIGHT1_DB_17_0, [121 x float]* @WEIGHT1_DB_17_1, [121 x float]* @WEIGHT1_DB_17_2, [121 x float]* @WEIGHT1_DB_17_3, [121 x float]* @WEIGHT1_DB_17_4, [121 x float]* @WEIGHT1_DB_17_5, [121 x float]* @WEIGHT1_DB_17_6, [121 x float]* @WEIGHT1_DB_18_0, [121 x float]* @WEIGHT1_DB_18_1, [121 x float]* @WEIGHT1_DB_18_2, [121 x float]* @WEIGHT1_DB_18_3, [121 x float]* @WEIGHT1_DB_18_4, [121 x float]* @WEIGHT1_DB_18_5, [121 x float]* @WEIGHT1_DB_18_6, [121 x float]* @WEIGHT1_DB_19_0, [121 x float]* @WEIGHT1_DB_19_1, [121 x float]* @WEIGHT1_DB_19_2, [121 x float]* @WEIGHT1_DB_19_3, [121 x float]* @WEIGHT1_DB_19_4, [121 x float]* @WEIGHT1_DB_19_5, [121 x float]* @WEIGHT1_DB_19_6, [121 x float]* @WEIGHT1_DB_20_0, [121 x float]* @WEIGHT1_DB_20_1, [121 x float]* @WEIGHT1_DB_20_2, [121 x float]* @WEIGHT1_DB_20_3, [121 x float]* @WEIGHT1_DB_20_4, [121 x float]* @WEIGHT1_DB_20_5, [121 x float]* @WEIGHT1_DB_20_6, [121 x float]* @WEIGHT1_DB_21_0, [121 x float]* @WEIGHT1_DB_21_1, [121 x float]* @WEIGHT1_DB_21_2, [121 x float]* @WEIGHT1_DB_21_3, [121 x float]* @WEIGHT1_DB_21_4, [121 x float]* @WEIGHT1_DB_21_5, [121 x float]* @WEIGHT1_DB_21_6, [121 x float]* @WEIGHT1_DB_22_0, [121 x float]* @WEIGHT1_DB_22_1, [121 x float]* @WEIGHT1_DB_22_2, [121 x float]* @WEIGHT1_DB_22_3, [121 x float]* @WEIGHT1_DB_22_4, [121 x float]* @WEIGHT1_DB_22_5, [121 x float]* @WEIGHT1_DB_22_6, [121 x float]* @WEIGHT1_DB_23_0, [121 x float]* @WEIGHT1_DB_23_1, [121 x float]* @WEIGHT1_DB_23_2, [121 x float]* @WEIGHT1_DB_23_3, [121 x float]* @WEIGHT1_DB_23_4, [121 x float]* @WEIGHT1_DB_23_5, [121 x float]* @WEIGHT1_DB_23_6, [121 x float]* @WEIGHT1_DB_24_0, [121 x float]* @WEIGHT1_DB_24_1, [121 x float]* @WEIGHT1_DB_24_2, [121 x float]* @WEIGHT1_DB_24_3, [121 x float]* @WEIGHT1_DB_24_4, [121 x float]* @WEIGHT1_DB_24_5, [121 x float]* @WEIGHT1_DB_24_6, [121 x float]* @WEIGHT1_DB_25_0, [121 x float]* @WEIGHT1_DB_25_1, [121 x float]* @WEIGHT1_DB_25_2, [121 x float]* @WEIGHT1_DB_25_3, [121 x float]* @WEIGHT1_DB_25_4, [121 x float]* @WEIGHT1_DB_25_5, [121 x float]* @WEIGHT1_DB_25_6, [121 x float]* @WEIGHT1_DB_26_0, [121 x float]* @WEIGHT1_DB_26_1, [121 x float]* @WEIGHT1_DB_26_2, [121 x float]* @WEIGHT1_DB_26_3, [121 x float]* @WEIGHT1_DB_26_4, [121 x float]* @WEIGHT1_DB_26_5, [121 x float]* @WEIGHT1_DB_26_6, [121 x float]* @WEIGHT1_DB_27_0, [121 x float]* @WEIGHT1_DB_27_1, [121 x float]* @WEIGHT1_DB_27_2, [121 x float]* @WEIGHT1_DB_27_3, [121 x float]* @WEIGHT1_DB_27_4, [121 x float]* @WEIGHT1_DB_27_5, [121 x float]* @WEIGHT1_DB_27_6, [121 x float]* @WEIGHT1_DB_28_0, [121 x float]* @WEIGHT1_DB_28_1, [121 x float]* @WEIGHT1_DB_28_2, [121 x float]* @WEIGHT1_DB_28_3, [121 x float]* @WEIGHT1_DB_28_4, [121 x float]* @WEIGHT1_DB_28_5, [121 x float]* @WEIGHT1_DB_28_6, [121 x float]* @WEIGHT1_DB_29_0, [121 x float]* @WEIGHT1_DB_29_1, [121 x float]* @WEIGHT1_DB_29_2, [121 x float]* @WEIGHT1_DB_29_3, [121 x float]* @WEIGHT1_DB_29_4, [121 x float]* @WEIGHT1_DB_29_5, [121 x float]* @WEIGHT1_DB_29_6, [121 x float]* @WEIGHT1_DB_30_0, [121 x float]* @WEIGHT1_DB_30_1, [121 x float]* @WEIGHT1_DB_30_2, [121 x float]* @WEIGHT1_DB_30_3, [121 x float]* @WEIGHT1_DB_30_4, [121 x float]* @WEIGHT1_DB_30_5, [121 x float]* @WEIGHT1_DB_30_6, [121 x float]* @WEIGHT1_DB_31_0, [121 x float]* @WEIGHT1_DB_31_1, [121 x float]* @WEIGHT1_DB_31_2, [121 x float]* @WEIGHT1_DB_31_3, [121 x float]* @WEIGHT1_DB_31_4, [121 x float]* @WEIGHT1_DB_31_5, [121 x float]* @WEIGHT1_DB_31_6, [121 x float]* @WEIGHT1_DB_32_0, [121 x float]* @WEIGHT1_DB_32_1, [121 x float]* @WEIGHT1_DB_32_2, [121 x float]* @WEIGHT1_DB_32_3, [121 x float]* @WEIGHT1_DB_32_4, [121 x float]* @WEIGHT1_DB_32_5, [121 x float]* @WEIGHT1_DB_32_6, [121 x float]* @WEIGHT1_DB_33_0, [121 x float]* @WEIGHT1_DB_33_1, [121 x float]* @WEIGHT1_DB_33_2, [121 x float]* @WEIGHT1_DB_33_3, [121 x float]* @WEIGHT1_DB_33_4, [121 x float]* @WEIGHT1_DB_33_5, [121 x float]* @WEIGHT1_DB_33_6, [121 x float]* @WEIGHT1_DB_34_0, [121 x float]* @WEIGHT1_DB_34_1, [121 x float]* @WEIGHT1_DB_34_2, [121 x float]* @WEIGHT1_DB_34_3, [121 x float]* @WEIGHT1_DB_34_4, [121 x float]* @WEIGHT1_DB_34_5, [121 x float]* @WEIGHT1_DB_34_6, [121 x float]* @WEIGHT1_DB_35_0, [121 x float]* @WEIGHT1_DB_35_1, [121 x float]* @WEIGHT1_DB_35_2, [121 x float]* @WEIGHT1_DB_35_3, [121 x float]* @WEIGHT1_DB_35_4, [121 x float]* @WEIGHT1_DB_35_5, [121 x float]* @WEIGHT1_DB_35_6, [121 x float]* @WEIGHT1_DB_36_0, [121 x float]* @WEIGHT1_DB_36_1, [121 x float]* @WEIGHT1_DB_36_2, [121 x float]* @WEIGHT1_DB_36_3, [121 x float]* @WEIGHT1_DB_36_4, [121 x float]* @WEIGHT1_DB_36_5, [121 x float]* @WEIGHT1_DB_36_6, [121 x float]* @WEIGHT1_DB_37_0, [121 x float]* @WEIGHT1_DB_37_1, [121 x float]* @WEIGHT1_DB_37_2, [121 x float]* @WEIGHT1_DB_37_3, [121 x float]* @WEIGHT1_DB_37_4, [121 x float]* @WEIGHT1_DB_37_5, [121 x float]* @WEIGHT1_DB_37_6, [121 x float]* @WEIGHT1_DB_38_0, [121 x float]* @WEIGHT1_DB_38_1, [121 x float]* @WEIGHT1_DB_38_2, [121 x float]* @WEIGHT1_DB_38_3, [121 x float]* @WEIGHT1_DB_38_4, [121 x float]* @WEIGHT1_DB_38_5, [121 x float]* @WEIGHT1_DB_38_6, [121 x float]* @WEIGHT1_DB_39_0, [121 x float]* @WEIGHT1_DB_39_1, [121 x float]* @WEIGHT1_DB_39_2, [121 x float]* @WEIGHT1_DB_39_3, [121 x float]* @WEIGHT1_DB_39_4, [121 x float]* @WEIGHT1_DB_39_5, [121 x float]* @WEIGHT1_DB_39_6, [121 x float]* @WEIGHT1_DB_40_0, [121 x float]* @WEIGHT1_DB_40_1, [121 x float]* @WEIGHT1_DB_40_2, [121 x float]* @WEIGHT1_DB_40_3, [121 x float]* @WEIGHT1_DB_40_4, [121 x float]* @WEIGHT1_DB_40_5, [121 x float]* @WEIGHT1_DB_40_6, [121 x float]* @WEIGHT1_DB_41_0, [121 x float]* @WEIGHT1_DB_41_1, [121 x float]* @WEIGHT1_DB_41_2, [121 x float]* @WEIGHT1_DB_41_3, [121 x float]* @WEIGHT1_DB_41_4, [121 x float]* @WEIGHT1_DB_41_5, [121 x float]* @WEIGHT1_DB_41_6, [121 x float]* @WEIGHT1_DB_42_0, [121 x float]* @WEIGHT1_DB_42_1, [121 x float]* @WEIGHT1_DB_42_2, [121 x float]* @WEIGHT1_DB_42_3, [121 x float]* @WEIGHT1_DB_42_4, [121 x float]* @WEIGHT1_DB_42_5, [121 x float]* @WEIGHT1_DB_42_6, [121 x float]* @WEIGHT1_DB_43_0, [121 x float]* @WEIGHT1_DB_43_1, [121 x float]* @WEIGHT1_DB_43_2, [121 x float]* @WEIGHT1_DB_43_3, [121 x float]* @WEIGHT1_DB_43_4, [121 x float]* @WEIGHT1_DB_43_5, [121 x float]* @WEIGHT1_DB_43_6, [121 x float]* @WEIGHT1_DB_44_0, [121 x float]* @WEIGHT1_DB_44_1, [121 x float]* @WEIGHT1_DB_44_2, [121 x float]* @WEIGHT1_DB_44_3, [121 x float]* @WEIGHT1_DB_44_4, [121 x float]* @WEIGHT1_DB_44_5, [121 x float]* @WEIGHT1_DB_44_6, [121 x float]* @WEIGHT1_DB_45_0, [121 x float]* @WEIGHT1_DB_45_1, [121 x float]* @WEIGHT1_DB_45_2, [121 x float]* @WEIGHT1_DB_45_3, [121 x float]* @WEIGHT1_DB_45_4, [121 x float]* @WEIGHT1_DB_45_5, [121 x float]* @WEIGHT1_DB_45_6, [121 x float]* @WEIGHT1_DB_46_0, [121 x float]* @WEIGHT1_DB_46_1, [121 x float]* @WEIGHT1_DB_46_2, [121 x float]* @WEIGHT1_DB_46_3, [121 x float]* @WEIGHT1_DB_46_4, [121 x float]* @WEIGHT1_DB_46_5, [121 x float]* @WEIGHT1_DB_46_6, [121 x float]* @WEIGHT1_DB_47_0, [121 x float]* @WEIGHT1_DB_47_1, [121 x float]* @WEIGHT1_DB_47_2, [121 x float]* @WEIGHT1_DB_47_3, [121 x float]* @WEIGHT1_DB_47_4, [121 x float]* @WEIGHT1_DB_47_5, [121 x float]* @WEIGHT1_DB_47_6, [121 x float]* @WEIGHT1_DB_48_0, [121 x float]* @WEIGHT1_DB_48_1, [121 x float]* @WEIGHT1_DB_48_2, [121 x float]* @WEIGHT1_DB_48_3, [121 x float]* @WEIGHT1_DB_48_4, [121 x float]* @WEIGHT1_DB_48_5, [121 x float]* @WEIGHT1_DB_48_6, [121 x float]* @WEIGHT1_DB_49_0, [121 x float]* @WEIGHT1_DB_49_1, [121 x float]* @WEIGHT1_DB_49_2, [121 x float]* @WEIGHT1_DB_49_3, [121 x float]* @WEIGHT1_DB_49_4, [121 x float]* @WEIGHT1_DB_49_5, [121 x float]* @WEIGHT1_DB_49_6, [121 x float]* @WEIGHT1_DB_50_0, [121 x float]* @WEIGHT1_DB_50_1, [121 x float]* @WEIGHT1_DB_50_2, [121 x float]* @WEIGHT1_DB_50_3, [121 x float]* @WEIGHT1_DB_50_4, [121 x float]* @WEIGHT1_DB_50_5, [121 x float]* @WEIGHT1_DB_50_6, [121 x float]* @WEIGHT1_DB_51_0, [121 x float]* @WEIGHT1_DB_51_1, [121 x float]* @WEIGHT1_DB_51_2, [121 x float]* @WEIGHT1_DB_51_3, [121 x float]* @WEIGHT1_DB_51_4, [121 x float]* @WEIGHT1_DB_51_5, [121 x float]* @WEIGHT1_DB_51_6, [121 x float]* @WEIGHT1_DB_52_0, [121 x float]* @WEIGHT1_DB_52_1, [121 x float]* @WEIGHT1_DB_52_2, [121 x float]* @WEIGHT1_DB_52_3, [121 x float]* @WEIGHT1_DB_52_4, [121 x float]* @WEIGHT1_DB_52_5, [121 x float]* @WEIGHT1_DB_52_6, [121 x float]* @WEIGHT1_DB_53_0, [121 x float]* @WEIGHT1_DB_53_1, [121 x float]* @WEIGHT1_DB_53_2, [121 x float]* @WEIGHT1_DB_53_3, [121 x float]* @WEIGHT1_DB_53_4, [121 x float]* @WEIGHT1_DB_53_5, [121 x float]* @WEIGHT1_DB_53_6, [121 x float]* @WEIGHT1_DB_54_0, [121 x float]* @WEIGHT1_DB_54_1, [121 x float]* @WEIGHT1_DB_54_2, [121 x float]* @WEIGHT1_DB_54_3, [121 x float]* @WEIGHT1_DB_54_4, [121 x float]* @WEIGHT1_DB_54_5, [121 x float]* @WEIGHT1_DB_54_6, [121 x float]* @WEIGHT1_DB_55_0, [121 x float]* @WEIGHT1_DB_55_1, [121 x float]* @WEIGHT1_DB_55_2, [121 x float]* @WEIGHT1_DB_55_3, [121 x float]* @WEIGHT1_DB_55_4, [121 x float]* @WEIGHT1_DB_55_5, [121 x float]* @WEIGHT1_DB_55_6, [121 x float]* @WEIGHT1_DB_56_0, [121 x float]* @WEIGHT1_DB_56_1, [121 x float]* @WEIGHT1_DB_56_2, [121 x float]* @WEIGHT1_DB_56_3, [121 x float]* @WEIGHT1_DB_56_4, [121 x float]* @WEIGHT1_DB_56_5, [121 x float]* @WEIGHT1_DB_56_6, [121 x float]* @WEIGHT1_DB_57_0, [121 x float]* @WEIGHT1_DB_57_1, [121 x float]* @WEIGHT1_DB_57_2, [121 x float]* @WEIGHT1_DB_57_3, [121 x float]* @WEIGHT1_DB_57_4, [121 x float]* @WEIGHT1_DB_57_5, [121 x float]* @WEIGHT1_DB_57_6, [121 x float]* @WEIGHT1_DB_58_0, [121 x float]* @WEIGHT1_DB_58_1, [121 x float]* @WEIGHT1_DB_58_2, [121 x float]* @WEIGHT1_DB_58_3, [121 x float]* @WEIGHT1_DB_58_4, [121 x float]* @WEIGHT1_DB_58_5, [121 x float]* @WEIGHT1_DB_58_6, [121 x float]* @WEIGHT1_DB_59_0, [121 x float]* @WEIGHT1_DB_59_1, [121 x float]* @WEIGHT1_DB_59_2, [121 x float]* @WEIGHT1_DB_59_3, [121 x float]* @WEIGHT1_DB_59_4, [121 x float]* @WEIGHT1_DB_59_5, [121 x float]* @WEIGHT1_DB_59_6, [121 x float]* @WEIGHT1_DB_60_0, [121 x float]* @WEIGHT1_DB_60_1, [121 x float]* @WEIGHT1_DB_60_2, [121 x float]* @WEIGHT1_DB_60_3, [121 x float]* @WEIGHT1_DB_60_4, [121 x float]* @WEIGHT1_DB_60_5, [121 x float]* @WEIGHT1_DB_60_6, [121 x float]* @WEIGHT1_DB_61_0, [121 x float]* @WEIGHT1_DB_61_1, [121 x float]* @WEIGHT1_DB_61_2, [121 x float]* @WEIGHT1_DB_61_3, [121 x float]* @WEIGHT1_DB_61_4, [121 x float]* @WEIGHT1_DB_61_5, [121 x float]* @WEIGHT1_DB_61_6, [121 x float]* @WEIGHT1_DB_62_0, [121 x float]* @WEIGHT1_DB_62_1, [121 x float]* @WEIGHT1_DB_62_2, [121 x float]* @WEIGHT1_DB_62_3, [121 x float]* @WEIGHT1_DB_62_4, [121 x float]* @WEIGHT1_DB_62_5, [121 x float]* @WEIGHT1_DB_62_6, [121 x float]* @WEIGHT1_DB_63_0, [121 x float]* @WEIGHT1_DB_63_1, [121 x float]* @WEIGHT1_DB_63_2, [121 x float]* @WEIGHT1_DB_63_3, [121 x float]* @WEIGHT1_DB_63_4, [121 x float]* @WEIGHT1_DB_63_5, [121 x float]* @WEIGHT1_DB_63_6, [1 x i8]* @p_str1, [12 x i8]* @p_str19, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="44" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1096" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="32" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32" op_27_bw="32" op_28_bw="32" op_29_bw="32" op_30_bw="32" op_31_bw="32" op_32_bw="32" op_33_bw="32" op_34_bw="32" op_35_bw="32" op_36_bw="32" op_37_bw="32" op_38_bw="32" op_39_bw="32" op_40_bw="32" op_41_bw="32" op_42_bw="32" op_43_bw="32" op_44_bw="32" op_45_bw="32" op_46_bw="32" op_47_bw="32" op_48_bw="32" op_49_bw="32" op_50_bw="32" op_51_bw="32" op_52_bw="32" op_53_bw="32" op_54_bw="32" op_55_bw="32" op_56_bw="32" op_57_bw="32" op_58_bw="32" op_59_bw="32" op_60_bw="32" op_61_bw="32" op_62_bw="32" op_63_bw="32" op_64_bw="32" op_65_bw="0" op_66_bw="0" op_67_bw="0" op_68_bw="32" op_69_bw="0" op_70_bw="0" op_71_bw="0" op_72_bw="0" op_73_bw="0">
+<![CDATA[
+:39  call void (...)* @_ssdm_op_SpecMemCore([169 x float]* @OFM_0, [169 x float]* @OFM_1, [169 x float]* @OFM_2, [169 x float]* @OFM_3, [169 x float]* @OFM_4, [169 x float]* @OFM_5, [169 x float]* @OFM_6, [169 x float]* @OFM_7, [169 x float]* @OFM_8, [169 x float]* @OFM_9, [169 x float]* @OFM_10, [169 x float]* @OFM_11, [169 x float]* @OFM_12, [169 x float]* @OFM_13, [169 x float]* @OFM_14, [169 x float]* @OFM_15, [169 x float]* @OFM_16, [169 x float]* @OFM_17, [169 x float]* @OFM_18, [169 x float]* @OFM_19, [169 x float]* @OFM_20, [169 x float]* @OFM_21, [169 x float]* @OFM_22, [169 x float]* @OFM_23, [169 x float]* @OFM_24, [169 x float]* @OFM_25, [169 x float]* @OFM_26, [169 x float]* @OFM_27, [169 x float]* @OFM_28, [169 x float]* @OFM_29, [169 x float]* @OFM_30, [169 x float]* @OFM_31, [169 x float]* @OFM_32, [169 x float]* @OFM_33, [169 x float]* @OFM_34, [169 x float]* @OFM_35, [169 x float]* @OFM_36, [169 x float]* @OFM_37, [169 x float]* @OFM_38, [169 x float]* @OFM_39, [169 x float]* @OFM_40, [169 x float]* @OFM_41, [169 x float]* @OFM_42, [169 x float]* @OFM_43, [169 x float]* @OFM_44, [169 x float]* @OFM_45, [169 x float]* @OFM_46, [169 x float]* @OFM_47, [169 x float]* @OFM_48, [169 x float]* @OFM_49, [169 x float]* @OFM_50, [169 x float]* @OFM_51, [169 x float]* @OFM_52, [169 x float]* @OFM_53, [169 x float]* @OFM_54, [169 x float]* @OFM_55, [169 x float]* @OFM_56, [169 x float]* @OFM_57, [169 x float]* @OFM_58, [169 x float]* @OFM_59, [169 x float]* @OFM_60, [169 x float]* @OFM_61, [169 x float]* @OFM_62, [169 x float]* @OFM_63, [1 x i8]* @p_str1, [13 x i8]* @p_str21, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="45" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1097" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="32" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32" op_27_bw="32" op_28_bw="32" op_29_bw="32" op_30_bw="32" op_31_bw="32" op_32_bw="32" op_33_bw="32" op_34_bw="32" op_35_bw="32" op_36_bw="32" op_37_bw="32" op_38_bw="32" op_39_bw="32" op_40_bw="32" op_41_bw="32" op_42_bw="32" op_43_bw="32" op_44_bw="32" op_45_bw="32" op_46_bw="32" op_47_bw="32" op_48_bw="32" op_49_bw="32" op_50_bw="32" op_51_bw="32" op_52_bw="32" op_53_bw="32" op_54_bw="32" op_55_bw="32" op_56_bw="32" op_57_bw="32" op_58_bw="32" op_59_bw="32" op_60_bw="32" op_61_bw="32" op_62_bw="32" op_63_bw="32" op_64_bw="32" op_65_bw="0" op_66_bw="0" op_67_bw="0" op_68_bw="32" op_69_bw="0" op_70_bw="0" op_71_bw="0" op_72_bw="0" op_73_bw="0">
+<![CDATA[
+:40  call void (...)* @_ssdm_op_SpecMemCore([169 x float]* @OFM_DB_0, [169 x float]* @OFM_DB_1, [169 x float]* @OFM_DB_2, [169 x float]* @OFM_DB_3, [169 x float]* @OFM_DB_4, [169 x float]* @OFM_DB_5, [169 x float]* @OFM_DB_6, [169 x float]* @OFM_DB_7, [169 x float]* @OFM_DB_8, [169 x float]* @OFM_DB_9, [169 x float]* @OFM_DB_10, [169 x float]* @OFM_DB_11, [169 x float]* @OFM_DB_12, [169 x float]* @OFM_DB_13, [169 x float]* @OFM_DB_14, [169 x float]* @OFM_DB_15, [169 x float]* @OFM_DB_16, [169 x float]* @OFM_DB_17, [169 x float]* @OFM_DB_18, [169 x float]* @OFM_DB_19, [169 x float]* @OFM_DB_20, [169 x float]* @OFM_DB_21, [169 x float]* @OFM_DB_22, [169 x float]* @OFM_DB_23, [169 x float]* @OFM_DB_24, [169 x float]* @OFM_DB_25, [169 x float]* @OFM_DB_26, [169 x float]* @OFM_DB_27, [169 x float]* @OFM_DB_28, [169 x float]* @OFM_DB_29, [169 x float]* @OFM_DB_30, [169 x float]* @OFM_DB_31, [169 x float]* @OFM_DB_32, [169 x float]* @OFM_DB_33, [169 x float]* @OFM_DB_34, [169 x float]* @OFM_DB_35, [169 x float]* @OFM_DB_36, [169 x float]* @OFM_DB_37, [169 x float]* @OFM_DB_38, [169 x float]* @OFM_DB_39, [169 x float]* @OFM_DB_40, [169 x float]* @OFM_DB_41, [169 x float]* @OFM_DB_42, [169 x float]* @OFM_DB_43, [169 x float]* @OFM_DB_44, [169 x float]* @OFM_DB_45, [169 x float]* @OFM_DB_46, [169 x float]* @OFM_DB_47, [169 x float]* @OFM_DB_48, [169 x float]* @OFM_DB_49, [169 x float]* @OFM_DB_50, [169 x float]* @OFM_DB_51, [169 x float]* @OFM_DB_52, [169 x float]* @OFM_DB_53, [169 x float]* @OFM_DB_54, [169 x float]* @OFM_DB_55, [169 x float]* @OFM_DB_56, [169 x float]* @OFM_DB_57, [169 x float]* @OFM_DB_58, [169 x float]* @OFM_DB_59, [169 x float]* @OFM_DB_60, [169 x float]* @OFM_DB_61, [169 x float]* @OFM_DB_62, [169 x float]* @OFM_DB_63, [1 x i8]* @p_str1, [13 x i8]* @p_str21, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="46" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1098" bw="1" op_0_bw="32">
+<![CDATA[
+:41  %tmp = trunc i32 %num_read to i1
+
+]]></Node>
+<StgValue><ssdm name="tmp"/></StgValue>
+</operation>
+
+<operation id="47" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1099" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<![CDATA[
+:42  br i1 %tmp, label %2, label %1
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="48" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="2">
+<or_exp><and_exp><literal name="tmp" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="1101" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="1" op_3_bw="64" op_4_bw="1" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="32" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32" op_27_bw="32" op_28_bw="32" op_29_bw="32" op_30_bw="32" op_31_bw="32" op_32_bw="32" op_33_bw="32" op_34_bw="32" op_35_bw="32" op_36_bw="32" op_37_bw="32" op_38_bw="32" op_39_bw="32" op_40_bw="32" op_41_bw="32" op_42_bw="32" op_43_bw="32" op_44_bw="32" op_45_bw="32" op_46_bw="32" op_47_bw="32" op_48_bw="32" op_49_bw="32" op_50_bw="32" op_51_bw="32" op_52_bw="32" op_53_bw="32" op_54_bw="32" op_55_bw="32" op_56_bw="32" op_57_bw="32" op_58_bw="32" op_59_bw="32" op_60_bw="32" op_61_bw="32" op_62_bw="32" op_63_bw="32" op_64_bw="32" op_65_bw="32" op_66_bw="32" op_67_bw="32" op_68_bw="32" op_69_bw="32" op_70_bw="32" op_71_bw="32" op_72_bw="32" op_73_bw="32" op_74_bw="32">
+<![CDATA[
+:0  call fastcc void @Load_Fire(i64* %input_dma_W_V_data, i1* %input_dma_W_V_last, i64* %input_dma_I_V_data, i1* %input_dma_I_V_last, [169 x float]* @OFM_0, [169 x float]* @OFM_1, [169 x float]* @OFM_2, [169 x float]* @OFM_3, [169 x float]* @OFM_4, [169 x float]* @OFM_5, [169 x float]* @OFM_6, [169 x float]* @OFM_7, [169 x float]* @OFM_8, [169 x float]* @OFM_9, [169 x float]* @OFM_10, [169 x float]* @OFM_11, [169 x float]* @OFM_12, [169 x float]* @OFM_13, [169 x float]* @OFM_14, [169 x float]* @OFM_15, [169 x float]* @OFM_16, [169 x float]* @OFM_17, [169 x float]* @OFM_18, [169 x float]* @OFM_19, [169 x float]* @OFM_20, [169 x float]* @OFM_21, [169 x float]* @OFM_22, [169 x float]* @OFM_23, [169 x float]* @OFM_24, [169 x float]* @OFM_25, [169 x float]* @OFM_26, [169 x float]* @OFM_27, [169 x float]* @OFM_28, [169 x float]* @OFM_29, [169 x float]* @OFM_30, [169 x float]* @OFM_31, [169 x float]* @OFM_32, [169 x float]* @OFM_33, [169 x float]* @OFM_34, [169 x float]* @OFM_35, [169 x float]* @OFM_36, [169 x float]* @OFM_37, [169 x float]* @OFM_38, [169 x float]* @OFM_39, [169 x float]* @OFM_40, [169 x float]* @OFM_41, [169 x float]* @OFM_42, [169 x float]* @OFM_43, [169 x float]* @OFM_44, [169 x float]* @OFM_45, [169 x float]* @OFM_46, [169 x float]* @OFM_47, [169 x float]* @OFM_48, [169 x float]* @OFM_49, [169 x float]* @OFM_50, [169 x float]* @OFM_51, [169 x float]* @OFM_52, [169 x float]* @OFM_53, [169 x float]* @OFM_54, [169 x float]* @OFM_55, [169 x float]* @OFM_56, [169 x float]* @OFM_57, [169 x float]* @OFM_58, [169 x float]* @OFM_59, [169 x float]* @OFM_60, [169 x float]* @OFM_61, [169 x float]* @OFM_62, [169 x float]* @OFM_63, i32 %row_read, i32 %col_read, i32 %N_read, i32 %custom_k_read, i32 %custom_Tr_read, i32 %custom_Tc_read)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="49" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="2">
+<or_exp><and_exp><literal name="tmp" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="1102" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="1" op_3_bw="32" op_4_bw="1" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="32" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32" op_27_bw="32" op_28_bw="32" op_29_bw="32" op_30_bw="32" op_31_bw="32" op_32_bw="32" op_33_bw="32" op_34_bw="32" op_35_bw="32" op_36_bw="32" op_37_bw="32" op_38_bw="32" op_39_bw="32" op_40_bw="32" op_41_bw="32" op_42_bw="32" op_43_bw="32" op_44_bw="32" op_45_bw="32" op_46_bw="32" op_47_bw="32" op_48_bw="32" op_49_bw="32" op_50_bw="32" op_51_bw="32" op_52_bw="32" op_53_bw="32" op_54_bw="32" op_55_bw="32" op_56_bw="32" op_57_bw="32" op_58_bw="32" op_59_bw="32" op_60_bw="32" op_61_bw="32" op_62_bw="32" op_63_bw="32" op_64_bw="32" op_65_bw="32" op_66_bw="32" op_67_bw="32" op_68_bw="32" op_69_bw="32" op_70_bw="32" op_71_bw="32">
+<![CDATA[
+:1  call fastcc void @OFM_STORE(i64* %output_dma_O_V_data, i1* %output_dma_O_V_last, float* %input_dma_B_V_data, i1* %input_dma_B_V_last, [169 x float]* @OFM_DB_0, [169 x float]* @OFM_DB_1, [169 x float]* @OFM_DB_2, [169 x float]* @OFM_DB_3, [169 x float]* @OFM_DB_4, [169 x float]* @OFM_DB_5, [169 x float]* @OFM_DB_6, [169 x float]* @OFM_DB_7, [169 x float]* @OFM_DB_8, [169 x float]* @OFM_DB_9, [169 x float]* @OFM_DB_10, [169 x float]* @OFM_DB_11, [169 x float]* @OFM_DB_12, [169 x float]* @OFM_DB_13, [169 x float]* @OFM_DB_14, [169 x float]* @OFM_DB_15, [169 x float]* @OFM_DB_16, [169 x float]* @OFM_DB_17, [169 x float]* @OFM_DB_18, [169 x float]* @OFM_DB_19, [169 x float]* @OFM_DB_20, [169 x float]* @OFM_DB_21, [169 x float]* @OFM_DB_22, [169 x float]* @OFM_DB_23, [169 x float]* @OFM_DB_24, [169 x float]* @OFM_DB_25, [169 x float]* @OFM_DB_26, [169 x float]* @OFM_DB_27, [169 x float]* @OFM_DB_28, [169 x float]* @OFM_DB_29, [169 x float]* @OFM_DB_30, [169 x float]* @OFM_DB_31, [169 x float]* @OFM_DB_32, [169 x float]* @OFM_DB_33, [169 x float]* @OFM_DB_34, [169 x float]* @OFM_DB_35, [169 x float]* @OFM_DB_36, [169 x float]* @OFM_DB_37, [169 x float]* @OFM_DB_38, [169 x float]* @OFM_DB_39, [169 x float]* @OFM_DB_40, [169 x float]* @OFM_DB_41, [169 x float]* @OFM_DB_42, [169 x float]* @OFM_DB_43, [169 x float]* @OFM_DB_44, [169 x float]* @OFM_DB_45, [169 x float]* @OFM_DB_46, [169 x float]* @OFM_DB_47, [169 x float]* @OFM_DB_48, [169 x float]* @OFM_DB_49, [169 x float]* @OFM_DB_50, [169 x float]* @OFM_DB_51, [169 x float]* @OFM_DB_52, [169 x float]* @OFM_DB_53, [169 x float]* @OFM_DB_54, [169 x float]* @OFM_DB_55, [169 x float]* @OFM_DB_56, [169 x float]* @OFM_DB_57, [169 x float]* @OFM_DB_58, [169 x float]* @OFM_DB_59, [169 x float]* @OFM_DB_60, [169 x float]* @OFM_DB_61, [169 x float]* @OFM_DB_62, [169 x float]* @OFM_DB_63, [64 x float]* @BIAS_DB, i32 %custom_Tr_read, i32 %custom_Tc_read)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="50" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="4">
+<or_exp><and_exp><literal name="tmp" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="1105" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="1" op_3_bw="64" op_4_bw="1" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="32" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32" op_27_bw="32" op_28_bw="32" op_29_bw="32" op_30_bw="32" op_31_bw="32" op_32_bw="32" op_33_bw="32" op_34_bw="32" op_35_bw="32" op_36_bw="32" op_37_bw="32" op_38_bw="32" op_39_bw="32" op_40_bw="32" op_41_bw="32" op_42_bw="32" op_43_bw="32" op_44_bw="32" op_45_bw="32" op_46_bw="32" op_47_bw="32" op_48_bw="32" op_49_bw="32" op_50_bw="32" op_51_bw="32" op_52_bw="32" op_53_bw="32" op_54_bw="32" op_55_bw="32" op_56_bw="32" op_57_bw="32" op_58_bw="32" op_59_bw="32" op_60_bw="32" op_61_bw="32" op_62_bw="32" op_63_bw="32" op_64_bw="32" op_65_bw="32" op_66_bw="32" op_67_bw="32" op_68_bw="32" op_69_bw="32" op_70_bw="32" op_71_bw="32" op_72_bw="32" op_73_bw="32" op_74_bw="32">
+<![CDATA[
+:0  call fastcc void @Load_Fire(i64* %input_dma_W_V_data, i1* %input_dma_W_V_last, i64* %input_dma_I_V_data, i1* %input_dma_I_V_last, [169 x float]* @OFM_DB_0, [169 x float]* @OFM_DB_1, [169 x float]* @OFM_DB_2, [169 x float]* @OFM_DB_3, [169 x float]* @OFM_DB_4, [169 x float]* @OFM_DB_5, [169 x float]* @OFM_DB_6, [169 x float]* @OFM_DB_7, [169 x float]* @OFM_DB_8, [169 x float]* @OFM_DB_9, [169 x float]* @OFM_DB_10, [169 x float]* @OFM_DB_11, [169 x float]* @OFM_DB_12, [169 x float]* @OFM_DB_13, [169 x float]* @OFM_DB_14, [169 x float]* @OFM_DB_15, [169 x float]* @OFM_DB_16, [169 x float]* @OFM_DB_17, [169 x float]* @OFM_DB_18, [169 x float]* @OFM_DB_19, [169 x float]* @OFM_DB_20, [169 x float]* @OFM_DB_21, [169 x float]* @OFM_DB_22, [169 x float]* @OFM_DB_23, [169 x float]* @OFM_DB_24, [169 x float]* @OFM_DB_25, [169 x float]* @OFM_DB_26, [169 x float]* @OFM_DB_27, [169 x float]* @OFM_DB_28, [169 x float]* @OFM_DB_29, [169 x float]* @OFM_DB_30, [169 x float]* @OFM_DB_31, [169 x float]* @OFM_DB_32, [169 x float]* @OFM_DB_33, [169 x float]* @OFM_DB_34, [169 x float]* @OFM_DB_35, [169 x float]* @OFM_DB_36, [169 x float]* @OFM_DB_37, [169 x float]* @OFM_DB_38, [169 x float]* @OFM_DB_39, [169 x float]* @OFM_DB_40, [169 x float]* @OFM_DB_41, [169 x float]* @OFM_DB_42, [169 x float]* @OFM_DB_43, [169 x float]* @OFM_DB_44, [169 x float]* @OFM_DB_45, [169 x float]* @OFM_DB_46, [169 x float]* @OFM_DB_47, [169 x float]* @OFM_DB_48, [169 x float]* @OFM_DB_49, [169 x float]* @OFM_DB_50, [169 x float]* @OFM_DB_51, [169 x float]* @OFM_DB_52, [169 x float]* @OFM_DB_53, [169 x float]* @OFM_DB_54, [169 x float]* @OFM_DB_55, [169 x float]* @OFM_DB_56, [169 x float]* @OFM_DB_57, [169 x float]* @OFM_DB_58, [169 x float]* @OFM_DB_59, [169 x float]* @OFM_DB_60, [169 x float]* @OFM_DB_61, [169 x float]* @OFM_DB_62, [169 x float]* @OFM_DB_63, i32 %row_read, i32 %col_read, i32 %N_read, i32 %custom_k_read, i32 %custom_Tr_read, i32 %custom_Tc_read)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="51" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="4">
+<or_exp><and_exp><literal name="tmp" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="1106" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="1" op_3_bw="32" op_4_bw="1" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="32" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32" op_27_bw="32" op_28_bw="32" op_29_bw="32" op_30_bw="32" op_31_bw="32" op_32_bw="32" op_33_bw="32" op_34_bw="32" op_35_bw="32" op_36_bw="32" op_37_bw="32" op_38_bw="32" op_39_bw="32" op_40_bw="32" op_41_bw="32" op_42_bw="32" op_43_bw="32" op_44_bw="32" op_45_bw="32" op_46_bw="32" op_47_bw="32" op_48_bw="32" op_49_bw="32" op_50_bw="32" op_51_bw="32" op_52_bw="32" op_53_bw="32" op_54_bw="32" op_55_bw="32" op_56_bw="32" op_57_bw="32" op_58_bw="32" op_59_bw="32" op_60_bw="32" op_61_bw="32" op_62_bw="32" op_63_bw="32" op_64_bw="32" op_65_bw="32" op_66_bw="32" op_67_bw="32" op_68_bw="32" op_69_bw="32" op_70_bw="32" op_71_bw="32">
+<![CDATA[
+:1  call fastcc void @OFM_STORE(i64* %output_dma_O_V_data, i1* %output_dma_O_V_last, float* %input_dma_B_V_data, i1* %input_dma_B_V_last, [169 x float]* @OFM_0, [169 x float]* @OFM_1, [169 x float]* @OFM_2, [169 x float]* @OFM_3, [169 x float]* @OFM_4, [169 x float]* @OFM_5, [169 x float]* @OFM_6, [169 x float]* @OFM_7, [169 x float]* @OFM_8, [169 x float]* @OFM_9, [169 x float]* @OFM_10, [169 x float]* @OFM_11, [169 x float]* @OFM_12, [169 x float]* @OFM_13, [169 x float]* @OFM_14, [169 x float]* @OFM_15, [169 x float]* @OFM_16, [169 x float]* @OFM_17, [169 x float]* @OFM_18, [169 x float]* @OFM_19, [169 x float]* @OFM_20, [169 x float]* @OFM_21, [169 x float]* @OFM_22, [169 x float]* @OFM_23, [169 x float]* @OFM_24, [169 x float]* @OFM_25, [169 x float]* @OFM_26, [169 x float]* @OFM_27, [169 x float]* @OFM_28, [169 x float]* @OFM_29, [169 x float]* @OFM_30, [169 x float]* @OFM_31, [169 x float]* @OFM_32, [169 x float]* @OFM_33, [169 x float]* @OFM_34, [169 x float]* @OFM_35, [169 x float]* @OFM_36, [169 x float]* @OFM_37, [169 x float]* @OFM_38, [169 x float]* @OFM_39, [169 x float]* @OFM_40, [169 x float]* @OFM_41, [169 x float]* @OFM_42, [169 x float]* @OFM_43, [169 x float]* @OFM_44, [169 x float]* @OFM_45, [169 x float]* @OFM_46, [169 x float]* @OFM_47, [169 x float]* @OFM_48, [169 x float]* @OFM_49, [169 x float]* @OFM_50, [169 x float]* @OFM_51, [169 x float]* @OFM_52, [169 x float]* @OFM_53, [169 x float]* @OFM_54, [169 x float]* @OFM_55, [169 x float]* @OFM_56, [169 x float]* @OFM_57, [169 x float]* @OFM_58, [169 x float]* @OFM_59, [169 x float]* @OFM_60, [169 x float]* @OFM_61, [169 x float]* @OFM_62, [169 x float]* @OFM_63, [64 x float]* @BIAS, i32 %custom_Tr_read, i32 %custom_Tc_read)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="52" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="5">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1101" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="1" op_3_bw="64" op_4_bw="1" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="32" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32" op_27_bw="32" op_28_bw="32" op_29_bw="32" op_30_bw="32" op_31_bw="32" op_32_bw="32" op_33_bw="32" op_34_bw="32" op_35_bw="32" op_36_bw="32" op_37_bw="32" op_38_bw="32" op_39_bw="32" op_40_bw="32" op_41_bw="32" op_42_bw="32" op_43_bw="32" op_44_bw="32" op_45_bw="32" op_46_bw="32" op_47_bw="32" op_48_bw="32" op_49_bw="32" op_50_bw="32" op_51_bw="32" op_52_bw="32" op_53_bw="32" op_54_bw="32" op_55_bw="32" op_56_bw="32" op_57_bw="32" op_58_bw="32" op_59_bw="32" op_60_bw="32" op_61_bw="32" op_62_bw="32" op_63_bw="32" op_64_bw="32" op_65_bw="32" op_66_bw="32" op_67_bw="32" op_68_bw="32" op_69_bw="32" op_70_bw="32" op_71_bw="32" op_72_bw="32" op_73_bw="32" op_74_bw="32">
+<![CDATA[
+:0  call fastcc void @Load_Fire(i64* %input_dma_W_V_data, i1* %input_dma_W_V_last, i64* %input_dma_I_V_data, i1* %input_dma_I_V_last, [169 x float]* @OFM_0, [169 x float]* @OFM_1, [169 x float]* @OFM_2, [169 x float]* @OFM_3, [169 x float]* @OFM_4, [169 x float]* @OFM_5, [169 x float]* @OFM_6, [169 x float]* @OFM_7, [169 x float]* @OFM_8, [169 x float]* @OFM_9, [169 x float]* @OFM_10, [169 x float]* @OFM_11, [169 x float]* @OFM_12, [169 x float]* @OFM_13, [169 x float]* @OFM_14, [169 x float]* @OFM_15, [169 x float]* @OFM_16, [169 x float]* @OFM_17, [169 x float]* @OFM_18, [169 x float]* @OFM_19, [169 x float]* @OFM_20, [169 x float]* @OFM_21, [169 x float]* @OFM_22, [169 x float]* @OFM_23, [169 x float]* @OFM_24, [169 x float]* @OFM_25, [169 x float]* @OFM_26, [169 x float]* @OFM_27, [169 x float]* @OFM_28, [169 x float]* @OFM_29, [169 x float]* @OFM_30, [169 x float]* @OFM_31, [169 x float]* @OFM_32, [169 x float]* @OFM_33, [169 x float]* @OFM_34, [169 x float]* @OFM_35, [169 x float]* @OFM_36, [169 x float]* @OFM_37, [169 x float]* @OFM_38, [169 x float]* @OFM_39, [169 x float]* @OFM_40, [169 x float]* @OFM_41, [169 x float]* @OFM_42, [169 x float]* @OFM_43, [169 x float]* @OFM_44, [169 x float]* @OFM_45, [169 x float]* @OFM_46, [169 x float]* @OFM_47, [169 x float]* @OFM_48, [169 x float]* @OFM_49, [169 x float]* @OFM_50, [169 x float]* @OFM_51, [169 x float]* @OFM_52, [169 x float]* @OFM_53, [169 x float]* @OFM_54, [169 x float]* @OFM_55, [169 x float]* @OFM_56, [169 x float]* @OFM_57, [169 x float]* @OFM_58, [169 x float]* @OFM_59, [169 x float]* @OFM_60, [169 x float]* @OFM_61, [169 x float]* @OFM_62, [169 x float]* @OFM_63, i32 %row_read, i32 %col_read, i32 %N_read, i32 %custom_k_read, i32 %custom_Tr_read, i32 %custom_Tc_read)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="53" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="5">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1102" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="1" op_3_bw="32" op_4_bw="1" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="32" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32" op_27_bw="32" op_28_bw="32" op_29_bw="32" op_30_bw="32" op_31_bw="32" op_32_bw="32" op_33_bw="32" op_34_bw="32" op_35_bw="32" op_36_bw="32" op_37_bw="32" op_38_bw="32" op_39_bw="32" op_40_bw="32" op_41_bw="32" op_42_bw="32" op_43_bw="32" op_44_bw="32" op_45_bw="32" op_46_bw="32" op_47_bw="32" op_48_bw="32" op_49_bw="32" op_50_bw="32" op_51_bw="32" op_52_bw="32" op_53_bw="32" op_54_bw="32" op_55_bw="32" op_56_bw="32" op_57_bw="32" op_58_bw="32" op_59_bw="32" op_60_bw="32" op_61_bw="32" op_62_bw="32" op_63_bw="32" op_64_bw="32" op_65_bw="32" op_66_bw="32" op_67_bw="32" op_68_bw="32" op_69_bw="32" op_70_bw="32" op_71_bw="32">
+<![CDATA[
+:1  call fastcc void @OFM_STORE(i64* %output_dma_O_V_data, i1* %output_dma_O_V_last, float* %input_dma_B_V_data, i1* %input_dma_B_V_last, [169 x float]* @OFM_DB_0, [169 x float]* @OFM_DB_1, [169 x float]* @OFM_DB_2, [169 x float]* @OFM_DB_3, [169 x float]* @OFM_DB_4, [169 x float]* @OFM_DB_5, [169 x float]* @OFM_DB_6, [169 x float]* @OFM_DB_7, [169 x float]* @OFM_DB_8, [169 x float]* @OFM_DB_9, [169 x float]* @OFM_DB_10, [169 x float]* @OFM_DB_11, [169 x float]* @OFM_DB_12, [169 x float]* @OFM_DB_13, [169 x float]* @OFM_DB_14, [169 x float]* @OFM_DB_15, [169 x float]* @OFM_DB_16, [169 x float]* @OFM_DB_17, [169 x float]* @OFM_DB_18, [169 x float]* @OFM_DB_19, [169 x float]* @OFM_DB_20, [169 x float]* @OFM_DB_21, [169 x float]* @OFM_DB_22, [169 x float]* @OFM_DB_23, [169 x float]* @OFM_DB_24, [169 x float]* @OFM_DB_25, [169 x float]* @OFM_DB_26, [169 x float]* @OFM_DB_27, [169 x float]* @OFM_DB_28, [169 x float]* @OFM_DB_29, [169 x float]* @OFM_DB_30, [169 x float]* @OFM_DB_31, [169 x float]* @OFM_DB_32, [169 x float]* @OFM_DB_33, [169 x float]* @OFM_DB_34, [169 x float]* @OFM_DB_35, [169 x float]* @OFM_DB_36, [169 x float]* @OFM_DB_37, [169 x float]* @OFM_DB_38, [169 x float]* @OFM_DB_39, [169 x float]* @OFM_DB_40, [169 x float]* @OFM_DB_41, [169 x float]* @OFM_DB_42, [169 x float]* @OFM_DB_43, [169 x float]* @OFM_DB_44, [169 x float]* @OFM_DB_45, [169 x float]* @OFM_DB_46, [169 x float]* @OFM_DB_47, [169 x float]* @OFM_DB_48, [169 x float]* @OFM_DB_49, [169 x float]* @OFM_DB_50, [169 x float]* @OFM_DB_51, [169 x float]* @OFM_DB_52, [169 x float]* @OFM_DB_53, [169 x float]* @OFM_DB_54, [169 x float]* @OFM_DB_55, [169 x float]* @OFM_DB_56, [169 x float]* @OFM_DB_57, [169 x float]* @OFM_DB_58, [169 x float]* @OFM_DB_59, [169 x float]* @OFM_DB_60, [169 x float]* @OFM_DB_61, [169 x float]* @OFM_DB_62, [169 x float]* @OFM_DB_63, [64 x float]* @BIAS_DB, i32 %custom_Tr_read, i32 %custom_Tc_read)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="54" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="5">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1103" bw="0" op_0_bw="0">
+<![CDATA[
+:2  br label %3
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+
+<state id="3" st_id="3">
+
+<operation id="55" st_id="3" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="6">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1105" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="1" op_3_bw="64" op_4_bw="1" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="32" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32" op_27_bw="32" op_28_bw="32" op_29_bw="32" op_30_bw="32" op_31_bw="32" op_32_bw="32" op_33_bw="32" op_34_bw="32" op_35_bw="32" op_36_bw="32" op_37_bw="32" op_38_bw="32" op_39_bw="32" op_40_bw="32" op_41_bw="32" op_42_bw="32" op_43_bw="32" op_44_bw="32" op_45_bw="32" op_46_bw="32" op_47_bw="32" op_48_bw="32" op_49_bw="32" op_50_bw="32" op_51_bw="32" op_52_bw="32" op_53_bw="32" op_54_bw="32" op_55_bw="32" op_56_bw="32" op_57_bw="32" op_58_bw="32" op_59_bw="32" op_60_bw="32" op_61_bw="32" op_62_bw="32" op_63_bw="32" op_64_bw="32" op_65_bw="32" op_66_bw="32" op_67_bw="32" op_68_bw="32" op_69_bw="32" op_70_bw="32" op_71_bw="32" op_72_bw="32" op_73_bw="32" op_74_bw="32">
+<![CDATA[
+:0  call fastcc void @Load_Fire(i64* %input_dma_W_V_data, i1* %input_dma_W_V_last, i64* %input_dma_I_V_data, i1* %input_dma_I_V_last, [169 x float]* @OFM_DB_0, [169 x float]* @OFM_DB_1, [169 x float]* @OFM_DB_2, [169 x float]* @OFM_DB_3, [169 x float]* @OFM_DB_4, [169 x float]* @OFM_DB_5, [169 x float]* @OFM_DB_6, [169 x float]* @OFM_DB_7, [169 x float]* @OFM_DB_8, [169 x float]* @OFM_DB_9, [169 x float]* @OFM_DB_10, [169 x float]* @OFM_DB_11, [169 x float]* @OFM_DB_12, [169 x float]* @OFM_DB_13, [169 x float]* @OFM_DB_14, [169 x float]* @OFM_DB_15, [169 x float]* @OFM_DB_16, [169 x float]* @OFM_DB_17, [169 x float]* @OFM_DB_18, [169 x float]* @OFM_DB_19, [169 x float]* @OFM_DB_20, [169 x float]* @OFM_DB_21, [169 x float]* @OFM_DB_22, [169 x float]* @OFM_DB_23, [169 x float]* @OFM_DB_24, [169 x float]* @OFM_DB_25, [169 x float]* @OFM_DB_26, [169 x float]* @OFM_DB_27, [169 x float]* @OFM_DB_28, [169 x float]* @OFM_DB_29, [169 x float]* @OFM_DB_30, [169 x float]* @OFM_DB_31, [169 x float]* @OFM_DB_32, [169 x float]* @OFM_DB_33, [169 x float]* @OFM_DB_34, [169 x float]* @OFM_DB_35, [169 x float]* @OFM_DB_36, [169 x float]* @OFM_DB_37, [169 x float]* @OFM_DB_38, [169 x float]* @OFM_DB_39, [169 x float]* @OFM_DB_40, [169 x float]* @OFM_DB_41, [169 x float]* @OFM_DB_42, [169 x float]* @OFM_DB_43, [169 x float]* @OFM_DB_44, [169 x float]* @OFM_DB_45, [169 x float]* @OFM_DB_46, [169 x float]* @OFM_DB_47, [169 x float]* @OFM_DB_48, [169 x float]* @OFM_DB_49, [169 x float]* @OFM_DB_50, [169 x float]* @OFM_DB_51, [169 x float]* @OFM_DB_52, [169 x float]* @OFM_DB_53, [169 x float]* @OFM_DB_54, [169 x float]* @OFM_DB_55, [169 x float]* @OFM_DB_56, [169 x float]* @OFM_DB_57, [169 x float]* @OFM_DB_58, [169 x float]* @OFM_DB_59, [169 x float]* @OFM_DB_60, [169 x float]* @OFM_DB_61, [169 x float]* @OFM_DB_62, [169 x float]* @OFM_DB_63, i32 %row_read, i32 %col_read, i32 %N_read, i32 %custom_k_read, i32 %custom_Tr_read, i32 %custom_Tc_read)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="56" st_id="3" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="6">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1106" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="1" op_3_bw="32" op_4_bw="1" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="32" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32" op_27_bw="32" op_28_bw="32" op_29_bw="32" op_30_bw="32" op_31_bw="32" op_32_bw="32" op_33_bw="32" op_34_bw="32" op_35_bw="32" op_36_bw="32" op_37_bw="32" op_38_bw="32" op_39_bw="32" op_40_bw="32" op_41_bw="32" op_42_bw="32" op_43_bw="32" op_44_bw="32" op_45_bw="32" op_46_bw="32" op_47_bw="32" op_48_bw="32" op_49_bw="32" op_50_bw="32" op_51_bw="32" op_52_bw="32" op_53_bw="32" op_54_bw="32" op_55_bw="32" op_56_bw="32" op_57_bw="32" op_58_bw="32" op_59_bw="32" op_60_bw="32" op_61_bw="32" op_62_bw="32" op_63_bw="32" op_64_bw="32" op_65_bw="32" op_66_bw="32" op_67_bw="32" op_68_bw="32" op_69_bw="32" op_70_bw="32" op_71_bw="32">
+<![CDATA[
+:1  call fastcc void @OFM_STORE(i64* %output_dma_O_V_data, i1* %output_dma_O_V_last, float* %input_dma_B_V_data, i1* %input_dma_B_V_last, [169 x float]* @OFM_0, [169 x float]* @OFM_1, [169 x float]* @OFM_2, [169 x float]* @OFM_3, [169 x float]* @OFM_4, [169 x float]* @OFM_5, [169 x float]* @OFM_6, [169 x float]* @OFM_7, [169 x float]* @OFM_8, [169 x float]* @OFM_9, [169 x float]* @OFM_10, [169 x float]* @OFM_11, [169 x float]* @OFM_12, [169 x float]* @OFM_13, [169 x float]* @OFM_14, [169 x float]* @OFM_15, [169 x float]* @OFM_16, [169 x float]* @OFM_17, [169 x float]* @OFM_18, [169 x float]* @OFM_19, [169 x float]* @OFM_20, [169 x float]* @OFM_21, [169 x float]* @OFM_22, [169 x float]* @OFM_23, [169 x float]* @OFM_24, [169 x float]* @OFM_25, [169 x float]* @OFM_26, [169 x float]* @OFM_27, [169 x float]* @OFM_28, [169 x float]* @OFM_29, [169 x float]* @OFM_30, [169 x float]* @OFM_31, [169 x float]* @OFM_32, [169 x float]* @OFM_33, [169 x float]* @OFM_34, [169 x float]* @OFM_35, [169 x float]* @OFM_36, [169 x float]* @OFM_37, [169 x float]* @OFM_38, [169 x float]* @OFM_39, [169 x float]* @OFM_40, [169 x float]* @OFM_41, [169 x float]* @OFM_42, [169 x float]* @OFM_43, [169 x float]* @OFM_44, [169 x float]* @OFM_45, [169 x float]* @OFM_46, [169 x float]* @OFM_47, [169 x float]* @OFM_48, [169 x float]* @OFM_49, [169 x float]* @OFM_50, [169 x float]* @OFM_51, [169 x float]* @OFM_52, [169 x float]* @OFM_53, [169 x float]* @OFM_54, [169 x float]* @OFM_55, [169 x float]* @OFM_56, [169 x float]* @OFM_57, [169 x float]* @OFM_58, [169 x float]* @OFM_59, [169 x float]* @OFM_60, [169 x float]* @OFM_61, [169 x float]* @OFM_62, [169 x float]* @OFM_63, [64 x float]* @BIAS, i32 %custom_Tr_read, i32 %custom_Tc_read)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="57" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="6">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1107" bw="0" op_0_bw="0">
+<![CDATA[
+:2  br label %3
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+
+<state id="4" st_id="4">
+
+<operation id="58" st_id="4" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="7">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="1109" bw="0">
+<![CDATA[
+:0  ret void
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+</ports>
+
+
+<dataflows>
+</dataflows>
+
+
+</stg>

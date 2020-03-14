@@ -1,0 +1,186 @@
+
+
+================================================================
+== Vivado HLS Report for 'top'
+================================================================
+* Date:           Tue Jun 11 17:40:08 2019
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        LURAM-Test
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.75|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  9177|  9177|  9177|  9177|   none  |
+    +------+------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / (!tmp)
+	3  / (tmp)
+2 --> 
+	4  / true
+3 --> 
+	4  / true
+4 --> 
+
+* FSM state operations: 
+
+ <State 1> : 2.33ns
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i56* %output_dma_O_V_data), !map !113"
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i56* %input_dma_I_V_data), !map !120"
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i56* %input_dma_W_V_data), !map !127"
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %input_dma_W_V_last), !map !134"
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %input_dma_I_V_last), !map !138"
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %input_dma_B_V_data_V), !map !142"
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %input_dma_B_V_last), !map !146"
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %output_dma_O_V_last), !map !150"
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %row), !map !154"
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %col), !map !160"
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %flag), !map !164"
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %num), !map !168"
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %N), !map !172"
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %custom_k), !map !176"
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %custom_Tr), !map !180"
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %custom_Tc), !map !184"
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @top_str) nounwind"
+ST_1 : Operation 22 [1/1] (1.00ns)   --->   "%custom_Tc_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %custom_Tc)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 23 [1/1] (1.00ns)   --->   "%custom_Tr_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %custom_Tr)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 24 [1/1] (1.00ns)   --->   "%custom_k_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %custom_k)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 25 [1/1] (1.00ns)   --->   "%N_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %N)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 26 [1/1] (1.00ns)   --->   "%num_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %num)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 27 [1/1] (1.00ns)   --->   "%col_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %col)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 28 [1/1] (1.00ns)   --->   "%row_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %row)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str16, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [LURAM-Test/TEST_REF.cpp:187]
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %row, [10 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str16, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [LURAM-Test/TEST_REF.cpp:188]
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %col, [10 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str16, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [LURAM-Test/TEST_REF.cpp:189]
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %flag, [10 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str16, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [LURAM-Test/TEST_REF.cpp:190]
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %num, [10 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str16, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [LURAM-Test/TEST_REF.cpp:191]
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %N, [10 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str16, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [LURAM-Test/TEST_REF.cpp:192]
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %custom_k, [10 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str16, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [LURAM-Test/TEST_REF.cpp:193]
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %custom_Tr, [10 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str16, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [LURAM-Test/TEST_REF.cpp:194]
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %custom_Tc, [10 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str16, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [LURAM-Test/TEST_REF.cpp:195]
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i56* %input_dma_W_V_data, i1* %input_dma_W_V_last, [5 x i8]* @p_str17, i32 1, i32 1, [5 x i8]* @p_str18, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i56* %input_dma_I_V_data, i1* %input_dma_I_V_last, [5 x i8]* @p_str17, i32 1, i32 1, [5 x i8]* @p_str18, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %input_dma_B_V_data_V, i1* %input_dma_B_V_last, [5 x i8]* @p_str17, i32 1, i32 1, [5 x i8]* @p_str18, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)" [LURAM-Test/TEST_REF.cpp:199]
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i56* %output_dma_O_V_data, i1* %output_dma_O_V_last, [5 x i8]* @p_str17, i32 1, i32 1, [5 x i8]* @p_str18, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([121 x i8]* @WEIGHT1_V_0_0, [121 x i8]* @WEIGHT1_V_0_1, [121 x i8]* @WEIGHT1_V_0_2, [121 x i8]* @WEIGHT1_V_0_3, [121 x i8]* @WEIGHT1_V_0_4, [121 x i8]* @WEIGHT1_V_0_5, [121 x i8]* @WEIGHT1_V_0_6, [121 x i8]* @WEIGHT1_V_1_0, [121 x i8]* @WEIGHT1_V_1_1, [121 x i8]* @WEIGHT1_V_1_2, [121 x i8]* @WEIGHT1_V_1_3, [121 x i8]* @WEIGHT1_V_1_4, [121 x i8]* @WEIGHT1_V_1_5, [121 x i8]* @WEIGHT1_V_1_6, [121 x i8]* @WEIGHT1_V_2_0, [121 x i8]* @WEIGHT1_V_2_1, [121 x i8]* @WEIGHT1_V_2_2, [121 x i8]* @WEIGHT1_V_2_3, [121 x i8]* @WEIGHT1_V_2_4, [121 x i8]* @WEIGHT1_V_2_5, [121 x i8]* @WEIGHT1_V_2_6, [121 x i8]* @WEIGHT1_V_3_0, [121 x i8]* @WEIGHT1_V_3_1, [121 x i8]* @WEIGHT1_V_3_2, [121 x i8]* @WEIGHT1_V_3_3, [121 x i8]* @WEIGHT1_V_3_4, [121 x i8]* @WEIGHT1_V_3_5, [121 x i8]* @WEIGHT1_V_3_6, [121 x i8]* @WEIGHT1_V_4_0, [121 x i8]* @WEIGHT1_V_4_1, [121 x i8]* @WEIGHT1_V_4_2, [121 x i8]* @WEIGHT1_V_4_3, [121 x i8]* @WEIGHT1_V_4_4, [121 x i8]* @WEIGHT1_V_4_5, [121 x i8]* @WEIGHT1_V_4_6, [121 x i8]* @WEIGHT1_V_5_0, [121 x i8]* @WEIGHT1_V_5_1, [121 x i8]* @WEIGHT1_V_5_2, [121 x i8]* @WEIGHT1_V_5_3, [121 x i8]* @WEIGHT1_V_5_4, [121 x i8]* @WEIGHT1_V_5_5, [121 x i8]* @WEIGHT1_V_5_6, [121 x i8]* @WEIGHT1_V_6_0, [121 x i8]* @WEIGHT1_V_6_1, [121 x i8]* @WEIGHT1_V_6_2, [121 x i8]* @WEIGHT1_V_6_3, [121 x i8]* @WEIGHT1_V_6_4, [121 x i8]* @WEIGHT1_V_6_5, [121 x i8]* @WEIGHT1_V_6_6, [121 x i8]* @WEIGHT1_V_7_0, [121 x i8]* @WEIGHT1_V_7_1, [121 x i8]* @WEIGHT1_V_7_2, [121 x i8]* @WEIGHT1_V_7_3, [121 x i8]* @WEIGHT1_V_7_4, [121 x i8]* @WEIGHT1_V_7_5, [121 x i8]* @WEIGHT1_V_7_6, [1 x i8]* @p_str1, [14 x i8]* @p_str19, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)" [LURAM-Test/TEST_REF.cpp:204]
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([121 x i8]* @WEIGHT1_DB_V_0_0, [121 x i8]* @WEIGHT1_DB_V_0_1, [121 x i8]* @WEIGHT1_DB_V_0_2, [121 x i8]* @WEIGHT1_DB_V_0_3, [121 x i8]* @WEIGHT1_DB_V_0_4, [121 x i8]* @WEIGHT1_DB_V_0_5, [121 x i8]* @WEIGHT1_DB_V_0_6, [121 x i8]* @WEIGHT1_DB_V_1_0, [121 x i8]* @WEIGHT1_DB_V_1_1, [121 x i8]* @WEIGHT1_DB_V_1_2, [121 x i8]* @WEIGHT1_DB_V_1_3, [121 x i8]* @WEIGHT1_DB_V_1_4, [121 x i8]* @WEIGHT1_DB_V_1_5, [121 x i8]* @WEIGHT1_DB_V_1_6, [121 x i8]* @WEIGHT1_DB_V_2_0, [121 x i8]* @WEIGHT1_DB_V_2_1, [121 x i8]* @WEIGHT1_DB_V_2_2, [121 x i8]* @WEIGHT1_DB_V_2_3, [121 x i8]* @WEIGHT1_DB_V_2_4, [121 x i8]* @WEIGHT1_DB_V_2_5, [121 x i8]* @WEIGHT1_DB_V_2_6, [121 x i8]* @WEIGHT1_DB_V_3_0, [121 x i8]* @WEIGHT1_DB_V_3_1, [121 x i8]* @WEIGHT1_DB_V_3_2, [121 x i8]* @WEIGHT1_DB_V_3_3, [121 x i8]* @WEIGHT1_DB_V_3_4, [121 x i8]* @WEIGHT1_DB_V_3_5, [121 x i8]* @WEIGHT1_DB_V_3_6, [121 x i8]* @WEIGHT1_DB_V_4_0, [121 x i8]* @WEIGHT1_DB_V_4_1, [121 x i8]* @WEIGHT1_DB_V_4_2, [121 x i8]* @WEIGHT1_DB_V_4_3, [121 x i8]* @WEIGHT1_DB_V_4_4, [121 x i8]* @WEIGHT1_DB_V_4_5, [121 x i8]* @WEIGHT1_DB_V_4_6, [121 x i8]* @WEIGHT1_DB_V_5_0, [121 x i8]* @WEIGHT1_DB_V_5_1, [121 x i8]* @WEIGHT1_DB_V_5_2, [121 x i8]* @WEIGHT1_DB_V_5_3, [121 x i8]* @WEIGHT1_DB_V_5_4, [121 x i8]* @WEIGHT1_DB_V_5_5, [121 x i8]* @WEIGHT1_DB_V_5_6, [121 x i8]* @WEIGHT1_DB_V_6_0, [121 x i8]* @WEIGHT1_DB_V_6_1, [121 x i8]* @WEIGHT1_DB_V_6_2, [121 x i8]* @WEIGHT1_DB_V_6_3, [121 x i8]* @WEIGHT1_DB_V_6_4, [121 x i8]* @WEIGHT1_DB_V_6_5, [121 x i8]* @WEIGHT1_DB_V_6_6, [121 x i8]* @WEIGHT1_DB_V_7_0, [121 x i8]* @WEIGHT1_DB_V_7_1, [121 x i8]* @WEIGHT1_DB_V_7_2, [121 x i8]* @WEIGHT1_DB_V_7_3, [121 x i8]* @WEIGHT1_DB_V_7_4, [121 x i8]* @WEIGHT1_DB_V_7_5, [121 x i8]* @WEIGHT1_DB_V_7_6, [1 x i8]* @p_str1, [14 x i8]* @p_str19, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)" [LURAM-Test/TEST_REF.cpp:209]
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([169 x i26]* @OFM_V_0, [169 x i26]* @OFM_V_1, [169 x i26]* @OFM_V_2, [169 x i26]* @OFM_V_3, [169 x i26]* @OFM_V_4, [169 x i26]* @OFM_V_5, [169 x i26]* @OFM_V_6, [169 x i26]* @OFM_V_7, [1 x i8]* @p_str1, [13 x i8]* @p_str21, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)" [LURAM-Test/TEST_REF.cpp:223]
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([169 x i26]* @OFM_DB_V_0, [169 x i26]* @OFM_DB_V_1, [169 x i26]* @OFM_DB_V_2, [169 x i26]* @OFM_DB_V_3, [169 x i26]* @OFM_DB_V_4, [169 x i26]* @OFM_DB_V_5, [169 x i26]* @OFM_DB_V_6, [169 x i26]* @OFM_DB_V_7, [1 x i8]* @p_str1, [13 x i8]* @p_str21, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)" [LURAM-Test/TEST_REF.cpp:227]
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%tmp = trunc i32 %num_read to i1" [LURAM-Test/TEST_REF.cpp:234]
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "br i1 %tmp, label %1, label %0" [LURAM-Test/TEST_REF.cpp:234]
+ST_1 : Operation 48 [2/2] (0.65ns)   --->   "call fastcc void @Load_Fire(i56* %input_dma_W_V_data, i1* %input_dma_W_V_last, i56* %input_dma_I_V_data, i1* %input_dma_I_V_last, [169 x i26]* @OFM_V_0, [169 x i26]* @OFM_V_1, [169 x i26]* @OFM_V_2, [169 x i26]* @OFM_V_3, [169 x i26]* @OFM_V_4, [169 x i26]* @OFM_V_5, [169 x i26]* @OFM_V_6, [169 x i26]* @OFM_V_7, i32 %row_read, i32 %col_read, i32 %N_read, i32 %custom_k_read, i32 %custom_Tr_read, i32 %custom_Tc_read)"   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 49 [2/2] (1.33ns)   --->   "call fastcc void @OFM_STORE(i56* %output_dma_O_V_data, i1* %output_dma_O_V_last, i32* %input_dma_B_V_data_V, i1* %input_dma_B_V_last, [169 x i26]* @OFM_DB_V_0, [169 x i26]* @OFM_DB_V_1, [169 x i26]* @OFM_DB_V_2, [169 x i26]* @OFM_DB_V_3, [169 x i26]* @OFM_DB_V_4, [169 x i26]* @OFM_DB_V_5, [169 x i26]* @OFM_DB_V_6, [169 x i26]* @OFM_DB_V_7, [8 x i26]* @BIAS_DB_V, i32 %custom_Tr_read, i32 %custom_Tc_read)"   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 50 [2/2] (0.65ns)   --->   "call fastcc void @Load_Fire(i56* %input_dma_W_V_data, i1* %input_dma_W_V_last, i56* %input_dma_I_V_data, i1* %input_dma_I_V_last, [169 x i26]* @OFM_DB_V_0, [169 x i26]* @OFM_DB_V_1, [169 x i26]* @OFM_DB_V_2, [169 x i26]* @OFM_DB_V_3, [169 x i26]* @OFM_DB_V_4, [169 x i26]* @OFM_DB_V_5, [169 x i26]* @OFM_DB_V_6, [169 x i26]* @OFM_DB_V_7, i32 %row_read, i32 %col_read, i32 %N_read, i32 %custom_k_read, i32 %custom_Tr_read, i32 %custom_Tc_read)"   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 51 [2/2] (1.33ns)   --->   "call fastcc void @OFM_STORE(i56* %output_dma_O_V_data, i1* %output_dma_O_V_last, i32* %input_dma_B_V_data_V, i1* %input_dma_B_V_last, [169 x i26]* @OFM_V_0, [169 x i26]* @OFM_V_1, [169 x i26]* @OFM_V_2, [169 x i26]* @OFM_V_3, [169 x i26]* @OFM_V_4, [169 x i26]* @OFM_V_5, [169 x i26]* @OFM_V_6, [169 x i26]* @OFM_V_7, [8 x i26]* @BIAS_V, i32 %custom_Tr_read, i32 %custom_Tc_read)"   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 2> : 4.11ns
+ST_2 : Operation 52 [1/2] (0.00ns)   --->   "call fastcc void @Load_Fire(i56* %input_dma_W_V_data, i1* %input_dma_W_V_last, i56* %input_dma_I_V_data, i1* %input_dma_I_V_last, [169 x i26]* @OFM_V_0, [169 x i26]* @OFM_V_1, [169 x i26]* @OFM_V_2, [169 x i26]* @OFM_V_3, [169 x i26]* @OFM_V_4, [169 x i26]* @OFM_V_5, [169 x i26]* @OFM_V_6, [169 x i26]* @OFM_V_7, i32 %row_read, i32 %col_read, i32 %N_read, i32 %custom_k_read, i32 %custom_Tr_read, i32 %custom_Tc_read)"   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 53 [1/2] (4.11ns)   --->   "call fastcc void @OFM_STORE(i56* %output_dma_O_V_data, i1* %output_dma_O_V_last, i32* %input_dma_B_V_data_V, i1* %input_dma_B_V_last, [169 x i26]* @OFM_DB_V_0, [169 x i26]* @OFM_DB_V_1, [169 x i26]* @OFM_DB_V_2, [169 x i26]* @OFM_DB_V_3, [169 x i26]* @OFM_DB_V_4, [169 x i26]* @OFM_DB_V_5, [169 x i26]* @OFM_DB_V_6, [169 x i26]* @OFM_DB_V_7, [8 x i26]* @BIAS_DB_V, i32 %custom_Tr_read, i32 %custom_Tc_read)"   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "br label %2" [LURAM-Test/TEST_REF.cpp:237]
+
+ <State 3> : 4.11ns
+ST_3 : Operation 55 [1/2] (0.00ns)   --->   "call fastcc void @Load_Fire(i56* %input_dma_W_V_data, i1* %input_dma_W_V_last, i56* %input_dma_I_V_data, i1* %input_dma_I_V_last, [169 x i26]* @OFM_DB_V_0, [169 x i26]* @OFM_DB_V_1, [169 x i26]* @OFM_DB_V_2, [169 x i26]* @OFM_DB_V_3, [169 x i26]* @OFM_DB_V_4, [169 x i26]* @OFM_DB_V_5, [169 x i26]* @OFM_DB_V_6, [169 x i26]* @OFM_DB_V_7, i32 %row_read, i32 %col_read, i32 %N_read, i32 %custom_k_read, i32 %custom_Tr_read, i32 %custom_Tc_read)"   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 56 [1/2] (4.11ns)   --->   "call fastcc void @OFM_STORE(i56* %output_dma_O_V_data, i1* %output_dma_O_V_last, i32* %input_dma_B_V_data_V, i1* %input_dma_B_V_last, [169 x i26]* @OFM_V_0, [169 x i26]* @OFM_V_1, [169 x i26]* @OFM_V_2, [169 x i26]* @OFM_V_3, [169 x i26]* @OFM_V_4, [169 x i26]* @OFM_V_5, [169 x i26]* @OFM_V_6, [169 x i26]* @OFM_V_7, [8 x i26]* @BIAS_V, i32 %custom_Tr_read, i32 %custom_Tc_read)"   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 57 [1/1] (0.00ns)   --->   "br label %2"
+
+ <State 4> : 0.00ns
+ST_4 : Operation 58 [1/1] (0.00ns)   --->   "ret void" [LURAM-Test/TEST_REF.cpp:243]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 2.33ns
+The critical path consists of the following:
+	s_axi read on port 'custom_Tc' [178]  (1 ns)
+	'call' operation to 'OFM_STORE' [206]  (1.33 ns)
+
+ <State 2>: 4.11ns
+The critical path consists of the following:
+	'call' operation to 'OFM_STORE' [206]  (4.11 ns)
+
+ <State 3>: 4.11ns
+The critical path consists of the following:
+	'call' operation to 'OFM_STORE' [210]  (4.11 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,14 @@
+top_mac_muladd_5nbkb
+top_mac_muladd_5ncud
+top_mul_mul_8s_26dEe
+Load_Fire_WEIGHT1eOg
+Load_Fire_IFM_V_0
+top_OFM_V_0
+top_BIAS_DB_V
+top_CRTL_BUS_s_axi
+LOAD_WEIGHT_DMA
+LOAD_IFM
+FIRE4
+Load_Fire
+OFM_STORE
+top

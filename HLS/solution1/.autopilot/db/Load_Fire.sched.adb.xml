@@ -1,0 +1,658 @@
+<stg><name>Load_Fire</name>
+
+
+<trans_list>
+
+<trans id="43" from="1" to="2">
+<condition id="16">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="44" from="2" to="3">
+<condition id="17">
+<or_exp><and_exp><literal name="tmp" val="1"/>
+</and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="47" from="3" to="2">
+<condition id="21">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="145" bw="0" op_0_bw="0" op_1_bw="26" op_2_bw="26" op_3_bw="26" op_4_bw="26" op_5_bw="26" op_6_bw="26" op_7_bw="26" op_8_bw="26" op_9_bw="0" op_10_bw="0" op_11_bw="0" op_12_bw="32" op_13_bw="0" op_14_bw="0" op_15_bw="0" op_16_bw="0" op_17_bw="0">
+<![CDATA[
+:0  call void (...)* @_ssdm_op_SpecMemCore([169 x i26]* %OFM_0_V, [169 x i26]* %OFM_1_V, [169 x i26]* %OFM_2_V, [169 x i26]* %OFM_3_V, [169 x i26]* %OFM_4_V, [169 x i26]* %OFM_5_V, [169 x i26]* %OFM_6_V, [169 x i26]* %OFM_7_V, [1 x i8]* @p_str1, [13 x i8]* @p_str21, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="146" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="8" op_8_bw="8" op_9_bw="8" op_10_bw="8" op_11_bw="8" op_12_bw="8" op_13_bw="8" op_14_bw="8" op_15_bw="8" op_16_bw="8" op_17_bw="8" op_18_bw="8" op_19_bw="8" op_20_bw="8" op_21_bw="8" op_22_bw="8" op_23_bw="8" op_24_bw="8" op_25_bw="8" op_26_bw="8" op_27_bw="8" op_28_bw="8" op_29_bw="8" op_30_bw="8" op_31_bw="8" op_32_bw="8" op_33_bw="8" op_34_bw="8" op_35_bw="8" op_36_bw="8" op_37_bw="8" op_38_bw="8" op_39_bw="8" op_40_bw="8" op_41_bw="8" op_42_bw="8" op_43_bw="8" op_44_bw="8" op_45_bw="8" op_46_bw="8" op_47_bw="8" op_48_bw="8" op_49_bw="8" op_50_bw="8" op_51_bw="8" op_52_bw="8" op_53_bw="8" op_54_bw="8" op_55_bw="8" op_56_bw="8" op_57_bw="0" op_58_bw="0" op_59_bw="0" op_60_bw="32" op_61_bw="0" op_62_bw="0" op_63_bw="0" op_64_bw="0" op_65_bw="0">
+<![CDATA[
+:1  call void (...)* @_ssdm_op_SpecMemCore([121 x i8]* @WEIGHT1_DB_V_0_0, [121 x i8]* @WEIGHT1_DB_V_0_1, [121 x i8]* @WEIGHT1_DB_V_0_2, [121 x i8]* @WEIGHT1_DB_V_0_3, [121 x i8]* @WEIGHT1_DB_V_0_4, [121 x i8]* @WEIGHT1_DB_V_0_5, [121 x i8]* @WEIGHT1_DB_V_0_6, [121 x i8]* @WEIGHT1_DB_V_1_0, [121 x i8]* @WEIGHT1_DB_V_1_1, [121 x i8]* @WEIGHT1_DB_V_1_2, [121 x i8]* @WEIGHT1_DB_V_1_3, [121 x i8]* @WEIGHT1_DB_V_1_4, [121 x i8]* @WEIGHT1_DB_V_1_5, [121 x i8]* @WEIGHT1_DB_V_1_6, [121 x i8]* @WEIGHT1_DB_V_2_0, [121 x i8]* @WEIGHT1_DB_V_2_1, [121 x i8]* @WEIGHT1_DB_V_2_2, [121 x i8]* @WEIGHT1_DB_V_2_3, [121 x i8]* @WEIGHT1_DB_V_2_4, [121 x i8]* @WEIGHT1_DB_V_2_5, [121 x i8]* @WEIGHT1_DB_V_2_6, [121 x i8]* @WEIGHT1_DB_V_3_0, [121 x i8]* @WEIGHT1_DB_V_3_1, [121 x i8]* @WEIGHT1_DB_V_3_2, [121 x i8]* @WEIGHT1_DB_V_3_3, [121 x i8]* @WEIGHT1_DB_V_3_4, [121 x i8]* @WEIGHT1_DB_V_3_5, [121 x i8]* @WEIGHT1_DB_V_3_6, [121 x i8]* @WEIGHT1_DB_V_4_0, [121 x i8]* @WEIGHT1_DB_V_4_1, [121 x i8]* @WEIGHT1_DB_V_4_2, [121 x i8]* @WEIGHT1_DB_V_4_3, [121 x i8]* @WEIGHT1_DB_V_4_4, [121 x i8]* @WEIGHT1_DB_V_4_5, [121 x i8]* @WEIGHT1_DB_V_4_6, [121 x i8]* @WEIGHT1_DB_V_5_0, [121 x i8]* @WEIGHT1_DB_V_5_1, [121 x i8]* @WEIGHT1_DB_V_5_2, [121 x i8]* @WEIGHT1_DB_V_5_3, [121 x i8]* @WEIGHT1_DB_V_5_4, [121 x i8]* @WEIGHT1_DB_V_5_5, [121 x i8]* @WEIGHT1_DB_V_5_6, [121 x i8]* @WEIGHT1_DB_V_6_0, [121 x i8]* @WEIGHT1_DB_V_6_1, [121 x i8]* @WEIGHT1_DB_V_6_2, [121 x i8]* @WEIGHT1_DB_V_6_3, [121 x i8]* @WEIGHT1_DB_V_6_4, [121 x i8]* @WEIGHT1_DB_V_6_5, [121 x i8]* @WEIGHT1_DB_V_6_6, [121 x i8]* @WEIGHT1_DB_V_7_0, [121 x i8]* @WEIGHT1_DB_V_7_1, [121 x i8]* @WEIGHT1_DB_V_7_2, [121 x i8]* @WEIGHT1_DB_V_7_3, [121 x i8]* @WEIGHT1_DB_V_7_4, [121 x i8]* @WEIGHT1_DB_V_7_5, [121 x i8]* @WEIGHT1_DB_V_7_6, [1 x i8]* @p_str1, [14 x i8]* @p_str19, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="147" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="8" op_8_bw="8" op_9_bw="8" op_10_bw="8" op_11_bw="8" op_12_bw="8" op_13_bw="8" op_14_bw="8" op_15_bw="8" op_16_bw="8" op_17_bw="8" op_18_bw="8" op_19_bw="8" op_20_bw="8" op_21_bw="8" op_22_bw="8" op_23_bw="8" op_24_bw="8" op_25_bw="8" op_26_bw="8" op_27_bw="8" op_28_bw="8" op_29_bw="8" op_30_bw="8" op_31_bw="8" op_32_bw="8" op_33_bw="8" op_34_bw="8" op_35_bw="8" op_36_bw="8" op_37_bw="8" op_38_bw="8" op_39_bw="8" op_40_bw="8" op_41_bw="8" op_42_bw="8" op_43_bw="8" op_44_bw="8" op_45_bw="8" op_46_bw="8" op_47_bw="8" op_48_bw="8" op_49_bw="8" op_50_bw="8" op_51_bw="8" op_52_bw="8" op_53_bw="8" op_54_bw="8" op_55_bw="8" op_56_bw="8" op_57_bw="0" op_58_bw="0" op_59_bw="0" op_60_bw="32" op_61_bw="0" op_62_bw="0" op_63_bw="0" op_64_bw="0" op_65_bw="0">
+<![CDATA[
+:2  call void (...)* @_ssdm_op_SpecMemCore([121 x i8]* @WEIGHT1_V_0_0, [121 x i8]* @WEIGHT1_V_0_1, [121 x i8]* @WEIGHT1_V_0_2, [121 x i8]* @WEIGHT1_V_0_3, [121 x i8]* @WEIGHT1_V_0_4, [121 x i8]* @WEIGHT1_V_0_5, [121 x i8]* @WEIGHT1_V_0_6, [121 x i8]* @WEIGHT1_V_1_0, [121 x i8]* @WEIGHT1_V_1_1, [121 x i8]* @WEIGHT1_V_1_2, [121 x i8]* @WEIGHT1_V_1_3, [121 x i8]* @WEIGHT1_V_1_4, [121 x i8]* @WEIGHT1_V_1_5, [121 x i8]* @WEIGHT1_V_1_6, [121 x i8]* @WEIGHT1_V_2_0, [121 x i8]* @WEIGHT1_V_2_1, [121 x i8]* @WEIGHT1_V_2_2, [121 x i8]* @WEIGHT1_V_2_3, [121 x i8]* @WEIGHT1_V_2_4, [121 x i8]* @WEIGHT1_V_2_5, [121 x i8]* @WEIGHT1_V_2_6, [121 x i8]* @WEIGHT1_V_3_0, [121 x i8]* @WEIGHT1_V_3_1, [121 x i8]* @WEIGHT1_V_3_2, [121 x i8]* @WEIGHT1_V_3_3, [121 x i8]* @WEIGHT1_V_3_4, [121 x i8]* @WEIGHT1_V_3_5, [121 x i8]* @WEIGHT1_V_3_6, [121 x i8]* @WEIGHT1_V_4_0, [121 x i8]* @WEIGHT1_V_4_1, [121 x i8]* @WEIGHT1_V_4_2, [121 x i8]* @WEIGHT1_V_4_3, [121 x i8]* @WEIGHT1_V_4_4, [121 x i8]* @WEIGHT1_V_4_5, [121 x i8]* @WEIGHT1_V_4_6, [121 x i8]* @WEIGHT1_V_5_0, [121 x i8]* @WEIGHT1_V_5_1, [121 x i8]* @WEIGHT1_V_5_2, [121 x i8]* @WEIGHT1_V_5_3, [121 x i8]* @WEIGHT1_V_5_4, [121 x i8]* @WEIGHT1_V_5_5, [121 x i8]* @WEIGHT1_V_5_6, [121 x i8]* @WEIGHT1_V_6_0, [121 x i8]* @WEIGHT1_V_6_1, [121 x i8]* @WEIGHT1_V_6_2, [121 x i8]* @WEIGHT1_V_6_3, [121 x i8]* @WEIGHT1_V_6_4, [121 x i8]* @WEIGHT1_V_6_5, [121 x i8]* @WEIGHT1_V_6_6, [121 x i8]* @WEIGHT1_V_7_0, [121 x i8]* @WEIGHT1_V_7_1, [121 x i8]* @WEIGHT1_V_7_2, [121 x i8]* @WEIGHT1_V_7_3, [121 x i8]* @WEIGHT1_V_7_4, [121 x i8]* @WEIGHT1_V_7_5, [121 x i8]* @WEIGHT1_V_7_6, [1 x i8]* @p_str1, [14 x i8]* @p_str19, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="148" bw="0" op_0_bw="0" op_1_bw="56" op_2_bw="1" op_3_bw="0" op_4_bw="32" op_5_bw="32" op_6_bw="0" op_7_bw="32" op_8_bw="32" op_9_bw="0" op_10_bw="0" op_11_bw="0" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="0" op_17_bw="0">
+<![CDATA[
+:3  call void (...)* @_ssdm_op_SpecInterface(i56* %input_dma_I_V_data, i1* %input_dma_I_V_last, [5 x i8]* @p_str17, i32 0, i32 0, [5 x i8]* @p_str18, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="149" bw="0" op_0_bw="0" op_1_bw="56" op_2_bw="1" op_3_bw="0" op_4_bw="32" op_5_bw="32" op_6_bw="0" op_7_bw="32" op_8_bw="32" op_9_bw="0" op_10_bw="0" op_11_bw="0" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="0" op_17_bw="0">
+<![CDATA[
+:4  call void (...)* @_ssdm_op_SpecInterface(i56* %input_dma_W_V_data, i1* %input_dma_W_V_last, [5 x i8]* @p_str17, i32 0, i32 0, [5 x i8]* @p_str18, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="9" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="150" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:5  %custom_Tc_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %custom_Tc)
+
+]]></Node>
+<StgValue><ssdm name="custom_Tc_read"/></StgValue>
+</operation>
+
+<operation id="10" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="151" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:6  %custom_Tr_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %custom_Tr)
+
+]]></Node>
+<StgValue><ssdm name="custom_Tr_read"/></StgValue>
+</operation>
+
+<operation id="11" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="152" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:7  %custom_k_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %custom_k)
+
+]]></Node>
+<StgValue><ssdm name="custom_k_read"/></StgValue>
+</operation>
+
+<operation id="12" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="153" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:8  %N_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %N)
+
+]]></Node>
+<StgValue><ssdm name="N_read"/></StgValue>
+</operation>
+
+<operation id="13" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="154" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:9  %col_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %col)
+
+]]></Node>
+<StgValue><ssdm name="col_read"/></StgValue>
+</operation>
+
+<operation id="14" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="155" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:10  %row_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %row)
+
+]]></Node>
+<StgValue><ssdm name="row_read"/></StgValue>
+</operation>
+
+<operation id="15" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="156" bw="0" op_0_bw="0">
+<![CDATA[
+:11  br label %1
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="16" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="158" bw="32" op_0_bw="32" op_1_bw="0">
+<![CDATA[
+:0  %idx = phi i32 [ 0, %0 ], [ %idx_1, %5 ]
+
+]]></Node>
+<StgValue><ssdm name="idx"/></StgValue>
+</operation>
+
+<operation id="17" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="159" bw="32" op_0_bw="32" op_1_bw="0">
+<![CDATA[
+:1  %i = phi i32 [ 0, %0 ], [ %i_3, %5 ]
+
+]]></Node>
+<StgValue><ssdm name="i"/></StgValue>
+</operation>
+
+<operation id="18" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="160" bw="1" op_0_bw="32">
+<![CDATA[
+:2  %tmp_31 = trunc i32 %idx to i1
+
+]]></Node>
+<StgValue><ssdm name="tmp_31"/></StgValue>
+</operation>
+
+<operation id="19" st_id="2" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="161" bw="1" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:3  %tmp = icmp slt i32 %i, %N_read
+
+]]></Node>
+<StgValue><ssdm name="tmp"/></StgValue>
+</operation>
+
+<operation id="20" st_id="2" stage="1" lat="1">
+<core>AddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="162" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:4  %idx_1 = add nsw i32 1, %idx
+
+]]></Node>
+<StgValue><ssdm name="idx_1"/></StgValue>
+</operation>
+
+<operation id="21" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="163" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<![CDATA[
+:5  br i1 %tmp, label %2, label %6
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="22" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="3">
+<or_exp><and_exp><literal name="tmp" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="165" bw="32" op_0_bw="32" op_1_bw="0">
+<![CDATA[
+:0  %tmp_16 = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str14)
+
+]]></Node>
+<StgValue><ssdm name="tmp_16"/></StgValue>
+</operation>
+
+<operation id="23" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="3">
+<or_exp><and_exp><literal name="tmp" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="166" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="0">
+<![CDATA[
+:1  call void (...)* @_ssdm_op_SpecLoopTripCount(i32 6, i32 6, i32 6, [1 x i8]* @p_str1) nounwind
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="24" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="3">
+<or_exp><and_exp><literal name="tmp" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="167" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<![CDATA[
+:2  br i1 %tmp_31, label %4, label %3
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="25" st_id="2" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="5">
+<or_exp><and_exp><literal name="tmp" val="1"/>
+<literal name="tmp_31" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="169" bw="0" op_0_bw="0" op_1_bw="56" op_2_bw="1" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="8" op_8_bw="8" op_9_bw="8" op_10_bw="8" op_11_bw="8" op_12_bw="8" op_13_bw="8" op_14_bw="8" op_15_bw="8" op_16_bw="8" op_17_bw="8" op_18_bw="8" op_19_bw="8" op_20_bw="8" op_21_bw="8" op_22_bw="8" op_23_bw="8" op_24_bw="8" op_25_bw="8" op_26_bw="8" op_27_bw="8" op_28_bw="8" op_29_bw="8" op_30_bw="8" op_31_bw="8" op_32_bw="8" op_33_bw="8" op_34_bw="8" op_35_bw="8" op_36_bw="8" op_37_bw="8" op_38_bw="8" op_39_bw="8" op_40_bw="8" op_41_bw="8" op_42_bw="8" op_43_bw="8" op_44_bw="8" op_45_bw="8" op_46_bw="8" op_47_bw="8" op_48_bw="8" op_49_bw="8" op_50_bw="8" op_51_bw="8" op_52_bw="8" op_53_bw="8" op_54_bw="8" op_55_bw="8" op_56_bw="8" op_57_bw="8" op_58_bw="8" op_59_bw="32">
+<![CDATA[
+:0  call fastcc void @LOAD_WEIGHT_DMA(i56* %input_dma_W_V_data, i1* %input_dma_W_V_last, [121 x i8]* @WEIGHT1_V_0_0, [121 x i8]* @WEIGHT1_V_0_1, [121 x i8]* @WEIGHT1_V_0_2, [121 x i8]* @WEIGHT1_V_0_3, [121 x i8]* @WEIGHT1_V_0_4, [121 x i8]* @WEIGHT1_V_0_5, [121 x i8]* @WEIGHT1_V_0_6, [121 x i8]* @WEIGHT1_V_1_0, [121 x i8]* @WEIGHT1_V_1_1, [121 x i8]* @WEIGHT1_V_1_2, [121 x i8]* @WEIGHT1_V_1_3, [121 x i8]* @WEIGHT1_V_1_4, [121 x i8]* @WEIGHT1_V_1_5, [121 x i8]* @WEIGHT1_V_1_6, [121 x i8]* @WEIGHT1_V_2_0, [121 x i8]* @WEIGHT1_V_2_1, [121 x i8]* @WEIGHT1_V_2_2, [121 x i8]* @WEIGHT1_V_2_3, [121 x i8]* @WEIGHT1_V_2_4, [121 x i8]* @WEIGHT1_V_2_5, [121 x i8]* @WEIGHT1_V_2_6, [121 x i8]* @WEIGHT1_V_3_0, [121 x i8]* @WEIGHT1_V_3_1, [121 x i8]* @WEIGHT1_V_3_2, [121 x i8]* @WEIGHT1_V_3_3, [121 x i8]* @WEIGHT1_V_3_4, [121 x i8]* @WEIGHT1_V_3_5, [121 x i8]* @WEIGHT1_V_3_6, [121 x i8]* @WEIGHT1_V_4_0, [121 x i8]* @WEIGHT1_V_4_1, [121 x i8]* @WEIGHT1_V_4_2, [121 x i8]* @WEIGHT1_V_4_3, [121 x i8]* @WEIGHT1_V_4_4, [121 x i8]* @WEIGHT1_V_4_5, [121 x i8]* @WEIGHT1_V_4_6, [121 x i8]* @WEIGHT1_V_5_0, [121 x i8]* @WEIGHT1_V_5_1, [121 x i8]* @WEIGHT1_V_5_2, [121 x i8]* @WEIGHT1_V_5_3, [121 x i8]* @WEIGHT1_V_5_4, [121 x i8]* @WEIGHT1_V_5_5, [121 x i8]* @WEIGHT1_V_5_6, [121 x i8]* @WEIGHT1_V_6_0, [121 x i8]* @WEIGHT1_V_6_1, [121 x i8]* @WEIGHT1_V_6_2, [121 x i8]* @WEIGHT1_V_6_3, [121 x i8]* @WEIGHT1_V_6_4, [121 x i8]* @WEIGHT1_V_6_5, [121 x i8]* @WEIGHT1_V_6_6, [121 x i8]* @WEIGHT1_V_7_0, [121 x i8]* @WEIGHT1_V_7_1, [121 x i8]* @WEIGHT1_V_7_2, [121 x i8]* @WEIGHT1_V_7_3, [121 x i8]* @WEIGHT1_V_7_4, [121 x i8]* @WEIGHT1_V_7_5, [121 x i8]* @WEIGHT1_V_7_6, i32 %custom_k_read)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="26" st_id="2" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="5">
+<or_exp><and_exp><literal name="tmp" val="1"/>
+<literal name="tmp_31" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="170" bw="0" op_0_bw="0" op_1_bw="56" op_2_bw="1" op_3_bw="26" op_4_bw="26" op_5_bw="26" op_6_bw="26" op_7_bw="26" op_8_bw="26" op_9_bw="26" op_10_bw="32" op_11_bw="32">
+<![CDATA[
+:1  call fastcc void @LOAD_IFM(i56* %input_dma_I_V_data, i1* %input_dma_I_V_last, [169 x i26]* @IFM_V_0, [169 x i26]* @IFM_V_1, [169 x i26]* @IFM_V_2, [169 x i26]* @IFM_V_3, [169 x i26]* @IFM_V_4, [169 x i26]* @IFM_V_5, [169 x i26]* @IFM_V_6, i32 %custom_Tr_read, i32 %custom_Tc_read)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="27" st_id="2" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="5">
+<or_exp><and_exp><literal name="tmp" val="1"/>
+<literal name="tmp_31" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="171" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="8" op_8_bw="8" op_9_bw="8" op_10_bw="8" op_11_bw="8" op_12_bw="8" op_13_bw="8" op_14_bw="8" op_15_bw="8" op_16_bw="8" op_17_bw="8" op_18_bw="8" op_19_bw="8" op_20_bw="8" op_21_bw="8" op_22_bw="8" op_23_bw="8" op_24_bw="8" op_25_bw="8" op_26_bw="8" op_27_bw="8" op_28_bw="8" op_29_bw="8" op_30_bw="8" op_31_bw="8" op_32_bw="8" op_33_bw="8" op_34_bw="8" op_35_bw="8" op_36_bw="8" op_37_bw="8" op_38_bw="8" op_39_bw="8" op_40_bw="8" op_41_bw="8" op_42_bw="8" op_43_bw="8" op_44_bw="8" op_45_bw="8" op_46_bw="8" op_47_bw="8" op_48_bw="8" op_49_bw="8" op_50_bw="8" op_51_bw="8" op_52_bw="8" op_53_bw="8" op_54_bw="8" op_55_bw="8" op_56_bw="8" op_57_bw="26" op_58_bw="26" op_59_bw="26" op_60_bw="26" op_61_bw="26" op_62_bw="26" op_63_bw="26" op_64_bw="26" op_65_bw="26" op_66_bw="26" op_67_bw="26" op_68_bw="26" op_69_bw="26" op_70_bw="26" op_71_bw="26" op_72_bw="32" op_73_bw="32" op_74_bw="32" op_75_bw="32" op_76_bw="32">
+<![CDATA[
+:2  call fastcc void @FIRE4([121 x i8]* @WEIGHT1_DB_V_0_0, [121 x i8]* @WEIGHT1_DB_V_0_1, [121 x i8]* @WEIGHT1_DB_V_0_2, [121 x i8]* @WEIGHT1_DB_V_0_3, [121 x i8]* @WEIGHT1_DB_V_0_4, [121 x i8]* @WEIGHT1_DB_V_0_5, [121 x i8]* @WEIGHT1_DB_V_0_6, [121 x i8]* @WEIGHT1_DB_V_1_0, [121 x i8]* @WEIGHT1_DB_V_1_1, [121 x i8]* @WEIGHT1_DB_V_1_2, [121 x i8]* @WEIGHT1_DB_V_1_3, [121 x i8]* @WEIGHT1_DB_V_1_4, [121 x i8]* @WEIGHT1_DB_V_1_5, [121 x i8]* @WEIGHT1_DB_V_1_6, [121 x i8]* @WEIGHT1_DB_V_2_0, [121 x i8]* @WEIGHT1_DB_V_2_1, [121 x i8]* @WEIGHT1_DB_V_2_2, [121 x i8]* @WEIGHT1_DB_V_2_3, [121 x i8]* @WEIGHT1_DB_V_2_4, [121 x i8]* @WEIGHT1_DB_V_2_5, [121 x i8]* @WEIGHT1_DB_V_2_6, [121 x i8]* @WEIGHT1_DB_V_3_0, [121 x i8]* @WEIGHT1_DB_V_3_1, [121 x i8]* @WEIGHT1_DB_V_3_2, [121 x i8]* @WEIGHT1_DB_V_3_3, [121 x i8]* @WEIGHT1_DB_V_3_4, [121 x i8]* @WEIGHT1_DB_V_3_5, [121 x i8]* @WEIGHT1_DB_V_3_6, [121 x i8]* @WEIGHT1_DB_V_4_0, [121 x i8]* @WEIGHT1_DB_V_4_1, [121 x i8]* @WEIGHT1_DB_V_4_2, [121 x i8]* @WEIGHT1_DB_V_4_3, [121 x i8]* @WEIGHT1_DB_V_4_4, [121 x i8]* @WEIGHT1_DB_V_4_5, [121 x i8]* @WEIGHT1_DB_V_4_6, [121 x i8]* @WEIGHT1_DB_V_5_0, [121 x i8]* @WEIGHT1_DB_V_5_1, [121 x i8]* @WEIGHT1_DB_V_5_2, [121 x i8]* @WEIGHT1_DB_V_5_3, [121 x i8]* @WEIGHT1_DB_V_5_4, [121 x i8]* @WEIGHT1_DB_V_5_5, [121 x i8]* @WEIGHT1_DB_V_5_6, [121 x i8]* @WEIGHT1_DB_V_6_0, [121 x i8]* @WEIGHT1_DB_V_6_1, [121 x i8]* @WEIGHT1_DB_V_6_2, [121 x i8]* @WEIGHT1_DB_V_6_3, [121 x i8]* @WEIGHT1_DB_V_6_4, [121 x i8]* @WEIGHT1_DB_V_6_5, [121 x i8]* @WEIGHT1_DB_V_6_6, [121 x i8]* @WEIGHT1_DB_V_7_0, [121 x i8]* @WEIGHT1_DB_V_7_1, [121 x i8]* @WEIGHT1_DB_V_7_2, [121 x i8]* @WEIGHT1_DB_V_7_3, [121 x i8]* @WEIGHT1_DB_V_7_4, [121 x i8]* @WEIGHT1_DB_V_7_5, [121 x i8]* @WEIGHT1_DB_V_7_6, [169 x i26]* @IFM_DB_V_0, [169 x i26]* @IFM_DB_V_1, [169 x i26]* @IFM_DB_V_2, [169 x i26]* @IFM_DB_V_3, [169 x i26]* @IFM_DB_V_4, [169 x i26]* @IFM_DB_V_5, [169 x i26]* @IFM_DB_V_6, [169 x i26]* %OFM_0_V, [169 x i26]* %OFM_1_V, [169 x i26]* %OFM_2_V, [169 x i26]* %OFM_3_V, [169 x i26]* %OFM_4_V, [169 x i26]* %OFM_5_V, [169 x i26]* %OFM_6_V, [169 x i26]* %OFM_7_V, i32 %row_read, i32 %col_read, i32 %custom_k_read, i32 %custom_Tr_read, i32 %custom_Tc_read)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="28" st_id="2" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="7">
+<or_exp><and_exp><literal name="tmp" val="1"/>
+<literal name="tmp_31" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="174" bw="0" op_0_bw="0" op_1_bw="56" op_2_bw="1" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="8" op_8_bw="8" op_9_bw="8" op_10_bw="8" op_11_bw="8" op_12_bw="8" op_13_bw="8" op_14_bw="8" op_15_bw="8" op_16_bw="8" op_17_bw="8" op_18_bw="8" op_19_bw="8" op_20_bw="8" op_21_bw="8" op_22_bw="8" op_23_bw="8" op_24_bw="8" op_25_bw="8" op_26_bw="8" op_27_bw="8" op_28_bw="8" op_29_bw="8" op_30_bw="8" op_31_bw="8" op_32_bw="8" op_33_bw="8" op_34_bw="8" op_35_bw="8" op_36_bw="8" op_37_bw="8" op_38_bw="8" op_39_bw="8" op_40_bw="8" op_41_bw="8" op_42_bw="8" op_43_bw="8" op_44_bw="8" op_45_bw="8" op_46_bw="8" op_47_bw="8" op_48_bw="8" op_49_bw="8" op_50_bw="8" op_51_bw="8" op_52_bw="8" op_53_bw="8" op_54_bw="8" op_55_bw="8" op_56_bw="8" op_57_bw="8" op_58_bw="8" op_59_bw="32">
+<![CDATA[
+:0  call fastcc void @LOAD_WEIGHT_DMA(i56* %input_dma_W_V_data, i1* %input_dma_W_V_last, [121 x i8]* @WEIGHT1_DB_V_0_0, [121 x i8]* @WEIGHT1_DB_V_0_1, [121 x i8]* @WEIGHT1_DB_V_0_2, [121 x i8]* @WEIGHT1_DB_V_0_3, [121 x i8]* @WEIGHT1_DB_V_0_4, [121 x i8]* @WEIGHT1_DB_V_0_5, [121 x i8]* @WEIGHT1_DB_V_0_6, [121 x i8]* @WEIGHT1_DB_V_1_0, [121 x i8]* @WEIGHT1_DB_V_1_1, [121 x i8]* @WEIGHT1_DB_V_1_2, [121 x i8]* @WEIGHT1_DB_V_1_3, [121 x i8]* @WEIGHT1_DB_V_1_4, [121 x i8]* @WEIGHT1_DB_V_1_5, [121 x i8]* @WEIGHT1_DB_V_1_6, [121 x i8]* @WEIGHT1_DB_V_2_0, [121 x i8]* @WEIGHT1_DB_V_2_1, [121 x i8]* @WEIGHT1_DB_V_2_2, [121 x i8]* @WEIGHT1_DB_V_2_3, [121 x i8]* @WEIGHT1_DB_V_2_4, [121 x i8]* @WEIGHT1_DB_V_2_5, [121 x i8]* @WEIGHT1_DB_V_2_6, [121 x i8]* @WEIGHT1_DB_V_3_0, [121 x i8]* @WEIGHT1_DB_V_3_1, [121 x i8]* @WEIGHT1_DB_V_3_2, [121 x i8]* @WEIGHT1_DB_V_3_3, [121 x i8]* @WEIGHT1_DB_V_3_4, [121 x i8]* @WEIGHT1_DB_V_3_5, [121 x i8]* @WEIGHT1_DB_V_3_6, [121 x i8]* @WEIGHT1_DB_V_4_0, [121 x i8]* @WEIGHT1_DB_V_4_1, [121 x i8]* @WEIGHT1_DB_V_4_2, [121 x i8]* @WEIGHT1_DB_V_4_3, [121 x i8]* @WEIGHT1_DB_V_4_4, [121 x i8]* @WEIGHT1_DB_V_4_5, [121 x i8]* @WEIGHT1_DB_V_4_6, [121 x i8]* @WEIGHT1_DB_V_5_0, [121 x i8]* @WEIGHT1_DB_V_5_1, [121 x i8]* @WEIGHT1_DB_V_5_2, [121 x i8]* @WEIGHT1_DB_V_5_3, [121 x i8]* @WEIGHT1_DB_V_5_4, [121 x i8]* @WEIGHT1_DB_V_5_5, [121 x i8]* @WEIGHT1_DB_V_5_6, [121 x i8]* @WEIGHT1_DB_V_6_0, [121 x i8]* @WEIGHT1_DB_V_6_1, [121 x i8]* @WEIGHT1_DB_V_6_2, [121 x i8]* @WEIGHT1_DB_V_6_3, [121 x i8]* @WEIGHT1_DB_V_6_4, [121 x i8]* @WEIGHT1_DB_V_6_5, [121 x i8]* @WEIGHT1_DB_V_6_6, [121 x i8]* @WEIGHT1_DB_V_7_0, [121 x i8]* @WEIGHT1_DB_V_7_1, [121 x i8]* @WEIGHT1_DB_V_7_2, [121 x i8]* @WEIGHT1_DB_V_7_3, [121 x i8]* @WEIGHT1_DB_V_7_4, [121 x i8]* @WEIGHT1_DB_V_7_5, [121 x i8]* @WEIGHT1_DB_V_7_6, i32 %custom_k_read)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="29" st_id="2" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="7">
+<or_exp><and_exp><literal name="tmp" val="1"/>
+<literal name="tmp_31" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="175" bw="0" op_0_bw="0" op_1_bw="56" op_2_bw="1" op_3_bw="26" op_4_bw="26" op_5_bw="26" op_6_bw="26" op_7_bw="26" op_8_bw="26" op_9_bw="26" op_10_bw="32" op_11_bw="32">
+<![CDATA[
+:1  call fastcc void @LOAD_IFM(i56* %input_dma_I_V_data, i1* %input_dma_I_V_last, [169 x i26]* @IFM_DB_V_0, [169 x i26]* @IFM_DB_V_1, [169 x i26]* @IFM_DB_V_2, [169 x i26]* @IFM_DB_V_3, [169 x i26]* @IFM_DB_V_4, [169 x i26]* @IFM_DB_V_5, [169 x i26]* @IFM_DB_V_6, i32 %custom_Tr_read, i32 %custom_Tc_read)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="30" st_id="2" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="7">
+<or_exp><and_exp><literal name="tmp" val="1"/>
+<literal name="tmp_31" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="176" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="8" op_8_bw="8" op_9_bw="8" op_10_bw="8" op_11_bw="8" op_12_bw="8" op_13_bw="8" op_14_bw="8" op_15_bw="8" op_16_bw="8" op_17_bw="8" op_18_bw="8" op_19_bw="8" op_20_bw="8" op_21_bw="8" op_22_bw="8" op_23_bw="8" op_24_bw="8" op_25_bw="8" op_26_bw="8" op_27_bw="8" op_28_bw="8" op_29_bw="8" op_30_bw="8" op_31_bw="8" op_32_bw="8" op_33_bw="8" op_34_bw="8" op_35_bw="8" op_36_bw="8" op_37_bw="8" op_38_bw="8" op_39_bw="8" op_40_bw="8" op_41_bw="8" op_42_bw="8" op_43_bw="8" op_44_bw="8" op_45_bw="8" op_46_bw="8" op_47_bw="8" op_48_bw="8" op_49_bw="8" op_50_bw="8" op_51_bw="8" op_52_bw="8" op_53_bw="8" op_54_bw="8" op_55_bw="8" op_56_bw="8" op_57_bw="26" op_58_bw="26" op_59_bw="26" op_60_bw="26" op_61_bw="26" op_62_bw="26" op_63_bw="26" op_64_bw="26" op_65_bw="26" op_66_bw="26" op_67_bw="26" op_68_bw="26" op_69_bw="26" op_70_bw="26" op_71_bw="26" op_72_bw="32" op_73_bw="32" op_74_bw="32" op_75_bw="32" op_76_bw="32">
+<![CDATA[
+:2  call fastcc void @FIRE4([121 x i8]* @WEIGHT1_V_0_0, [121 x i8]* @WEIGHT1_V_0_1, [121 x i8]* @WEIGHT1_V_0_2, [121 x i8]* @WEIGHT1_V_0_3, [121 x i8]* @WEIGHT1_V_0_4, [121 x i8]* @WEIGHT1_V_0_5, [121 x i8]* @WEIGHT1_V_0_6, [121 x i8]* @WEIGHT1_V_1_0, [121 x i8]* @WEIGHT1_V_1_1, [121 x i8]* @WEIGHT1_V_1_2, [121 x i8]* @WEIGHT1_V_1_3, [121 x i8]* @WEIGHT1_V_1_4, [121 x i8]* @WEIGHT1_V_1_5, [121 x i8]* @WEIGHT1_V_1_6, [121 x i8]* @WEIGHT1_V_2_0, [121 x i8]* @WEIGHT1_V_2_1, [121 x i8]* @WEIGHT1_V_2_2, [121 x i8]* @WEIGHT1_V_2_3, [121 x i8]* @WEIGHT1_V_2_4, [121 x i8]* @WEIGHT1_V_2_5, [121 x i8]* @WEIGHT1_V_2_6, [121 x i8]* @WEIGHT1_V_3_0, [121 x i8]* @WEIGHT1_V_3_1, [121 x i8]* @WEIGHT1_V_3_2, [121 x i8]* @WEIGHT1_V_3_3, [121 x i8]* @WEIGHT1_V_3_4, [121 x i8]* @WEIGHT1_V_3_5, [121 x i8]* @WEIGHT1_V_3_6, [121 x i8]* @WEIGHT1_V_4_0, [121 x i8]* @WEIGHT1_V_4_1, [121 x i8]* @WEIGHT1_V_4_2, [121 x i8]* @WEIGHT1_V_4_3, [121 x i8]* @WEIGHT1_V_4_4, [121 x i8]* @WEIGHT1_V_4_5, [121 x i8]* @WEIGHT1_V_4_6, [121 x i8]* @WEIGHT1_V_5_0, [121 x i8]* @WEIGHT1_V_5_1, [121 x i8]* @WEIGHT1_V_5_2, [121 x i8]* @WEIGHT1_V_5_3, [121 x i8]* @WEIGHT1_V_5_4, [121 x i8]* @WEIGHT1_V_5_5, [121 x i8]* @WEIGHT1_V_5_6, [121 x i8]* @WEIGHT1_V_6_0, [121 x i8]* @WEIGHT1_V_6_1, [121 x i8]* @WEIGHT1_V_6_2, [121 x i8]* @WEIGHT1_V_6_3, [121 x i8]* @WEIGHT1_V_6_4, [121 x i8]* @WEIGHT1_V_6_5, [121 x i8]* @WEIGHT1_V_6_6, [121 x i8]* @WEIGHT1_V_7_0, [121 x i8]* @WEIGHT1_V_7_1, [121 x i8]* @WEIGHT1_V_7_2, [121 x i8]* @WEIGHT1_V_7_3, [121 x i8]* @WEIGHT1_V_7_4, [121 x i8]* @WEIGHT1_V_7_5, [121 x i8]* @WEIGHT1_V_7_6, [169 x i26]* @IFM_V_0, [169 x i26]* @IFM_V_1, [169 x i26]* @IFM_V_2, [169 x i26]* @IFM_V_3, [169 x i26]* @IFM_V_4, [169 x i26]* @IFM_V_5, [169 x i26]* @IFM_V_6, [169 x i26]* %OFM_0_V, [169 x i26]* %OFM_1_V, [169 x i26]* %OFM_2_V, [169 x i26]* %OFM_3_V, [169 x i26]* %OFM_4_V, [169 x i26]* %OFM_5_V, [169 x i26]* %OFM_6_V, [169 x i26]* %OFM_7_V, i32 %row_read, i32 %col_read, i32 %custom_k_read, i32 %custom_Tr_read, i32 %custom_Tc_read)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="31" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="9">
+<or_exp><and_exp><literal name="tmp" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="183" bw="0">
+<![CDATA[
+:0  ret void
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+
+<state id="3" st_id="3">
+
+<operation id="32" st_id="3" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="10">
+<or_exp><and_exp><literal name="tmp_31" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="169" bw="0" op_0_bw="0" op_1_bw="56" op_2_bw="1" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="8" op_8_bw="8" op_9_bw="8" op_10_bw="8" op_11_bw="8" op_12_bw="8" op_13_bw="8" op_14_bw="8" op_15_bw="8" op_16_bw="8" op_17_bw="8" op_18_bw="8" op_19_bw="8" op_20_bw="8" op_21_bw="8" op_22_bw="8" op_23_bw="8" op_24_bw="8" op_25_bw="8" op_26_bw="8" op_27_bw="8" op_28_bw="8" op_29_bw="8" op_30_bw="8" op_31_bw="8" op_32_bw="8" op_33_bw="8" op_34_bw="8" op_35_bw="8" op_36_bw="8" op_37_bw="8" op_38_bw="8" op_39_bw="8" op_40_bw="8" op_41_bw="8" op_42_bw="8" op_43_bw="8" op_44_bw="8" op_45_bw="8" op_46_bw="8" op_47_bw="8" op_48_bw="8" op_49_bw="8" op_50_bw="8" op_51_bw="8" op_52_bw="8" op_53_bw="8" op_54_bw="8" op_55_bw="8" op_56_bw="8" op_57_bw="8" op_58_bw="8" op_59_bw="32">
+<![CDATA[
+:0  call fastcc void @LOAD_WEIGHT_DMA(i56* %input_dma_W_V_data, i1* %input_dma_W_V_last, [121 x i8]* @WEIGHT1_V_0_0, [121 x i8]* @WEIGHT1_V_0_1, [121 x i8]* @WEIGHT1_V_0_2, [121 x i8]* @WEIGHT1_V_0_3, [121 x i8]* @WEIGHT1_V_0_4, [121 x i8]* @WEIGHT1_V_0_5, [121 x i8]* @WEIGHT1_V_0_6, [121 x i8]* @WEIGHT1_V_1_0, [121 x i8]* @WEIGHT1_V_1_1, [121 x i8]* @WEIGHT1_V_1_2, [121 x i8]* @WEIGHT1_V_1_3, [121 x i8]* @WEIGHT1_V_1_4, [121 x i8]* @WEIGHT1_V_1_5, [121 x i8]* @WEIGHT1_V_1_6, [121 x i8]* @WEIGHT1_V_2_0, [121 x i8]* @WEIGHT1_V_2_1, [121 x i8]* @WEIGHT1_V_2_2, [121 x i8]* @WEIGHT1_V_2_3, [121 x i8]* @WEIGHT1_V_2_4, [121 x i8]* @WEIGHT1_V_2_5, [121 x i8]* @WEIGHT1_V_2_6, [121 x i8]* @WEIGHT1_V_3_0, [121 x i8]* @WEIGHT1_V_3_1, [121 x i8]* @WEIGHT1_V_3_2, [121 x i8]* @WEIGHT1_V_3_3, [121 x i8]* @WEIGHT1_V_3_4, [121 x i8]* @WEIGHT1_V_3_5, [121 x i8]* @WEIGHT1_V_3_6, [121 x i8]* @WEIGHT1_V_4_0, [121 x i8]* @WEIGHT1_V_4_1, [121 x i8]* @WEIGHT1_V_4_2, [121 x i8]* @WEIGHT1_V_4_3, [121 x i8]* @WEIGHT1_V_4_4, [121 x i8]* @WEIGHT1_V_4_5, [121 x i8]* @WEIGHT1_V_4_6, [121 x i8]* @WEIGHT1_V_5_0, [121 x i8]* @WEIGHT1_V_5_1, [121 x i8]* @WEIGHT1_V_5_2, [121 x i8]* @WEIGHT1_V_5_3, [121 x i8]* @WEIGHT1_V_5_4, [121 x i8]* @WEIGHT1_V_5_5, [121 x i8]* @WEIGHT1_V_5_6, [121 x i8]* @WEIGHT1_V_6_0, [121 x i8]* @WEIGHT1_V_6_1, [121 x i8]* @WEIGHT1_V_6_2, [121 x i8]* @WEIGHT1_V_6_3, [121 x i8]* @WEIGHT1_V_6_4, [121 x i8]* @WEIGHT1_V_6_5, [121 x i8]* @WEIGHT1_V_6_6, [121 x i8]* @WEIGHT1_V_7_0, [121 x i8]* @WEIGHT1_V_7_1, [121 x i8]* @WEIGHT1_V_7_2, [121 x i8]* @WEIGHT1_V_7_3, [121 x i8]* @WEIGHT1_V_7_4, [121 x i8]* @WEIGHT1_V_7_5, [121 x i8]* @WEIGHT1_V_7_6, i32 %custom_k_read)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="33" st_id="3" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="10">
+<or_exp><and_exp><literal name="tmp_31" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="170" bw="0" op_0_bw="0" op_1_bw="56" op_2_bw="1" op_3_bw="26" op_4_bw="26" op_5_bw="26" op_6_bw="26" op_7_bw="26" op_8_bw="26" op_9_bw="26" op_10_bw="32" op_11_bw="32">
+<![CDATA[
+:1  call fastcc void @LOAD_IFM(i56* %input_dma_I_V_data, i1* %input_dma_I_V_last, [169 x i26]* @IFM_V_0, [169 x i26]* @IFM_V_1, [169 x i26]* @IFM_V_2, [169 x i26]* @IFM_V_3, [169 x i26]* @IFM_V_4, [169 x i26]* @IFM_V_5, [169 x i26]* @IFM_V_6, i32 %custom_Tr_read, i32 %custom_Tc_read)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="34" st_id="3" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="10">
+<or_exp><and_exp><literal name="tmp_31" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="171" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="8" op_8_bw="8" op_9_bw="8" op_10_bw="8" op_11_bw="8" op_12_bw="8" op_13_bw="8" op_14_bw="8" op_15_bw="8" op_16_bw="8" op_17_bw="8" op_18_bw="8" op_19_bw="8" op_20_bw="8" op_21_bw="8" op_22_bw="8" op_23_bw="8" op_24_bw="8" op_25_bw="8" op_26_bw="8" op_27_bw="8" op_28_bw="8" op_29_bw="8" op_30_bw="8" op_31_bw="8" op_32_bw="8" op_33_bw="8" op_34_bw="8" op_35_bw="8" op_36_bw="8" op_37_bw="8" op_38_bw="8" op_39_bw="8" op_40_bw="8" op_41_bw="8" op_42_bw="8" op_43_bw="8" op_44_bw="8" op_45_bw="8" op_46_bw="8" op_47_bw="8" op_48_bw="8" op_49_bw="8" op_50_bw="8" op_51_bw="8" op_52_bw="8" op_53_bw="8" op_54_bw="8" op_55_bw="8" op_56_bw="8" op_57_bw="26" op_58_bw="26" op_59_bw="26" op_60_bw="26" op_61_bw="26" op_62_bw="26" op_63_bw="26" op_64_bw="26" op_65_bw="26" op_66_bw="26" op_67_bw="26" op_68_bw="26" op_69_bw="26" op_70_bw="26" op_71_bw="26" op_72_bw="32" op_73_bw="32" op_74_bw="32" op_75_bw="32" op_76_bw="32">
+<![CDATA[
+:2  call fastcc void @FIRE4([121 x i8]* @WEIGHT1_DB_V_0_0, [121 x i8]* @WEIGHT1_DB_V_0_1, [121 x i8]* @WEIGHT1_DB_V_0_2, [121 x i8]* @WEIGHT1_DB_V_0_3, [121 x i8]* @WEIGHT1_DB_V_0_4, [121 x i8]* @WEIGHT1_DB_V_0_5, [121 x i8]* @WEIGHT1_DB_V_0_6, [121 x i8]* @WEIGHT1_DB_V_1_0, [121 x i8]* @WEIGHT1_DB_V_1_1, [121 x i8]* @WEIGHT1_DB_V_1_2, [121 x i8]* @WEIGHT1_DB_V_1_3, [121 x i8]* @WEIGHT1_DB_V_1_4, [121 x i8]* @WEIGHT1_DB_V_1_5, [121 x i8]* @WEIGHT1_DB_V_1_6, [121 x i8]* @WEIGHT1_DB_V_2_0, [121 x i8]* @WEIGHT1_DB_V_2_1, [121 x i8]* @WEIGHT1_DB_V_2_2, [121 x i8]* @WEIGHT1_DB_V_2_3, [121 x i8]* @WEIGHT1_DB_V_2_4, [121 x i8]* @WEIGHT1_DB_V_2_5, [121 x i8]* @WEIGHT1_DB_V_2_6, [121 x i8]* @WEIGHT1_DB_V_3_0, [121 x i8]* @WEIGHT1_DB_V_3_1, [121 x i8]* @WEIGHT1_DB_V_3_2, [121 x i8]* @WEIGHT1_DB_V_3_3, [121 x i8]* @WEIGHT1_DB_V_3_4, [121 x i8]* @WEIGHT1_DB_V_3_5, [121 x i8]* @WEIGHT1_DB_V_3_6, [121 x i8]* @WEIGHT1_DB_V_4_0, [121 x i8]* @WEIGHT1_DB_V_4_1, [121 x i8]* @WEIGHT1_DB_V_4_2, [121 x i8]* @WEIGHT1_DB_V_4_3, [121 x i8]* @WEIGHT1_DB_V_4_4, [121 x i8]* @WEIGHT1_DB_V_4_5, [121 x i8]* @WEIGHT1_DB_V_4_6, [121 x i8]* @WEIGHT1_DB_V_5_0, [121 x i8]* @WEIGHT1_DB_V_5_1, [121 x i8]* @WEIGHT1_DB_V_5_2, [121 x i8]* @WEIGHT1_DB_V_5_3, [121 x i8]* @WEIGHT1_DB_V_5_4, [121 x i8]* @WEIGHT1_DB_V_5_5, [121 x i8]* @WEIGHT1_DB_V_5_6, [121 x i8]* @WEIGHT1_DB_V_6_0, [121 x i8]* @WEIGHT1_DB_V_6_1, [121 x i8]* @WEIGHT1_DB_V_6_2, [121 x i8]* @WEIGHT1_DB_V_6_3, [121 x i8]* @WEIGHT1_DB_V_6_4, [121 x i8]* @WEIGHT1_DB_V_6_5, [121 x i8]* @WEIGHT1_DB_V_6_6, [121 x i8]* @WEIGHT1_DB_V_7_0, [121 x i8]* @WEIGHT1_DB_V_7_1, [121 x i8]* @WEIGHT1_DB_V_7_2, [121 x i8]* @WEIGHT1_DB_V_7_3, [121 x i8]* @WEIGHT1_DB_V_7_4, [121 x i8]* @WEIGHT1_DB_V_7_5, [121 x i8]* @WEIGHT1_DB_V_7_6, [169 x i26]* @IFM_DB_V_0, [169 x i26]* @IFM_DB_V_1, [169 x i26]* @IFM_DB_V_2, [169 x i26]* @IFM_DB_V_3, [169 x i26]* @IFM_DB_V_4, [169 x i26]* @IFM_DB_V_5, [169 x i26]* @IFM_DB_V_6, [169 x i26]* %OFM_0_V, [169 x i26]* %OFM_1_V, [169 x i26]* %OFM_2_V, [169 x i26]* %OFM_3_V, [169 x i26]* %OFM_4_V, [169 x i26]* %OFM_5_V, [169 x i26]* %OFM_6_V, [169 x i26]* %OFM_7_V, i32 %row_read, i32 %col_read, i32 %custom_k_read, i32 %custom_Tr_read, i32 %custom_Tc_read)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="35" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="10">
+<or_exp><and_exp><literal name="tmp_31" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="172" bw="0" op_0_bw="0">
+<![CDATA[
+:3  br label %5
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="36" st_id="3" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="11">
+<or_exp><and_exp><literal name="tmp_31" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="174" bw="0" op_0_bw="0" op_1_bw="56" op_2_bw="1" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="8" op_8_bw="8" op_9_bw="8" op_10_bw="8" op_11_bw="8" op_12_bw="8" op_13_bw="8" op_14_bw="8" op_15_bw="8" op_16_bw="8" op_17_bw="8" op_18_bw="8" op_19_bw="8" op_20_bw="8" op_21_bw="8" op_22_bw="8" op_23_bw="8" op_24_bw="8" op_25_bw="8" op_26_bw="8" op_27_bw="8" op_28_bw="8" op_29_bw="8" op_30_bw="8" op_31_bw="8" op_32_bw="8" op_33_bw="8" op_34_bw="8" op_35_bw="8" op_36_bw="8" op_37_bw="8" op_38_bw="8" op_39_bw="8" op_40_bw="8" op_41_bw="8" op_42_bw="8" op_43_bw="8" op_44_bw="8" op_45_bw="8" op_46_bw="8" op_47_bw="8" op_48_bw="8" op_49_bw="8" op_50_bw="8" op_51_bw="8" op_52_bw="8" op_53_bw="8" op_54_bw="8" op_55_bw="8" op_56_bw="8" op_57_bw="8" op_58_bw="8" op_59_bw="32">
+<![CDATA[
+:0  call fastcc void @LOAD_WEIGHT_DMA(i56* %input_dma_W_V_data, i1* %input_dma_W_V_last, [121 x i8]* @WEIGHT1_DB_V_0_0, [121 x i8]* @WEIGHT1_DB_V_0_1, [121 x i8]* @WEIGHT1_DB_V_0_2, [121 x i8]* @WEIGHT1_DB_V_0_3, [121 x i8]* @WEIGHT1_DB_V_0_4, [121 x i8]* @WEIGHT1_DB_V_0_5, [121 x i8]* @WEIGHT1_DB_V_0_6, [121 x i8]* @WEIGHT1_DB_V_1_0, [121 x i8]* @WEIGHT1_DB_V_1_1, [121 x i8]* @WEIGHT1_DB_V_1_2, [121 x i8]* @WEIGHT1_DB_V_1_3, [121 x i8]* @WEIGHT1_DB_V_1_4, [121 x i8]* @WEIGHT1_DB_V_1_5, [121 x i8]* @WEIGHT1_DB_V_1_6, [121 x i8]* @WEIGHT1_DB_V_2_0, [121 x i8]* @WEIGHT1_DB_V_2_1, [121 x i8]* @WEIGHT1_DB_V_2_2, [121 x i8]* @WEIGHT1_DB_V_2_3, [121 x i8]* @WEIGHT1_DB_V_2_4, [121 x i8]* @WEIGHT1_DB_V_2_5, [121 x i8]* @WEIGHT1_DB_V_2_6, [121 x i8]* @WEIGHT1_DB_V_3_0, [121 x i8]* @WEIGHT1_DB_V_3_1, [121 x i8]* @WEIGHT1_DB_V_3_2, [121 x i8]* @WEIGHT1_DB_V_3_3, [121 x i8]* @WEIGHT1_DB_V_3_4, [121 x i8]* @WEIGHT1_DB_V_3_5, [121 x i8]* @WEIGHT1_DB_V_3_6, [121 x i8]* @WEIGHT1_DB_V_4_0, [121 x i8]* @WEIGHT1_DB_V_4_1, [121 x i8]* @WEIGHT1_DB_V_4_2, [121 x i8]* @WEIGHT1_DB_V_4_3, [121 x i8]* @WEIGHT1_DB_V_4_4, [121 x i8]* @WEIGHT1_DB_V_4_5, [121 x i8]* @WEIGHT1_DB_V_4_6, [121 x i8]* @WEIGHT1_DB_V_5_0, [121 x i8]* @WEIGHT1_DB_V_5_1, [121 x i8]* @WEIGHT1_DB_V_5_2, [121 x i8]* @WEIGHT1_DB_V_5_3, [121 x i8]* @WEIGHT1_DB_V_5_4, [121 x i8]* @WEIGHT1_DB_V_5_5, [121 x i8]* @WEIGHT1_DB_V_5_6, [121 x i8]* @WEIGHT1_DB_V_6_0, [121 x i8]* @WEIGHT1_DB_V_6_1, [121 x i8]* @WEIGHT1_DB_V_6_2, [121 x i8]* @WEIGHT1_DB_V_6_3, [121 x i8]* @WEIGHT1_DB_V_6_4, [121 x i8]* @WEIGHT1_DB_V_6_5, [121 x i8]* @WEIGHT1_DB_V_6_6, [121 x i8]* @WEIGHT1_DB_V_7_0, [121 x i8]* @WEIGHT1_DB_V_7_1, [121 x i8]* @WEIGHT1_DB_V_7_2, [121 x i8]* @WEIGHT1_DB_V_7_3, [121 x i8]* @WEIGHT1_DB_V_7_4, [121 x i8]* @WEIGHT1_DB_V_7_5, [121 x i8]* @WEIGHT1_DB_V_7_6, i32 %custom_k_read)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="37" st_id="3" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="11">
+<or_exp><and_exp><literal name="tmp_31" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="175" bw="0" op_0_bw="0" op_1_bw="56" op_2_bw="1" op_3_bw="26" op_4_bw="26" op_5_bw="26" op_6_bw="26" op_7_bw="26" op_8_bw="26" op_9_bw="26" op_10_bw="32" op_11_bw="32">
+<![CDATA[
+:1  call fastcc void @LOAD_IFM(i56* %input_dma_I_V_data, i1* %input_dma_I_V_last, [169 x i26]* @IFM_DB_V_0, [169 x i26]* @IFM_DB_V_1, [169 x i26]* @IFM_DB_V_2, [169 x i26]* @IFM_DB_V_3, [169 x i26]* @IFM_DB_V_4, [169 x i26]* @IFM_DB_V_5, [169 x i26]* @IFM_DB_V_6, i32 %custom_Tr_read, i32 %custom_Tc_read)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="38" st_id="3" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="11">
+<or_exp><and_exp><literal name="tmp_31" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="176" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8" op_7_bw="8" op_8_bw="8" op_9_bw="8" op_10_bw="8" op_11_bw="8" op_12_bw="8" op_13_bw="8" op_14_bw="8" op_15_bw="8" op_16_bw="8" op_17_bw="8" op_18_bw="8" op_19_bw="8" op_20_bw="8" op_21_bw="8" op_22_bw="8" op_23_bw="8" op_24_bw="8" op_25_bw="8" op_26_bw="8" op_27_bw="8" op_28_bw="8" op_29_bw="8" op_30_bw="8" op_31_bw="8" op_32_bw="8" op_33_bw="8" op_34_bw="8" op_35_bw="8" op_36_bw="8" op_37_bw="8" op_38_bw="8" op_39_bw="8" op_40_bw="8" op_41_bw="8" op_42_bw="8" op_43_bw="8" op_44_bw="8" op_45_bw="8" op_46_bw="8" op_47_bw="8" op_48_bw="8" op_49_bw="8" op_50_bw="8" op_51_bw="8" op_52_bw="8" op_53_bw="8" op_54_bw="8" op_55_bw="8" op_56_bw="8" op_57_bw="26" op_58_bw="26" op_59_bw="26" op_60_bw="26" op_61_bw="26" op_62_bw="26" op_63_bw="26" op_64_bw="26" op_65_bw="26" op_66_bw="26" op_67_bw="26" op_68_bw="26" op_69_bw="26" op_70_bw="26" op_71_bw="26" op_72_bw="32" op_73_bw="32" op_74_bw="32" op_75_bw="32" op_76_bw="32">
+<![CDATA[
+:2  call fastcc void @FIRE4([121 x i8]* @WEIGHT1_V_0_0, [121 x i8]* @WEIGHT1_V_0_1, [121 x i8]* @WEIGHT1_V_0_2, [121 x i8]* @WEIGHT1_V_0_3, [121 x i8]* @WEIGHT1_V_0_4, [121 x i8]* @WEIGHT1_V_0_5, [121 x i8]* @WEIGHT1_V_0_6, [121 x i8]* @WEIGHT1_V_1_0, [121 x i8]* @WEIGHT1_V_1_1, [121 x i8]* @WEIGHT1_V_1_2, [121 x i8]* @WEIGHT1_V_1_3, [121 x i8]* @WEIGHT1_V_1_4, [121 x i8]* @WEIGHT1_V_1_5, [121 x i8]* @WEIGHT1_V_1_6, [121 x i8]* @WEIGHT1_V_2_0, [121 x i8]* @WEIGHT1_V_2_1, [121 x i8]* @WEIGHT1_V_2_2, [121 x i8]* @WEIGHT1_V_2_3, [121 x i8]* @WEIGHT1_V_2_4, [121 x i8]* @WEIGHT1_V_2_5, [121 x i8]* @WEIGHT1_V_2_6, [121 x i8]* @WEIGHT1_V_3_0, [121 x i8]* @WEIGHT1_V_3_1, [121 x i8]* @WEIGHT1_V_3_2, [121 x i8]* @WEIGHT1_V_3_3, [121 x i8]* @WEIGHT1_V_3_4, [121 x i8]* @WEIGHT1_V_3_5, [121 x i8]* @WEIGHT1_V_3_6, [121 x i8]* @WEIGHT1_V_4_0, [121 x i8]* @WEIGHT1_V_4_1, [121 x i8]* @WEIGHT1_V_4_2, [121 x i8]* @WEIGHT1_V_4_3, [121 x i8]* @WEIGHT1_V_4_4, [121 x i8]* @WEIGHT1_V_4_5, [121 x i8]* @WEIGHT1_V_4_6, [121 x i8]* @WEIGHT1_V_5_0, [121 x i8]* @WEIGHT1_V_5_1, [121 x i8]* @WEIGHT1_V_5_2, [121 x i8]* @WEIGHT1_V_5_3, [121 x i8]* @WEIGHT1_V_5_4, [121 x i8]* @WEIGHT1_V_5_5, [121 x i8]* @WEIGHT1_V_5_6, [121 x i8]* @WEIGHT1_V_6_0, [121 x i8]* @WEIGHT1_V_6_1, [121 x i8]* @WEIGHT1_V_6_2, [121 x i8]* @WEIGHT1_V_6_3, [121 x i8]* @WEIGHT1_V_6_4, [121 x i8]* @WEIGHT1_V_6_5, [121 x i8]* @WEIGHT1_V_6_6, [121 x i8]* @WEIGHT1_V_7_0, [121 x i8]* @WEIGHT1_V_7_1, [121 x i8]* @WEIGHT1_V_7_2, [121 x i8]* @WEIGHT1_V_7_3, [121 x i8]* @WEIGHT1_V_7_4, [121 x i8]* @WEIGHT1_V_7_5, [121 x i8]* @WEIGHT1_V_7_6, [169 x i26]* @IFM_V_0, [169 x i26]* @IFM_V_1, [169 x i26]* @IFM_V_2, [169 x i26]* @IFM_V_3, [169 x i26]* @IFM_V_4, [169 x i26]* @IFM_V_5, [169 x i26]* @IFM_V_6, [169 x i26]* %OFM_0_V, [169 x i26]* %OFM_1_V, [169 x i26]* %OFM_2_V, [169 x i26]* %OFM_3_V, [169 x i26]* %OFM_4_V, [169 x i26]* %OFM_5_V, [169 x i26]* %OFM_6_V, [169 x i26]* %OFM_7_V, i32 %row_read, i32 %col_read, i32 %custom_k_read, i32 %custom_Tr_read, i32 %custom_Tc_read)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="39" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="11">
+<or_exp><and_exp><literal name="tmp_31" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="177" bw="0" op_0_bw="0">
+<![CDATA[
+:3  br label %5
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="40" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="14">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="179" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
+<![CDATA[
+:0  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str14, i32 %tmp_16)
+
+]]></Node>
+<StgValue><ssdm name="empty"/></StgValue>
+</operation>
+
+<operation id="41" st_id="3" stage="1" lat="1">
+<core>AddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="14">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="180" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:1  %i_3 = add nsw i32 %i, 7
+
+]]></Node>
+<StgValue><ssdm name="i_3"/></StgValue>
+</operation>
+
+<operation id="42" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="14">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="181" bw="0" op_0_bw="0">
+<![CDATA[
+:2  br label %1
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+</ports>
+
+
+<dataflows>
+</dataflows>
+
+
+</stg>

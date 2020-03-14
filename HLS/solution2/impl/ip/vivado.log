@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Aug  2 16:04:18 2019
+# Process ID: 16908
+# Current directory: H:/FPGA_Research/LURAM-Test/solution2/impl/ip
+# Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
+# Log file: H:/FPGA_Research/LURAM-Test/solution2/impl/ip/vivado.log
+# Journal file: H:/FPGA_Research/LURAM-Test/solution2/impl/ip\vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 308.801 ; gain = 74.109
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+create_ip: Time (s): cpu = 00:00:07 ; elapsed = 00:00:26 . Memory (MB): peak = 351.383 ; gain = 42.582
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'top_ap_fadd_2_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'top_ap_fadd_2_full_dsp_32'...
+generate_target: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 361.484 ; gain = 0.000
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'top_ap_fmul_0_max_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'top_ap_fmul_0_max_dsp_32'...
+generate_target: Time (s): cpu = 00:00:00 ; elapsed = 00:00:16 . Memory (MB): peak = 361.484 ; gain = 0.000
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Fri Aug  2 16:06:27 2019...

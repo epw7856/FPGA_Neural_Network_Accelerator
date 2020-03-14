@@ -1,0 +1,395 @@
+
+
+================================================================
+== Vivado HLS Report for 'OFM_STORE'
+================================================================
+* Date:           Tue Jun 11 17:40:08 2019
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        LURAM-Test
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      6.87|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  859|  859|  859|  859|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |    8|    8|         1|          1|          1|     8|    yes   |
+        |- Loop 2  |  676|  676|         2|          1|          1|   676|    yes   |
+        |- Loop 3  |  169|  169|         1|          1|          1|   169|    yes   |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+  * Pipeline-1: initiation interval (II) = 1, depth = 2
+  * Pipeline-2: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 8
+* Pipeline : 3
+  Pipeline-0 : II = 1, D = 1, States = { 2 }
+  Pipeline-1 : II = 1, D = 2, States = { 4 5 }
+  Pipeline-2 : II = 1, D = 1, States = { 7 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (exitcond1)
+	2  / (!exitcond1)
+3 --> 
+	4  / true
+4 --> 
+	6  / (exitcond_flatten1)
+	5  / (!exitcond_flatten1)
+5 --> 
+	4  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / (exitcond_flatten2)
+	7  / (!exitcond_flatten2)
+8 --> 
+
+* FSM state operations: 
+
+ <State 1> : 0.66ns
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%custom_Tc_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %custom_Tc)"
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%custom_Tr_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %custom_Tr)"
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([169 x i26]* %OFM_0_V, [169 x i26]* %OFM_1_V, [169 x i26]* %OFM_2_V, [169 x i26]* %OFM_3_V, [169 x i26]* %OFM_4_V, [169 x i26]* %OFM_5_V, [169 x i26]* %OFM_6_V, [169 x i26]* %OFM_7_V, [1 x i8]* @p_str1, [13 x i8]* @p_str21, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i56* %output_dma_O_V_data, i1* %output_dma_O_V_last, [5 x i8]* @p_str17, i32 0, i32 0, [5 x i8]* @p_str18, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %input_dma_B_V_data_V, i1* %input_dma_B_V_last, [5 x i8]* @p_str17, i32 0, i32 0, [5 x i8]* @p_str18, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"
+ST_1 : Operation 14 [1/1] (0.65ns)   --->   "br label %1" [LURAM-Test/TEST_REF.cpp:103]
+
+ <State 2> : 0.80ns
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%i = phi i4 [ 0, %0 ], [ %i_1, %2 ]"
+ST_2 : Operation 16 [1/1] (0.72ns)   --->   "%exitcond1 = icmp eq i4 %i, -8" [LURAM-Test/TEST_REF.cpp:103]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 17 [1/1] (0.79ns)   --->   "%i_1 = add i4 %i, 1" [LURAM-Test/TEST_REF.cpp:103]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "br i1 %exitcond1, label %.preheader44.preheader, label %2" [LURAM-Test/TEST_REF.cpp:103]
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)"
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str9)" [LURAM-Test/TEST_REF.cpp:103]
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [LURAM-Test/TEST_REF.cpp:104]
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %input_dma_B_V_data_V, i1* %input_dma_B_V_last)" [LURAM-Test/TEST_REF.cpp:105]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%tmp_data_V_cast = extractvalue { i32, i1 } %empty, 0" [LURAM-Test/TEST_REF.cpp:105]
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%tmp_data_V = trunc i32 %tmp_data_V_cast to i26" [LURAM-Test/TEST_REF.cpp:105]
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_2 = zext i4 %i to i64" [LURAM-Test/TEST_REF.cpp:106]
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%BIAS_V_addr = getelementptr [8 x i26]* %BIAS_V, i64 0, i64 %tmp_2" [LURAM-Test/TEST_REF.cpp:106]
+ST_2 : Operation 27 [1/1] (0.67ns)   --->   "store i26 %tmp_data_V, i26* %BIAS_V_addr, align 4" [LURAM-Test/TEST_REF.cpp:106]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 26> <Depth = 8> <RAM>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%empty_44 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str9, i32 %tmp_1)" [LURAM-Test/TEST_REF.cpp:107]
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "br label %1" [LURAM-Test/TEST_REF.cpp:103]
+
+ <State 3> : 3.42ns
+ST_3 : Operation 30 [1/1] (1.01ns)   --->   "%tmp = add nsw i32 %custom_Tr_read, -1" [LURAM-Test/TEST_REF.cpp:117]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 31 [1/1] (1.01ns)   --->   "%tmp_s = add nsw i32 %custom_Tc_read, -1" [LURAM-Test/TEST_REF.cpp:117]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%cast1 = zext i32 %custom_Tr_read to i64"
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%cast2 = zext i32 %custom_Tc_read to i64"
+ST_3 : Operation 34 [1/1] (3.42ns)   --->   "%bound = mul i64 %cast1, %cast2"   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 3.42> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_3 = call i66 @_ssdm_op_BitConcatenate.i66.i64.i2(i64 %bound, i2 0)"
+ST_3 : Operation 36 [1/1] (0.99ns)   --->   "%notrhs_mid = icmp eq i32 %tmp, 0" [LURAM-Test/TEST_REF.cpp:117]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 37 [1/1] (0.99ns)   --->   "%tmp_11_mid = icmp sgt i32 %custom_Tc_read, 0" [LURAM-Test/TEST_REF.cpp:112]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 38 [1/1] (0.65ns)   --->   "br label %3" [LURAM-Test/TEST_REF.cpp:109]
+
+ <State 4> : 6.87ns
+ST_4 : Operation 39 [1/1] (0.00ns)   --->   "%indvar_flatten1 = phi i66 [ 0, %.preheader44.preheader ], [ %indvar_flatten_next1, %.preheader44 ]"
+ST_4 : Operation 40 [1/1] (0.00ns)   --->   "%i1 = phi i3 [ 0, %.preheader44.preheader ], [ %tmp_4_mid2_v, %.preheader44 ]" [LURAM-Test/TEST_REF.cpp:120]
+ST_4 : Operation 41 [1/1] (0.00ns)   --->   "%indvar_flatten = phi i64 [ 0, %.preheader44.preheader ], [ %indvar_flatten_next, %.preheader44 ]"
+ST_4 : Operation 42 [1/1] (0.00ns)   --->   "%j = phi i31 [ 0, %.preheader44.preheader ], [ %j_mid2, %.preheader44 ]" [LURAM-Test/TEST_REF.cpp:112]
+ST_4 : Operation 43 [1/1] (0.00ns)   --->   "%k = phi i31 [ 0, %.preheader44.preheader ], [ %k_2, %.preheader44 ]"
+ST_4 : Operation 44 [1/1] (0.00ns)   --->   "%tmp_4 = zext i31 %j to i32" [LURAM-Test/TEST_REF.cpp:110]
+ST_4 : Operation 45 [1/1] (0.99ns)   --->   "%notrhs = icmp eq i32 %tmp_4, %tmp" [LURAM-Test/TEST_REF.cpp:117]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 46 [1/1] (0.00ns)   --->   "%k_cast = zext i31 %k to i32" [LURAM-Test/TEST_REF.cpp:112]
+ST_4 : Operation 47 [1/1] (0.99ns)   --->   "%tmp_6 = icmp slt i32 %k_cast, %custom_Tc_read" [LURAM-Test/TEST_REF.cpp:112]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 48 [1/1] (1.13ns)   --->   "%exitcond_flatten1 = icmp eq i66 %indvar_flatten1, %tmp_3"   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 49 [1/1] (1.10ns)   --->   "%indvar_flatten_next1 = add i66 %indvar_flatten1, 1"   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 50 [1/1] (0.00ns)   --->   "br i1 %exitcond_flatten1, label %.preheader.preheader.preheader, label %.preheader44"
+ST_4 : Operation 51 [1/1] (0.67ns)   --->   "%i_2 = add i3 1, %i1" [LURAM-Test/TEST_REF.cpp:109]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 52 [1/1] (1.13ns)   --->   "%exitcond_flatten = icmp eq i64 %indvar_flatten, %bound"   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 53 [1/1] (0.48ns)   --->   "%j_mid = select i1 %exitcond_flatten, i31 0, i31 %j" [LURAM-Test/TEST_REF.cpp:112]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 54 [1/1] (0.00ns) (grouped into LUT with out node k_mid2)   --->   "%k_mid = select i1 %exitcond_flatten, i31 0, i31 %k" [LURAM-Test/TEST_REF.cpp:112]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 55 [1/1] (0.48ns)   --->   "%tmp_4_mid2_v = select i1 %exitcond_flatten, i3 %i_2, i3 %i1" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 56 [1/1] (0.00ns)   --->   "%tmp_4_mid2 = zext i3 %tmp_4_mid2_v to i64" [LURAM-Test/TEST_REF.cpp:120]
+ST_4 : Operation 57 [1/1] (0.58ns)   --->   "%notlhs_mid1 = icmp eq i3 %i_2, 3" [LURAM-Test/TEST_REF.cpp:117]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 58 [1/1] (0.58ns)   --->   "%notlhs = icmp eq i3 %i1, 3" [LURAM-Test/TEST_REF.cpp:117]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 59 [1/1] (0.00ns) (grouped into LUT with out node tmp_last)   --->   "%notlhs_mid2 = select i1 %exitcond_flatten, i1 %notlhs_mid1, i1 %notlhs" [LURAM-Test/TEST_REF.cpp:117]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 60 [1/1] (0.58ns)   --->   "%sel_tmp_mid1 = icmp eq i3 %i_2, 0" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 61 [1/1] (0.58ns)   --->   "%sel_tmp = icmp eq i3 %i1, 0" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 62 [1/1] (0.48ns)   --->   "%sel_tmp_mid2 = select i1 %exitcond_flatten, i1 %sel_tmp_mid1, i1 %sel_tmp" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 63 [1/1] (0.58ns)   --->   "%sel_tmp3 = icmp eq i3 %i1, 1" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 64 [1/1] (0.48ns)   --->   "%sel_tmp6_mid2 = select i1 %exitcond_flatten, i1 %sel_tmp, i1 %sel_tmp3" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 65 [1/1] (0.58ns)   --->   "%sel_tmp8_mid1 = icmp eq i3 %i_2, 2" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 66 [1/1] (0.58ns)   --->   "%sel_tmp4 = icmp eq i3 %i1, 2" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 67 [1/1] (0.48ns)   --->   "%sel_tmp8_mid2 = select i1 %exitcond_flatten, i1 %sel_tmp8_mid1, i1 %sel_tmp4" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 68 [1/1] (0.00ns) (grouped into LUT with out node notrhs_mid2)   --->   "%notrhs_mid3 = select i1 %exitcond_flatten, i1 %notrhs_mid, i1 %notrhs" [LURAM-Test/TEST_REF.cpp:117]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 69 [1/1] (0.48ns)   --->   "%tmp_11_mid1 = select i1 %exitcond_flatten, i1 %tmp_11_mid, i1 %tmp_6" [LURAM-Test/TEST_REF.cpp:112]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 70 [1/1] (1.00ns)   --->   "%j_2 = add i31 1, %j_mid" [LURAM-Test/TEST_REF.cpp:110]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 71 [1/1] (0.48ns) (out node of the LUT)   --->   "%k_mid2 = select i1 %tmp_11_mid1, i31 %k_mid, i31 0" [LURAM-Test/TEST_REF.cpp:112]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 72 [1/1] (0.00ns)   --->   "%p_mid1 = zext i31 %j_2 to i32" [LURAM-Test/TEST_REF.cpp:110]
+ST_4 : Operation 73 [1/1] (0.00ns) (grouped into LUT with out node tmp_23)   --->   "%tmp_11 = trunc i31 %j to i9" [LURAM-Test/TEST_REF.cpp:120]
+ST_4 : Operation 74 [1/1] (0.00ns) (grouped into LUT with out node tmp_23)   --->   "%tmp_13 = select i1 %exitcond_flatten, i9 0, i9 %tmp_11" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 75 [1/1] (0.00ns) (grouped into LUT with out node tmp_23)   --->   "%tmp_22 = trunc i31 %j_2 to i9" [LURAM-Test/TEST_REF.cpp:120]
+ST_4 : Operation 76 [1/1] (0.48ns) (out node of the LUT)   --->   "%tmp_23 = select i1 %tmp_11_mid1, i9 %tmp_13, i9 %tmp_22" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 77 [1/1] (0.49ns)   --->   "%tmp_7 = mul i9 13, %tmp_23" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 78 [1/1] (0.99ns)   --->   "%notrhs_mid1 = icmp eq i32 %p_mid1, %tmp" [LURAM-Test/TEST_REF.cpp:117]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 79 [1/1] (0.48ns) (out node of the LUT)   --->   "%notrhs_mid2 = select i1 %tmp_11_mid1, i1 %notrhs_mid3, i1 %notrhs_mid1" [LURAM-Test/TEST_REF.cpp:117]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 80 [1/1] (0.00ns)   --->   "%k_cast_mid2_cast = zext i31 %k_mid2 to i32" [LURAM-Test/TEST_REF.cpp:112]
+ST_4 : Operation 81 [1/1] (0.48ns)   --->   "%j_mid2 = select i1 %tmp_11_mid1, i31 %j_mid, i31 %j_2" [LURAM-Test/TEST_REF.cpp:112]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 82 [1/1] (0.99ns)   --->   "%tmp_5 = icmp eq i32 %k_cast_mid2_cast, %tmp_s" [LURAM-Test/TEST_REF.cpp:117]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 83 [1/1] (0.00ns) (grouped into LUT with out node tmp_last)   --->   "%tmp6 = and i1 %notlhs_mid2, %tmp_5" [LURAM-Test/TEST_REF.cpp:117]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 84 [1/1] (0.48ns) (out node of the LUT)   --->   "%tmp_last = and i1 %tmp6, %notrhs_mid2" [LURAM-Test/TEST_REF.cpp:117]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 85 [1/1] (0.00ns)   --->   "%tmp_24 = trunc i31 %k_mid2 to i9" [LURAM-Test/TEST_REF.cpp:120]
+ST_4 : Operation 86 [1/1] (2.03ns)   --->   "%tmp_10 = add i9 %tmp_7, %tmp_24" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 87 [1/1] (0.00ns)   --->   "%tmp_14_cast = sext i9 %tmp_10 to i64" [LURAM-Test/TEST_REF.cpp:120]
+ST_4 : Operation 88 [1/1] (0.00ns)   --->   "%OFM_0_V_addr_1 = getelementptr [169 x i26]* %OFM_0_V, i64 0, i64 %tmp_14_cast" [LURAM-Test/TEST_REF.cpp:120]
+ST_4 : Operation 89 [1/1] (0.00ns)   --->   "%OFM_1_V_addr_1 = getelementptr [169 x i26]* %OFM_1_V, i64 0, i64 %tmp_14_cast" [LURAM-Test/TEST_REF.cpp:120]
+ST_4 : Operation 90 [1/1] (0.00ns)   --->   "%OFM_2_V_addr_1 = getelementptr [169 x i26]* %OFM_2_V, i64 0, i64 %tmp_14_cast" [LURAM-Test/TEST_REF.cpp:120]
+ST_4 : Operation 91 [1/1] (0.00ns)   --->   "%OFM_3_V_addr_1 = getelementptr [169 x i26]* %OFM_3_V, i64 0, i64 %tmp_14_cast" [LURAM-Test/TEST_REF.cpp:120]
+ST_4 : Operation 92 [1/1] (0.00ns)   --->   "%OFM_4_V_addr_1 = getelementptr [169 x i26]* %OFM_4_V, i64 0, i64 %tmp_14_cast" [LURAM-Test/TEST_REF.cpp:121]
+ST_4 : Operation 93 [1/1] (0.00ns)   --->   "%OFM_5_V_addr_1 = getelementptr [169 x i26]* %OFM_5_V, i64 0, i64 %tmp_14_cast" [LURAM-Test/TEST_REF.cpp:121]
+ST_4 : Operation 94 [1/1] (0.00ns)   --->   "%OFM_6_V_addr_1 = getelementptr [169 x i26]* %OFM_6_V, i64 0, i64 %tmp_14_cast" [LURAM-Test/TEST_REF.cpp:121]
+ST_4 : Operation 95 [1/1] (0.00ns)   --->   "%OFM_7_V_addr_1 = getelementptr [169 x i26]* %OFM_7_V, i64 0, i64 %tmp_14_cast" [LURAM-Test/TEST_REF.cpp:121]
+ST_4 : Operation 96 [2/2] (1.23ns)   --->   "%OFM_3_V_load = load i26* %OFM_3_V_addr_1, align 4" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 26> <Depth = 169> <RAM>
+ST_4 : Operation 97 [2/2] (1.23ns)   --->   "%OFM_0_V_load = load i26* %OFM_0_V_addr_1, align 4" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 26> <Depth = 169> <RAM>
+ST_4 : Operation 98 [2/2] (1.23ns)   --->   "%OFM_1_V_load = load i26* %OFM_1_V_addr_1, align 4" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 26> <Depth = 169> <RAM>
+ST_4 : Operation 99 [2/2] (1.23ns)   --->   "%OFM_2_V_load = load i26* %OFM_2_V_addr_1, align 4" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 26> <Depth = 169> <RAM>
+ST_4 : Operation 100 [1/1] (0.00ns)   --->   "%BIAS_V_addr_1 = getelementptr [8 x i26]* %BIAS_V, i64 0, i64 %tmp_4_mid2" [LURAM-Test/TEST_REF.cpp:120]
+ST_4 : Operation 101 [2/2] (0.67ns)   --->   "%p_Val2_1 = load i26* %BIAS_V_addr_1, align 4" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 26> <Depth = 8> <RAM>
+ST_4 : Operation 102 [2/2] (1.23ns)   --->   "%OFM_7_V_load = load i26* %OFM_7_V_addr_1, align 4" [LURAM-Test/TEST_REF.cpp:121]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 26> <Depth = 169> <RAM>
+ST_4 : Operation 103 [2/2] (1.23ns)   --->   "%OFM_4_V_load = load i26* %OFM_4_V_addr_1, align 4" [LURAM-Test/TEST_REF.cpp:121]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 26> <Depth = 169> <RAM>
+ST_4 : Operation 104 [2/2] (1.23ns)   --->   "%OFM_5_V_load = load i26* %OFM_5_V_addr_1, align 4" [LURAM-Test/TEST_REF.cpp:121]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 26> <Depth = 169> <RAM>
+ST_4 : Operation 105 [2/2] (1.23ns)   --->   "%OFM_6_V_load = load i26* %OFM_6_V_addr_1, align 4" [LURAM-Test/TEST_REF.cpp:121]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 26> <Depth = 169> <RAM>
+ST_4 : Operation 106 [1/1] (1.00ns)   --->   "%k_2 = add i31 1, %k_mid2" [LURAM-Test/TEST_REF.cpp:112]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 107 [1/1] (1.08ns)   --->   "%indvar_flatten_op = add i64 1, %indvar_flatten"   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 108 [1/1] (0.48ns)   --->   "%indvar_flatten_next = select i1 %exitcond_flatten, i64 1, i64 %indvar_flatten_op"   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+ <State 5> : 4.11ns
+ST_5 : Operation 109 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 676, i64 676, i64 676)"
+ST_5 : Operation 110 [1/1] (0.00ns)   --->   "%tmp_8 = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str11)" [LURAM-Test/TEST_REF.cpp:112]
+ST_5 : Operation 111 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [LURAM-Test/TEST_REF.cpp:114]
+ST_5 : Operation 112 [1/2] (1.23ns)   --->   "%OFM_3_V_load = load i26* %OFM_3_V_addr_1, align 4" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 26> <Depth = 169> <RAM>
+ST_5 : Operation 113 [1/2] (1.23ns)   --->   "%OFM_0_V_load = load i26* %OFM_0_V_addr_1, align 4" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 26> <Depth = 169> <RAM>
+ST_5 : Operation 114 [1/2] (1.23ns)   --->   "%OFM_1_V_load = load i26* %OFM_1_V_addr_1, align 4" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 26> <Depth = 169> <RAM>
+ST_5 : Operation 115 [1/2] (1.23ns)   --->   "%OFM_2_V_load = load i26* %OFM_2_V_addr_1, align 4" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 26> <Depth = 169> <RAM>
+ST_5 : Operation 116 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp7)   --->   "%sel_tmp5 = select i1 %sel_tmp_mid2, i26 %OFM_0_V_load, i26 %OFM_3_V_load" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 117 [1/1] (0.48ns) (out node of the LUT)   --->   "%sel_tmp7 = select i1 %sel_tmp6_mid2, i26 %OFM_1_V_load, i26 %sel_tmp5" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 118 [1/1] (0.48ns) (out node of the LUT)   --->   "%p_Val2_s = select i1 %sel_tmp8_mid2, i26 %OFM_2_V_load, i26 %sel_tmp7" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 119 [1/1] (0.00ns)   --->   "%tmp_14 = sext i26 %p_Val2_s to i27" [LURAM-Test/TEST_REF.cpp:120]
+ST_5 : Operation 120 [1/2] (0.67ns)   --->   "%p_Val2_1 = load i26* %BIAS_V_addr_1, align 4" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 26> <Depth = 8> <RAM>
+ST_5 : Operation 121 [1/1] (0.00ns)   --->   "%tmp_15 = sext i26 %p_Val2_1 to i27" [LURAM-Test/TEST_REF.cpp:120]
+ST_5 : Operation 122 [1/1] (0.95ns)   --->   "%p_Val2_2 = add i27 %tmp_14, %tmp_15" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 123 [1/1] (0.00ns)   --->   "%isneg = call i1 @_ssdm_op_BitSelect.i1.i27.i32(i27 %p_Val2_2, i32 26)" [LURAM-Test/TEST_REF.cpp:120]
+ST_5 : Operation 124 [1/1] (0.95ns)   --->   "%p_Val2_3 = add i26 %p_Val2_s, %p_Val2_1" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 125 [1/1] (0.00ns)   --->   "%newsignbit = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_3, i32 25)" [LURAM-Test/TEST_REF.cpp:120]
+ST_5 : Operation 126 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_3_45)   --->   "%tmp_16 = xor i1 %newsignbit, true" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 127 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_3_45)   --->   "%underflow = and i1 %isneg, %tmp_16" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 128 [1/1] (0.00ns) (grouped into LUT with out node tmp_data_data1_V)   --->   "%brmerge_i_i1 = xor i1 %isneg, %newsignbit" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 129 [1/1] (0.00ns) (grouped into LUT with out node tmp_data_data1_V)   --->   "%isneg_not = xor i1 %isneg, true" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 130 [1/1] (0.00ns) (grouped into LUT with out node tmp_data_data1_V)   --->   "%brmerge = or i1 %newsignbit, %isneg_not" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 131 [1/1] (0.00ns) (grouped into LUT with out node tmp_data_data1_V)   --->   "%p_Val2_3_mux = select i1 %brmerge_i_i1, i26 33554431, i26 %p_Val2_3" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 132 [1/1] (0.48ns) (out node of the LUT)   --->   "%p_Val2_3_45 = select i1 %underflow, i26 -33554432, i26 %p_Val2_3" [LURAM-Test/TEST_REF.cpp:120]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 133 [1/1] (0.48ns) (out node of the LUT)   --->   "%tmp_data_data1_V = select i1 %brmerge, i26 %p_Val2_3_mux, i26 %p_Val2_3_45" [LURAM-Test/TEST_REF.cpp:122]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 134 [1/2] (1.23ns)   --->   "%OFM_7_V_load = load i26* %OFM_7_V_addr_1, align 4" [LURAM-Test/TEST_REF.cpp:121]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 26> <Depth = 169> <RAM>
+ST_5 : Operation 135 [1/2] (1.23ns)   --->   "%OFM_4_V_load = load i26* %OFM_4_V_addr_1, align 4" [LURAM-Test/TEST_REF.cpp:121]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 26> <Depth = 169> <RAM>
+ST_5 : Operation 136 [1/2] (1.23ns)   --->   "%OFM_5_V_load = load i26* %OFM_5_V_addr_1, align 4" [LURAM-Test/TEST_REF.cpp:121]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 26> <Depth = 169> <RAM>
+ST_5 : Operation 137 [1/2] (1.23ns)   --->   "%OFM_6_V_load = load i26* %OFM_6_V_addr_1, align 4" [LURAM-Test/TEST_REF.cpp:121]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 26> <Depth = 169> <RAM>
+ST_5 : Operation 138 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp2)   --->   "%sel_tmp1 = select i1 %sel_tmp_mid2, i26 %OFM_4_V_load, i26 %OFM_7_V_load" [LURAM-Test/TEST_REF.cpp:121]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 139 [1/1] (0.48ns) (out node of the LUT)   --->   "%sel_tmp2 = select i1 %sel_tmp6_mid2, i26 %OFM_5_V_load, i26 %sel_tmp1" [LURAM-Test/TEST_REF.cpp:121]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 140 [1/1] (0.48ns) (out node of the LUT)   --->   "%p_Val2_4 = select i1 %sel_tmp8_mid2, i26 %OFM_6_V_load, i26 %sel_tmp2" [LURAM-Test/TEST_REF.cpp:121]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 141 [1/1] (0.00ns)   --->   "%tmp_17 = sext i26 %p_Val2_4 to i27" [LURAM-Test/TEST_REF.cpp:121]
+ST_5 : Operation 142 [1/1] (0.95ns)   --->   "%p_Val2_5 = add i27 %tmp_15, %tmp_17" [LURAM-Test/TEST_REF.cpp:121]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 143 [1/1] (0.00ns)   --->   "%isneg_1 = call i1 @_ssdm_op_BitSelect.i1.i27.i32(i27 %p_Val2_5, i32 26)" [LURAM-Test/TEST_REF.cpp:121]
+ST_5 : Operation 144 [1/1] (0.95ns)   --->   "%p_Val2_6 = add i26 %p_Val2_4, %p_Val2_1" [LURAM-Test/TEST_REF.cpp:121]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 145 [1/1] (0.00ns)   --->   "%newsignbit_1 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_6, i32 25)" [LURAM-Test/TEST_REF.cpp:121]
+ST_5 : Operation 146 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_6_46)   --->   "%tmp_18 = xor i1 %newsignbit_1, true" [LURAM-Test/TEST_REF.cpp:121]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 147 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_6_46)   --->   "%underflow_1 = and i1 %isneg_1, %tmp_18" [LURAM-Test/TEST_REF.cpp:121]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 148 [1/1] (0.00ns) (grouped into LUT with out node tmp_data_data2_V)   --->   "%brmerge_i_i = xor i1 %isneg_1, %newsignbit_1" [LURAM-Test/TEST_REF.cpp:121]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 149 [1/1] (0.00ns) (grouped into LUT with out node tmp_data_data2_V)   --->   "%isneg_1_not = xor i1 %isneg_1, true" [LURAM-Test/TEST_REF.cpp:121]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 150 [1/1] (0.00ns) (grouped into LUT with out node tmp_data_data2_V)   --->   "%brmerge5 = or i1 %newsignbit_1, %isneg_1_not" [LURAM-Test/TEST_REF.cpp:121]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 151 [1/1] (0.00ns) (grouped into LUT with out node tmp_data_data2_V)   --->   "%p_Val2_6_mux = select i1 %brmerge_i_i, i26 33554431, i26 %p_Val2_6" [LURAM-Test/TEST_REF.cpp:121]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 152 [1/1] (0.48ns) (out node of the LUT)   --->   "%p_Val2_6_46 = select i1 %underflow_1, i26 -33554432, i26 %p_Val2_6" [LURAM-Test/TEST_REF.cpp:121]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 153 [1/1] (0.48ns) (out node of the LUT)   --->   "%tmp_data_data2_V = select i1 %brmerge5, i26 %p_Val2_6_mux, i26 %p_Val2_6_46" [LURAM-Test/TEST_REF.cpp:122]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 154 [1/1] (0.00ns)   --->   "%tmp_data = call i52 @_ssdm_op_BitConcatenate.i52.i26.i26(i26 %tmp_data_data2_V, i26 %tmp_data_data1_V)" [LURAM-Test/TEST_REF.cpp:122]
+ST_5 : Operation 155 [1/1] (0.00ns)   --->   "%cast = sext i52 %tmp_data to i56" [LURAM-Test/TEST_REF.cpp:122]
+ST_5 : Operation 156 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i56P.i1P(i56* %output_dma_O_V_data, i1* %output_dma_O_V_last, i56 %cast, i1 %tmp_last)" [LURAM-Test/TEST_REF.cpp:122]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_5 : Operation 157 [1/1] (0.00ns)   --->   "%empty_47 = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str11, i32 %tmp_8)" [LURAM-Test/TEST_REF.cpp:123]
+ST_5 : Operation 158 [1/1] (0.00ns)   --->   "br label %3" [LURAM-Test/TEST_REF.cpp:112]
+
+ <State 6> : 0.66ns
+ST_6 : Operation 159 [1/1] (0.65ns)   --->   "br label %.preheader.preheader" [LURAM-Test/TEST_REF.cpp:128]
+
+ <State 7> : 5.26ns
+ST_7 : Operation 160 [1/1] (0.00ns)   --->   "%indvar_flatten2 = phi i64 [ %indvar_flatten_next2, %.preheader ], [ 0, %.preheader.preheader.preheader ]"
+ST_7 : Operation 161 [1/1] (0.00ns)   --->   "%j2 = phi i31 [ %tmp_7_mid2_v, %.preheader ], [ 0, %.preheader.preheader.preheader ]" [LURAM-Test/TEST_REF.cpp:132]
+ST_7 : Operation 162 [1/1] (0.00ns)   --->   "%k3 = phi i31 [ %k_1, %.preheader ], [ 0, %.preheader.preheader.preheader ]"
+ST_7 : Operation 163 [1/1] (0.00ns)   --->   "%k3_cast = zext i31 %k3 to i32" [LURAM-Test/TEST_REF.cpp:128]
+ST_7 : Operation 164 [1/1] (0.99ns)   --->   "%tmp_9 = icmp slt i32 %k3_cast, %custom_Tc_read" [LURAM-Test/TEST_REF.cpp:128]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 165 [1/1] (1.13ns)   --->   "%exitcond_flatten2 = icmp eq i64 %indvar_flatten2, %bound"   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 166 [1/1] (1.08ns)   --->   "%indvar_flatten_next2 = add i64 %indvar_flatten2, 1"   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 167 [1/1] (0.00ns)   --->   "br i1 %exitcond_flatten2, label %4, label %.preheader"
+ST_7 : Operation 168 [1/1] (1.00ns)   --->   "%j_1 = add i31 1, %j2" [LURAM-Test/TEST_REF.cpp:126]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 169 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 169, i64 169, i64 169)"
+ST_7 : Operation 170 [1/1] (0.48ns)   --->   "%k3_mid2 = select i1 %tmp_9, i31 %k3, i31 0" [LURAM-Test/TEST_REF.cpp:128]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 171 [1/1] (0.48ns)   --->   "%tmp_7_mid2_v = select i1 %tmp_9, i31 %j2, i31 %j_1" [LURAM-Test/TEST_REF.cpp:132]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 172 [1/1] (0.00ns)   --->   "%tmp_29 = trunc i31 %tmp_7_mid2_v to i9" [LURAM-Test/TEST_REF.cpp:132]
+ST_7 : Operation 173 [1/1] (0.49ns)   --->   "%tmp_19 = mul i9 13, %tmp_29" [LURAM-Test/TEST_REF.cpp:132]   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 174 [1/1] (0.00ns)   --->   "%tmp_12 = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str13)" [LURAM-Test/TEST_REF.cpp:128]
+ST_7 : Operation 175 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [LURAM-Test/TEST_REF.cpp:130]
+ST_7 : Operation 176 [1/1] (0.00ns)   --->   "%tmp_30 = trunc i31 %k3_mid2 to i9" [LURAM-Test/TEST_REF.cpp:128]
+ST_7 : Operation 177 [1/1] (2.03ns)   --->   "%tmp_20 = add i9 %tmp_19, %tmp_30" [LURAM-Test/TEST_REF.cpp:132]   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 178 [1/1] (0.00ns)   --->   "%tmp_21_cast = sext i9 %tmp_20 to i64" [LURAM-Test/TEST_REF.cpp:132]
+ST_7 : Operation 179 [1/1] (0.00ns)   --->   "%OFM_0_V_addr = getelementptr [169 x i26]* %OFM_0_V, i64 0, i64 %tmp_21_cast" [LURAM-Test/TEST_REF.cpp:132]
+ST_7 : Operation 180 [1/1] (0.00ns)   --->   "%OFM_1_V_addr = getelementptr [169 x i26]* %OFM_1_V, i64 0, i64 %tmp_21_cast" [LURAM-Test/TEST_REF.cpp:132]
+ST_7 : Operation 181 [1/1] (0.00ns)   --->   "%OFM_2_V_addr = getelementptr [169 x i26]* %OFM_2_V, i64 0, i64 %tmp_21_cast" [LURAM-Test/TEST_REF.cpp:132]
+ST_7 : Operation 182 [1/1] (0.00ns)   --->   "%OFM_3_V_addr = getelementptr [169 x i26]* %OFM_3_V, i64 0, i64 %tmp_21_cast" [LURAM-Test/TEST_REF.cpp:132]
+ST_7 : Operation 183 [1/1] (0.00ns)   --->   "%OFM_4_V_addr = getelementptr [169 x i26]* %OFM_4_V, i64 0, i64 %tmp_21_cast" [LURAM-Test/TEST_REF.cpp:132]
+ST_7 : Operation 184 [1/1] (0.00ns)   --->   "%OFM_5_V_addr = getelementptr [169 x i26]* %OFM_5_V, i64 0, i64 %tmp_21_cast" [LURAM-Test/TEST_REF.cpp:132]
+ST_7 : Operation 185 [1/1] (0.00ns)   --->   "%OFM_6_V_addr = getelementptr [169 x i26]* %OFM_6_V, i64 0, i64 %tmp_21_cast" [LURAM-Test/TEST_REF.cpp:132]
+ST_7 : Operation 186 [1/1] (0.00ns)   --->   "%OFM_7_V_addr = getelementptr [169 x i26]* %OFM_7_V, i64 0, i64 %tmp_21_cast" [LURAM-Test/TEST_REF.cpp:132]
+ST_7 : Operation 187 [1/1] (1.23ns)   --->   "store i26 0, i26* %OFM_0_V_addr, align 4" [LURAM-Test/TEST_REF.cpp:132]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 26> <Depth = 169> <RAM>
+ST_7 : Operation 188 [1/1] (1.23ns)   --->   "store i26 0, i26* %OFM_1_V_addr, align 4" [LURAM-Test/TEST_REF.cpp:132]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 26> <Depth = 169> <RAM>
+ST_7 : Operation 189 [1/1] (1.23ns)   --->   "store i26 0, i26* %OFM_2_V_addr, align 4" [LURAM-Test/TEST_REF.cpp:132]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 26> <Depth = 169> <RAM>
+ST_7 : Operation 190 [1/1] (1.23ns)   --->   "store i26 0, i26* %OFM_3_V_addr, align 4" [LURAM-Test/TEST_REF.cpp:132]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 26> <Depth = 169> <RAM>
+ST_7 : Operation 191 [1/1] (1.23ns)   --->   "store i26 0, i26* %OFM_4_V_addr, align 4" [LURAM-Test/TEST_REF.cpp:132]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 26> <Depth = 169> <RAM>
+ST_7 : Operation 192 [1/1] (1.23ns)   --->   "store i26 0, i26* %OFM_5_V_addr, align 4" [LURAM-Test/TEST_REF.cpp:132]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 26> <Depth = 169> <RAM>
+ST_7 : Operation 193 [1/1] (1.23ns)   --->   "store i26 0, i26* %OFM_6_V_addr, align 4" [LURAM-Test/TEST_REF.cpp:132]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 26> <Depth = 169> <RAM>
+ST_7 : Operation 194 [1/1] (1.23ns)   --->   "store i26 0, i26* %OFM_7_V_addr, align 4" [LURAM-Test/TEST_REF.cpp:132]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 26> <Depth = 169> <RAM>
+ST_7 : Operation 195 [1/1] (0.00ns)   --->   "%empty_48 = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str13, i32 %tmp_12)" [LURAM-Test/TEST_REF.cpp:134]
+ST_7 : Operation 196 [1/1] (1.00ns)   --->   "%k_1 = add i31 1, %k3_mid2" [LURAM-Test/TEST_REF.cpp:128]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 197 [1/1] (0.00ns)   --->   "br label %.preheader.preheader" [LURAM-Test/TEST_REF.cpp:128]
+
+ <State 8> : 0.00ns
+ST_8 : Operation 198 [1/1] (0.00ns)   --->   "ret void" [LURAM-Test/TEST_REF.cpp:136]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0.656ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', LURAM-Test/TEST_REF.cpp:103) [23]  (0.656 ns)
+
+ <State 2>: 0.797ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', LURAM-Test/TEST_REF.cpp:103) [23]  (0 ns)
+	'add' operation ('i', LURAM-Test/TEST_REF.cpp:103) [25]  (0.797 ns)
+
+ <State 3>: 3.42ns
+The critical path consists of the following:
+	'mul' operation ('bound') [44]  (3.42 ns)
+
+ <State 4>: 6.87ns
+The critical path consists of the following:
+	'phi' operation ('indvar_flatten') with incoming values : ('indvar_flatten_next') [52]  (0 ns)
+	'icmp' operation ('exitcond_flatten') [65]  (1.13 ns)
+	'select' operation ('j_mid', LURAM-Test/TEST_REF.cpp:112) [66]  (0.48 ns)
+	'add' operation ('j_2', LURAM-Test/TEST_REF.cpp:110) [83]  (1.01 ns)
+	'select' operation ('tmp_23', LURAM-Test/TEST_REF.cpp:120) [89]  (0.48 ns)
+	'mul' operation ('tmp_7', LURAM-Test/TEST_REF.cpp:120) [90]  (0.494 ns)
+	'add' operation ('tmp_10', LURAM-Test/TEST_REF.cpp:120) [101]  (2.04 ns)
+	'getelementptr' operation ('OFM_7_V_addr_1', LURAM-Test/TEST_REF.cpp:121) [110]  (0 ns)
+	'load' operation ('OFM_7_V_load', LURAM-Test/TEST_REF.cpp:121) on array 'OFM_7_V' [134]  (1.24 ns)
+
+ <State 5>: 4.11ns
+The critical path consists of the following:
+	'load' operation ('OFM_3_V_load', LURAM-Test/TEST_REF.cpp:120) on array 'OFM_3_V' [111]  (1.24 ns)
+	'select' operation ('sel_tmp5', LURAM-Test/TEST_REF.cpp:120) [115]  (0 ns)
+	'select' operation ('sel_tmp7', LURAM-Test/TEST_REF.cpp:120) [116]  (0.48 ns)
+	'select' operation ('__Val2__', LURAM-Test/TEST_REF.cpp:120) [117]  (0.48 ns)
+	'add' operation ('__Val2__', LURAM-Test/TEST_REF.cpp:120) [124]  (0.955 ns)
+	'select' operation ('p_Val2_3_45', LURAM-Test/TEST_REF.cpp:120) [132]  (0.48 ns)
+	'select' operation ('tmp.data.data1.V', LURAM-Test/TEST_REF.cpp:122) [133]  (0.48 ns)
+
+ <State 6>: 0.656ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('indvar_flatten2') with incoming values : ('indvar_flatten_next2') [165]  (0.656 ns)
+
+ <State 7>: 5.26ns
+The critical path consists of the following:
+	'phi' operation ('j2', LURAM-Test/TEST_REF.cpp:132) with incoming values : ('tmp_7_mid2_v', LURAM-Test/TEST_REF.cpp:132) [166]  (0 ns)
+	'add' operation ('j', LURAM-Test/TEST_REF.cpp:126) [174]  (1.01 ns)
+	'select' operation ('tmp_7_mid2_v', LURAM-Test/TEST_REF.cpp:132) [177]  (0.48 ns)
+	'mul' operation ('tmp_19', LURAM-Test/TEST_REF.cpp:132) [179]  (0.494 ns)
+	'add' operation ('tmp_20', LURAM-Test/TEST_REF.cpp:132) [183]  (2.04 ns)
+	'getelementptr' operation ('OFM_7_V_addr', LURAM-Test/TEST_REF.cpp:132) [192]  (0 ns)
+	'store' operation (LURAM-Test/TEST_REF.cpp:132) of constant 0 on array 'OFM_7_V' [200]  (1.24 ns)
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

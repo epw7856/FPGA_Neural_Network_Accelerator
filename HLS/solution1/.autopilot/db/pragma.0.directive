@@ -1,0 +1,320 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+<sourceFile name="">
+<directive functionLabel="" functionName="LOAD_WEIGHT_DMA" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="3"/>
+<option name="max" value="3"/>
+<option name="avg" value="3"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="LOAD_WEIGHT_DMA" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="3"/>
+<option name="max" value="3"/>
+<option name="avg" value="3"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="LOAD_WEIGHT_DMA" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="LOAD_WEIGHT_DMA" label="">
+<pragma name="DEPENDENCE">
+<option name="variable" value="WEIGHT1"/>
+<option name="intra" positionalBoolean="type" value=""/>
+<option name="false" positionalBoolean="dependent" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="LOAD_IFM" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="13"/>
+<option name="max" value="13"/>
+<option name="avg" value="13"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="LOAD_IFM" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="13"/>
+<option name="max" value="13"/>
+<option name="avg" value="13"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="LOAD_IFM" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="LOAD_IFM" label="">
+<pragma name="DEPENDENCE">
+<option name="variable" value="IFM"/>
+<option name="intra" positionalBoolean="type" value=""/>
+<option name="false" positionalBoolean="dependent" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="FIRE" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="3"/>
+<option name="max" value="3"/>
+<option name="avg" value="3"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="FIRE" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="3"/>
+<option name="max" value="3"/>
+<option name="avg" value="3"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="FIRE" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="13"/>
+<option name="max" value="13"/>
+<option name="avg" value="13"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="FIRE" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="13"/>
+<option name="max" value="13"/>
+<option name="avg" value="13"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="FIRE" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="FIRE" label="">
+<pragma name="DEPENDENCE">
+<option name="variable" value="OFM"/>
+<option name="inter" positionalBoolean="type" value=""/>
+<option name="false" positionalBoolean="dependent" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="OFM_STORE" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="OFM_STORE" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="13"/>
+<option name="max" value="13"/>
+<option name="avg" value="13"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="OFM_STORE" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="13"/>
+<option name="max" value="13"/>
+<option name="avg" value="13"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="OFM_STORE" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="OFM_STORE" label="">
+<pragma name="DEPENDENCE">
+<option name="variable" value="OFM"/>
+<option name="intra" positionalBoolean="type" value=""/>
+<option name="false" positionalBoolean="dependent" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="OFM_STORE" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="13"/>
+<option name="max" value="13"/>
+<option name="avg" value="13"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="OFM_STORE" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="13"/>
+<option name="max" value="13"/>
+<option name="avg" value="13"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="OFM_STORE" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="Load_Fire" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="6"/>
+<option name="max" value="6"/>
+<option name="avg" value="6"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="top" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="return"/>
+<option name="bundle" value="CRTL_BUS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="top" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="row"/>
+<option name="bundle" value="CRTL_BUS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="top" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="col"/>
+<option name="bundle" value="CRTL_BUS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="top" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="flag"/>
+<option name="bundle" value="CRTL_BUS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="top" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="num"/>
+<option name="bundle" value="CRTL_BUS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="top" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="N"/>
+<option name="bundle" value="CRTL_BUS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="top" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="custom_k"/>
+<option name="bundle" value="CRTL_BUS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="top" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="custom_Tr"/>
+<option name="bundle" value="CRTL_BUS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="top" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="custom_Tc"/>
+<option name="bundle" value="CRTL_BUS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="top" label="">
+<pragma name="INTERFACE">
+<option name="axis" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="input_dma_W"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="top" label="">
+<pragma name="INTERFACE">
+<option name="axis" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="input_dma_I"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="top" label="">
+<pragma name="INTERFACE">
+<option name="axis" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="input_dma_B"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="top" label="">
+<pragma name="INTERFACE">
+<option name="axis" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="output_dma_O"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="top" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="WEIGHT1"/>
+<option name="core" value="RAM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="top" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="WEIGHT1"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="top" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="WEIGHT1"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="top" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="WEIGHT1_DB"/>
+<option name="core" value="RAM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="top" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="WEIGHT1_DB"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="top" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="WEIGHT1_DB"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="top" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="IFM"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="top" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="IFM_DB"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="top" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="OFM"/>
+<option name="core" value="RAM_S2P_BRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="top" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="OFM"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="top" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="OFM_DB"/>
+<option name="core" value="RAM_S2P_BRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="top" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="OFM_DB"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+</sourceFile>
+</AutoPilot:ProjectResources>

@@ -1,0 +1,1475 @@
+INFO: [HLS 200-0] Workspace C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1 opened at Tue Jun 11 17:39:25 -0400 2019
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Command     config_clock returned 0; 0 sec.
+Execute     open_platform DefaultPlatform 
+Command     open_platform returned 0; 0 sec.
+Execute     import_lib C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.lib 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.lib 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.lib 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.002 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.lib 
+Command         ap_source returned 0; 0 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.lib 
+Command         ap_source returned 0; 0 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.lib 
+Command         ap_source returned 0; 0 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.lib 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.004 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_old.lib 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_vivado.lib 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
+Command         ap_source returned 0; 0.001 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.hlp 
+Command           ap_source returned 0; 0 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.hlp 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.003 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Command       ap_source returned 0; 0 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       config_chip_info -quiet -resource  {SLICE 34260} {LUT 274080}   {FF 548160}  {DSP48E 2520}  {BRAM 1824} {URAM 0}  
+Command       config_chip_info returned 0; 0 sec.
+Execute       config_chip_info -quiet -speed medium 
+Command       config_chip_info returned 0; 0 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
+Command         ap_source returned 0; 0.001 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.hlp 
+Command           ap_source returned 0; 0 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.hlp 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.013 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
+Command         ap_source returned 0; 0.002 sec.
+Command       ap_source returned 0; 0.017 sec.
+Command     import_lib returned 0; 0.03 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0.002 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0.007 sec.
+Command           ap_source returned 0; 0.01 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.011 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.007 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0.003 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.086 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.121 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.123 sec.
+Command     ap_source returned 0; 0.124 sec.
+Execute     open_platform DefaultPlatform 
+Command     open_platform returned 0; 0 sec.
+Execute     import_lib C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_hp.lib 
+Command         ap_source returned 0; 0.001 sec.
+Command       ap_source returned 0; 0.003 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
+Command           ap_source returned 0; 0.07 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.hlp 
+Command             ap_source returned 0; 0.001 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.hlp 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
+Command           ap_source returned 0; 0.001 sec.
+Command         ap_source returned 0; 0.073 sec.
+Command       ap_source returned 0; 0.074 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynquplus/zynquplus_hp.hlp 
+Command       ap_source returned 0; 0.001 sec.
+Command     import_lib returned 0; 0.086 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0.001 sec.
+Command     ap_source returned 0; 0.002 sec.
+Execute     set_part xczu9eg-ffvb1156-2-i 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu9eg:-ffvb1156:-2-i 
+Execute         get_default_platform 
+Command         get_default_platform returned 0; 0 sec.
+Execute         license_isbetapart xczu9eg 
+Command         license_isbetapart returned 1; 0.027 sec.
+Execute         get_default_platform 
+Command         get_default_platform returned 0; 0 sec.
+Execute         config_chip_info -quiet -resource  {SLICE 34260} {LUT 274080}   {FF 548160}  {DSP48E 2520}  {BRAM 1824} {URAM 0}  
+Command         config_chip_info returned 0; 0 sec.
+Execute         config_chip_info -quiet -speed medium 
+Command         config_chip_info returned 0; 0 sec.
+Command       add_library returned 0; 0.031 sec.
+Execute       add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute         get_default_platform 
+Command         get_default_platform returned 0; 0 sec.
+Command       add_library returned 0; 0.002 sec.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-i'
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Command     set_part returned 0; 0.087 sec.
+Execute     get_default_platform 
+Command     get_default_platform returned 0; 0 sec.
+Execute     config_chip_info -quiet -resource  {SLICE 34260} {LUT 274080}   {FF 548160}  {DSP48E 2520}  {BRAM 1824} {URAM 0}  
+Command     config_chip_info returned 0; 0 sec.
+Execute     config_chip_info -quiet -speed medium 
+Command     config_chip_info returned 0; 0 sec.
+Command   open_solution returned 0; 0.44 sec.
+Execute   set_part xczu9eg-ffvb1156-2-i -tool vivado 
+Execute     add_library xilinx/zynquplus/zynquplus:xczu9eg:-ffvb1156:-2-i 
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       license_isbetapart xczu9eg 
+Command       license_isbetapart returned 1; 0 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       config_chip_info -quiet -resource  {SLICE 34260} {LUT 274080}   {FF 548160}  {DSP48E 2520}  {BRAM 1824} {URAM 0}  
+Command       config_chip_info returned 0; 0 sec.
+Execute       config_chip_info -quiet -speed medium 
+Command       config_chip_info returned 0; 0 sec.
+Command     add_library returned 0; 0.004 sec.
+Execute     add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Command     add_library returned 0; 0.003 sec.
+Execute     get_default_platform 
+Command     get_default_platform returned 0; 0 sec.
+Command   set_part returned 0; 0.04 sec.
+Execute   create_clock -period 10 -name default 
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Command     config_clock returned 0; 0 sec.
+Command   create_clock returned 0; 0.002 sec.
+Execute   csynth_design 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -VP9_rom_infer_simplify=0 -ng=0 -g=0 -opt_fp=0 -enable_clang39=0 
+INFO: [HLS 200-10] Analyzing design file 'LURAM-Test/TEST_REF.cpp' ...
+INFO: [HLS 200-0] Compiling one TU...
+Execute       is_m_axi_addr64 
+Command       is_m_axi_addr64 returned 0; 0 sec.
+INFO: [HLS 200-0] Handling LURAM-Test/TEST_REF.cpp as C++
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       is_encrypted LURAM-Test/TEST_REF.cpp 
+Command       is_encrypted returned 0; 0 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-0] Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2017.4/msys" -hls  -fno-exceptions  -D__llvm__  -E "LURAM-Test/TEST_REF.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot" -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/TEST_REF.pp.0.cpp" 
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2017.4/msys -hls -fno-exceptions -D__llvm__ -E LURAM-Test/TEST_REF.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/TEST_REF.pp.0.cpp
+Command       clang returned 0; 0.538 sec.
+INFO: [HLS 200-0] Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2017.4/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot" -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  "C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/TEST_REF.pp.0.cpp"  -o "C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/useless.bc"  
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2017.4/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/TEST_REF.pp.0.cpp -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/useless.bc
+Command       clang returned 0; 0.851 sec.
+INFO: [HLS 200-0] GCC PP time: 1 seconds per iteration
+Execute       list_core -type functional_unit 
+Command       list_core returned 0; 0 sec.
+INFO: [HLS 200-0] CDT Preprocessing...
+INFO: [HLS 200-0] Marker-Pragma convertor: C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/TEST_REF.pp.0.cpp C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/TEST_REF.pp.0.cpp.ap-line.cpp C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/TEST_REF.pp.0.cpp.ap-line.cpp.CXX 1
+INFO: [HLS 200-0] Converting Markers to Pragmas...
+Execute       cdt  "C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/TEST_REF.pp.0.cpp.ap-line.cpp"  -m "top" -o "C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/TEST_REF.pp.0.cpp.ap-cdt.cpp" --pp --directive C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/solution1.directive --source C:/PITT/ZCU102/UNet-2018/LURAM-Test/TEST_REF.cpp --error C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSP_Double_Pump_Mac16 DSP_Double_Pump_Mac8 DSP_Macro DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt HAddSub_fulldsp HAddSub_meddsp HAddSub_nodsp HDiv HMul_fulldsp HMul_maxdsp HMul_nodsp HSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S Mul_LUT MulnS MuxnS" --ve --vetcl C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db --ca --es --gf --pd --p2d C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db --sd --scff C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/.systemc_flag --ad 
+Command       cdt returned 0; 6.782 sec.
+INFO: [HLS 200-0] Marker-Pragma convertor: C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/TEST_REF.pp.0.cpp.ap-cdt.cpp C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/TEST_REF.pragma.0.cpp C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/TEST_REF.pragma.0.cpp.ap-line.CXX 0
+INFO: [HLS 200-0] Converting Pragmas to Markers...
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/pragma.status.tcl 
+Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-0] Pragma Handling...
+INFO: [HLS 200-0] Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2017.4/msys" -hls  -fno-exceptions  -D__llvm__  -E "C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/TEST_REF.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot" -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/TEST_REF.pragma.2.cpp" 
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2017.4/msys -hls -fno-exceptions -D__llvm__ -E C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/TEST_REF.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/TEST_REF.pragma.2.cpp
+Command       clang returned 0; 0.51 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-0] Processing labels
+Execute       clang  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2017.4/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/TEST_REF.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot" -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o "C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/TEST_REF.g.bc" 
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2017.4/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/TEST_REF.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/TEST_REF.g.bc
+Command       clang returned 0; 0.915 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/ve_warning.tcl 
+Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-10] Validating synthesis directives ...
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/pragma.status.tcl 
+Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 101.215 ; gain = 45.508
+INFO: [HLS 200-0] Linking Release ...
+Execute       llvm-ld C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/TEST_REF.bc -hls-opt -except-internalize top -LC:/Xilinx/Vivado/2017.4/win64/lib -lm_basic -lhlsmc++ -lhlsm -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.o 
+Command       llvm-ld returned 0; 0.424 sec.
+Execute       disassemble C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.o 
+Execute         is_encrypted C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.o.bc 
+Command         is_encrypted returned 0; 0.001 sec.
+Command       disassemble returned 0; 0.367 sec.
+INFO: [HLS 200-0] Disassemble time: 0 seconds per iteration
+INFO: [HLS 200-0] Linking Debug ...
+Execute       llvm-ld C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/TEST_REF.g.bc -hls-opt -except-internalize top -LC:/Xilinx/Vivado/2017.4/win64/lib -lm_basic -lhlsmc++ -lhlsm -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.g 
+Command       llvm-ld returned 0; 0.416 sec.
+INFO: [HLS 200-0] Disassemble time: 0 seconds per iteration
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 101.254 ; gain = 45.547
+Execute       ::config_rtl 
+Command       config_rtl returned 0; 0.001 sec.
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 -enable_clang39=0 -VP9_rom_infer_simplify=0 
+Execute         cleanup_all_models 
+Command         cleanup_all_models returned 0; 0 sec.
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.pp.bc -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.pp.0.bc -f 
+Command         transform returned 0; 0.033 sec.
+Execute         llvm-ld C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LC:/Xilinx/Vivado/2017.4/win64/lib -lfloatconversion -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld returned 0; 0.305 sec.
+INFO: [HLS 200-0] Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top top -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.g.0.bc -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<8, 1, true, (ap_q_mode)6, (ap_o_mode)0, 0>::quantization_adjust' into 'ap_fixed_base<8, 1, true, (ap_q_mode)6, (ap_o_mode)0, 0>::ap_fixed_base<26, 10, true, (ap_q_mode)6, (ap_o_mode)0, 0>' ().
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<8, 1, true, (ap_q_mode)6, (ap_o_mode)0, 0>::overflow_adjust' into 'ap_fixed_base<8, 1, true, (ap_q_mode)6, (ap_o_mode)0, 0>::ap_fixed_base<26, 10, true, (ap_q_mode)6, (ap_o_mode)0, 0>' ().
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<26, 10, true, (ap_q_mode)6, (ap_o_mode)0, 0>::quantization_adjust' into 'ap_fixed_base<26, 10, true, (ap_q_mode)6, (ap_o_mode)0, 0>::ap_fixed_base<34, 11, true, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<26, 10, true, (ap_q_mode)6, (ap_o_mode)0, 0>::overflow_adjust' into 'ap_fixed_base<26, 10, true, (ap_q_mode)6, (ap_o_mode)0, 0>::ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>.1' ().
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<26, 10, true, (ap_q_mode)6, (ap_o_mode)0, 0>::overflow_adjust' into 'ap_fixed_base<26, 10, true, (ap_q_mode)6, (ap_o_mode)0, 0>::ap_fixed_base<27, 11, true, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<26, 10, true, (ap_q_mode)6, (ap_o_mode)0, 0>::overflow_adjust' into 'ap_fixed_base<26, 10, true, (ap_q_mode)6, (ap_o_mode)0, 0>::ap_fixed_base<34, 11, true, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
+Command         transform returned 0; 0.265 sec.
+Execute         disassemble C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.g.1 C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.g.1 
+Execute           is_encrypted C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.g.1.bc 
+Command           is_encrypted returned 0; 0.001 sec.
+Command         disassemble returned 0; 0.365 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 115.750 ; gain = 60.043
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-0] Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.g.1.bc -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform returned 0; 0.247 sec.
+INFO: [HLS 200-0] Checking Synthesizability 2/2..
+Execute         transform -syn-check C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.g.2.prechk.bc -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+Command         transform returned 0; 0.041 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 125.309 ; gain = 69.602
+INFO: [HLS 200-0] Compiler optimizing ...
+INFO: [HLS 200-0] Share syncheck's 1.bc for syn flow: copy C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.g.1.bc to C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.o.1.bc
+INFO: [HLS 200-0] Presyn 1...
+Execute         transform -hls -tmp C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -simplifycfg -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.o.1.bc -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-1101] Packing variable 'output_dma_O.V.data' (LURAM-Test/TEST_REF.cpp:176) into a 52-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'input_dma_I.V.data' (LURAM-Test/TEST_REF.cpp:174) into a 52-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'input_dma_W.V.data' (LURAM-Test/TEST_REF.cpp:173) into a 52-bit variable.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1.1.1' (LURAM-Test/TEST_REF.cpp:74) in function 'FIRE' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-3.1' (LURAM-Test/TEST_REF.cpp:128) in function 'OFM_STORE' for pipelining.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1.1.1' (LURAM-Test/TEST_REF.cpp:78) in function 'FIRE' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1.1.1.1' (LURAM-Test/TEST_REF.cpp:79) in function 'FIRE' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.1' (LURAM-Test/TEST_REF.cpp:131) in function 'OFM_STORE' completely.
+INFO: [XFORM 203-101] Partitioning array 'WEIGHT1.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'WEIGHT1_DB.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'IFM.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'IFM_DB.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'OFM.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'OFM_DB.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'WEIGHT1.V.0'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'WEIGHT1.V.1'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'WEIGHT1.V.2'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'WEIGHT1.V.3'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'WEIGHT1.V.4'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'WEIGHT1.V.5'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'WEIGHT1.V.6'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'WEIGHT1.V.7'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'WEIGHT1_DB.V.0'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'WEIGHT1_DB.V.1'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'WEIGHT1_DB.V.2'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'WEIGHT1_DB.V.3'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'WEIGHT1_DB.V.4'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'WEIGHT1_DB.V.5'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'WEIGHT1_DB.V.6'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'WEIGHT1_DB.V.7'  in dimension 1 completely.
+Command         transform returned 0; 3.26 sec.
+INFO: [HLS 200-0] Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.o.1.tmp.bc -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (LURAM-Test/TEST_REF.cpp:74:45) to (LURAM-Test/TEST_REF.cpp:74:38) in function 'FIRE'... converting 449 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (LURAM-Test/TEST_REF.cpp:112:31) to (LURAM-Test/TEST_REF.cpp:112:26) in function 'OFM_STORE'... converting 19 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (LURAM-Test/TEST_REF.cpp:14:30) to (LURAM-Test/TEST_REF.cpp:20:6) in function 'LOAD_WEIGHT_DMA'... converting 9 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (LURAM-Test/TEST_REF.cpp:23:7) to (LURAM-Test/TEST_REF.cpp:23:7) in function 'LOAD_WEIGHT_DMA'... converting 9 basic blocks.
+Command         transform returned 0; 4.794 sec.
+Execute         disassemble C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.o.2 C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.o.2 
+Execute           is_encrypted C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.o.2.bc 
+Command           is_encrypted returned 0; 0 sec.
+Command         disassemble returned 0; 0.412 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:10 ; elapsed = 00:00:23 . Memory (MB): peak = 185.211 ; gain = 129.504
+INFO: [HLS 200-0] Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -interface-preproc -directive-preproc -interface-gen -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -read-loop-dep -dce -bitwidth -loop-dep -check-stream -norm-name -legalize -validate-dataflow -cdfg-build C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.o.2.bc -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (LURAM-Test/TEST_REF.cpp:110:14) in function 'OFM_STORE'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (LURAM-Test/TEST_REF.cpp:109:13) in function 'OFM_STORE'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-3' (LURAM-Test/TEST_REF.cpp:126:13) in function 'OFM_STORE'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (LURAM-Test/TEST_REF.cpp:12:15) in function 'LOAD_WEIGHT_DMA'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (LURAM-Test/TEST_REF.cpp:11:14) in function 'LOAD_WEIGHT_DMA'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (LURAM-Test/TEST_REF.cpp:10:13) in function 'LOAD_WEIGHT_DMA'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (LURAM-Test/TEST_REF.cpp:38:14) in function 'LOAD_IFM'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (LURAM-Test/TEST_REF.cpp:37:13) in function 'LOAD_IFM'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (LURAM-Test/TEST_REF.cpp:72:17) in function 'FIRE'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (LURAM-Test/TEST_REF.cpp:70:13) in function 'FIRE'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (LURAM-Test/TEST_REF.cpp:68:13) in function 'FIRE'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'OFM[2].V' (LURAM-Test/TEST_REF.cpp:95).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'OFM[3].V' (LURAM-Test/TEST_REF.cpp:95).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'OFM[1].V' (LURAM-Test/TEST_REF.cpp:95).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'OFM[0].V' (LURAM-Test/TEST_REF.cpp:95).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'OFM[6].V' (LURAM-Test/TEST_REF.cpp:95).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'OFM[7].V' (LURAM-Test/TEST_REF.cpp:95).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'OFM[4].V' (LURAM-Test/TEST_REF.cpp:95).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'OFM[5].V' (LURAM-Test/TEST_REF.cpp:95).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[2][2].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[1][6].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[0][1].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[0][4].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[1][4].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[0][3].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[2][1].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[2][3].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[0][2].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[0][6].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[1][0].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[1][1].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[0][5].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[1][2].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[0][0].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[1][3].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[1][5].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[2][0].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[6][5].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[5][1].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[7][1].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[4][4].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[3][3].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[5][3].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[4][2].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[6][4].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[4][3].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[6][1].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[3][0].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[3][6].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[6][3].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[2][4].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[2][6].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[4][5].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[7][6].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[3][2].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[5][4].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[7][3].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[7][5].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[3][1].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[5][5].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[4][1].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[7][2].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[2][5].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[4][0].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[3][4].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[5][6].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[6][6].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[7][4].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[6][2].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[5][2].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[7][0].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[4][6].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[5][0].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[6][0].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'WEIGHT1[3][5].V' (LURAM-Test/TEST_REF.cpp:5).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'IFM[6].V' (LURAM-Test/TEST_REF.cpp:31).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'IFM[4].V' (LURAM-Test/TEST_REF.cpp:31).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'IFM[5].V' (LURAM-Test/TEST_REF.cpp:31).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'IFM[1].V' (LURAM-Test/TEST_REF.cpp:31).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'IFM[3].V' (LURAM-Test/TEST_REF.cpp:31).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'IFM[2].V' (LURAM-Test/TEST_REF.cpp:31).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'IFM[0].V' (LURAM-Test/TEST_REF.cpp:31).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'OFM[6].V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'OFM[7].V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'OFM[4].V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'OFM[2].V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'OFM[3].V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'OFM[5].V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'OFM[1].V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'OFM[0].V'.
+Command         transform returned 0; 10.244 sec.
+Execute         disassemble C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.o.3 C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.o.3 
+Execute           is_encrypted C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.o.3.bc 
+Command           is_encrypted returned 0; 0 sec.
+Command         disassemble returned 0; 0.349 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:20 ; elapsed = 00:00:34 . Memory (MB): peak = 233.195 ; gain = 177.488
+INFO: [HLS 200-0] Finish building internal data model.
+Command       opt_and_import_c returned 0; 20.539 sec.
+Command     elaborate returned 0; 32.608 sec.
+Execute     autosyn 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-0] Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'top' ...
+Execute       ap_set_top_model top 
+Command       ap_set_top_model returned 0; 0 sec.
+Execute       get_model_list top -filter all-wo-channel -topdown 
+Command       get_model_list returned 0; 0 sec.
+Execute       preproc_iomode -model top 
+Command       preproc_iomode returned 0; 0.001 sec.
+Execute       preproc_iomode -model OFM_STORE 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       preproc_iomode -model Load_Fire 
+Command       preproc_iomode returned 0; 0.001 sec.
+Execute       preproc_iomode -model FIRE4 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       preproc_iomode -model LOAD_IFM 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       preproc_iomode -model LOAD_WEIGHT_DMA 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       get_model_list top -filter all-wo-channel 
+Command       get_model_list returned 0; 0 sec.
+INFO: [HLS 200-0] Model list for configure: LOAD_WEIGHT_DMA LOAD_IFM FIRE4 Load_Fire OFM_STORE top
+INFO: [HLS 200-0] Configuring Module : LOAD_WEIGHT_DMA ...
+Execute       set_default_model LOAD_WEIGHT_DMA 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit LOAD_WEIGHT_DMA 
+Command       apply_spec_resource_limit returned 0; 0.001 sec.
+INFO: [HLS 200-0] Configuring Module : LOAD_IFM ...
+Execute       set_default_model LOAD_IFM 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit LOAD_IFM 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Configuring Module : FIRE4 ...
+Execute       set_default_model FIRE4 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit FIRE4 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Configuring Module : Load_Fire ...
+Execute       set_default_model Load_Fire 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit Load_Fire 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Configuring Module : OFM_STORE ...
+Execute       set_default_model OFM_STORE 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit OFM_STORE 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Configuring Module : top ...
+Execute       set_default_model top 
+Command       set_default_model returned 0; 0.002 sec.
+Execute       apply_spec_resource_limit top 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Model list for preprocess: LOAD_WEIGHT_DMA LOAD_IFM FIRE4 Load_Fire OFM_STORE top
+INFO: [HLS 200-0] Preprocessing Module: LOAD_WEIGHT_DMA ...
+Execute       set_default_model LOAD_WEIGHT_DMA 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model LOAD_WEIGHT_DMA 
+Command       cdfg_preprocess returned 0; 0.014 sec.
+Execute       rtl_gen_preprocess LOAD_WEIGHT_DMA 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+INFO: [HLS 200-0] Preprocessing Module: LOAD_IFM ...
+Execute       set_default_model LOAD_IFM 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model LOAD_IFM 
+Command       cdfg_preprocess returned 0; 0.001 sec.
+Execute       rtl_gen_preprocess LOAD_IFM 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+INFO: [HLS 200-0] Preprocessing Module: FIRE4 ...
+Execute       set_default_model FIRE4 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model FIRE4 
+Command       cdfg_preprocess returned 0; 0.017 sec.
+Execute       rtl_gen_preprocess FIRE4 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+INFO: [HLS 200-0] Preprocessing Module: Load_Fire ...
+Execute       set_default_model Load_Fire 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model Load_Fire 
+Command       cdfg_preprocess returned 0; 0.004 sec.
+Execute       rtl_gen_preprocess Load_Fire 
+Command       rtl_gen_preprocess returned 0; 0.001 sec.
+INFO: [HLS 200-0] Preprocessing Module: OFM_STORE ...
+Execute       set_default_model OFM_STORE 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model OFM_STORE 
+Command       cdfg_preprocess returned 0; 0.002 sec.
+Execute       rtl_gen_preprocess OFM_STORE 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+INFO: [HLS 200-0] Preprocessing Module: top ...
+Execute       set_default_model top 
+Command       set_default_model returned 0; 0.002 sec.
+Execute       cdfg_preprocess -model top 
+Command       cdfg_preprocess returned 0; 0.005 sec.
+Execute       rtl_gen_preprocess top 
+Command       rtl_gen_preprocess returned 0; 0.001 sec.
+INFO: [HLS 200-0] Model list for synthesis: LOAD_WEIGHT_DMA LOAD_IFM FIRE4 Load_Fire OFM_STORE top
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'LOAD_WEIGHT_DMA'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model LOAD_WEIGHT_DMA 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model LOAD_WEIGHT_DMA 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.154 sec.
+INFO: [HLS 200-111]  Elapsed time: 33.995 seconds; current allocated memory: 179.600 MB.
+Execute       report -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/LOAD_WEIGHT_DMA.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.082 sec.
+Execute       db_write -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/LOAD_WEIGHT_DMA.sched.adb -f 
+Command       db_write returned 0; 0.062 sec.
+INFO: [HLS 200-0] Finish scheduling LOAD_WEIGHT_DMA.
+Execute       set_default_model LOAD_WEIGHT_DMA 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model LOAD_WEIGHT_DMA 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=LOAD_WEIGHT_DMA
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.043 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.28 seconds; current allocated memory: 180.544 MB.
+Execute       report -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/LOAD_WEIGHT_DMA.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.132 sec.
+Execute       db_write -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/LOAD_WEIGHT_DMA.bind.adb -f 
+Command       db_write returned 0; 0.074 sec.
+INFO: [HLS 200-0] Finish binding LOAD_WEIGHT_DMA.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'LOAD_IFM'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model LOAD_IFM 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model LOAD_IFM 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.052 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.3 seconds; current allocated memory: 180.942 MB.
+Execute       report -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/LOAD_IFM.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.022 sec.
+Execute       db_write -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/LOAD_IFM.sched.adb -f 
+Command       db_write returned 0; 0.018 sec.
+INFO: [HLS 200-0] Finish scheduling LOAD_IFM.
+Execute       set_default_model LOAD_IFM 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model LOAD_IFM 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=LOAD_IFM
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.022 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.225 seconds; current allocated memory: 181.197 MB.
+Execute       report -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/LOAD_IFM.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.038 sec.
+Execute       db_write -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/LOAD_IFM.bind.adb -f 
+Command       db_write returned 0; 0.022 sec.
+INFO: [HLS 200-0] Finish binding LOAD_IFM.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'FIRE4'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model FIRE4 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model FIRE4 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 1.368 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.465 seconds; current allocated memory: 188.526 MB.
+Execute       report -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/FIRE4.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.669 sec.
+Execute       db_write -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/FIRE4.sched.adb -f 
+Command       db_write returned 0; 0.481 sec.
+INFO: [HLS 200-0] Finish scheduling FIRE4.
+Execute       set_default_model FIRE4 
+Command       set_default_model returned 0; 0.001 sec.
+Execute       bind -model FIRE4 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=FIRE4
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.633 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.905 seconds; current allocated memory: 196.884 MB.
+Execute       report -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/FIRE4.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 2.084 sec.
+Execute       db_write -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/FIRE4.bind.adb -f 
+Command       db_write returned 0; 0.534 sec.
+INFO: [HLS 200-0] Finish binding FIRE4.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Load_Fire'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Load_Fire 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model Load_Fire 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.018 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.682 seconds; current allocated memory: 199.189 MB.
+Execute       report -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/Load_Fire.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.008 sec.
+Execute       db_write -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/Load_Fire.sched.adb -f 
+Command       db_write returned 0; 0.013 sec.
+INFO: [HLS 200-0] Finish scheduling Load_Fire.
+Execute       set_default_model Load_Fire 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model Load_Fire 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=Load_Fire
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 1.136 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.27 seconds; current allocated memory: 201.145 MB.
+Execute       report -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/Load_Fire.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 1.45 sec.
+Execute       db_write -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/Load_Fire.bind.adb -f 
+Command       db_write returned 0; 0.032 sec.
+INFO: [HLS 200-0] Finish binding Load_Fire.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'OFM_STORE'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model OFM_STORE 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model OFM_STORE 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.104 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.642 seconds; current allocated memory: 203.675 MB.
+Execute       report -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/OFM_STORE.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.053 sec.
+Execute       db_write -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/OFM_STORE.sched.adb -f 
+Command       db_write returned 0; 0.032 sec.
+INFO: [HLS 200-0] Finish scheduling OFM_STORE.
+Execute       set_default_model OFM_STORE 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model OFM_STORE 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=OFM_STORE
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.044 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.263 seconds; current allocated memory: 204.275 MB.
+Execute       report -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/OFM_STORE.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.114 sec.
+Execute       db_write -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/OFM_STORE.bind.adb -f 
+Command       db_write returned 0; 0.053 sec.
+INFO: [HLS 200-0] Finish binding OFM_STORE.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'top'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model top 
+Command       set_default_model returned 0; 0.001 sec.
+Execute       schedule -model top 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.021 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.282 seconds; current allocated memory: 204.500 MB.
+Execute       report -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.014 sec.
+Execute       db_write -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.sched.adb -f 
+Command       db_write returned 0; 0.02 sec.
+INFO: [HLS 200-0] Finish scheduling top.
+Execute       set_default_model top 
+Command       set_default_model returned 0; 0.005 sec.
+Execute       bind -model top 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=top
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 1.728 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.932 seconds; current allocated memory: 207.162 MB.
+Execute       report -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 1.548 sec.
+Execute       db_write -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.bind.adb -f 
+Command       db_write returned 0; 0.018 sec.
+INFO: [HLS 200-0] Finish binding top.
+Execute       get_model_list top -filter all-wo-channel 
+Command       get_model_list returned 0; 0 sec.
+INFO: [HLS 200-0] Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess LOAD_WEIGHT_DMA 
+Command       rtl_gen_preprocess returned 0; 0.001 sec.
+Execute       rtl_gen_preprocess LOAD_IFM 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess FIRE4 
+Command       rtl_gen_preprocess returned 0; 0.001 sec.
+Execute       rtl_gen_preprocess Load_Fire 
+Command       rtl_gen_preprocess returned 0; 0.001 sec.
+Execute       rtl_gen_preprocess OFM_STORE 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess top 
+Command       rtl_gen_preprocess returned 0; 0.001 sec.
+INFO: [HLS 200-0] Model list for RTL generation: LOAD_WEIGHT_DMA LOAD_IFM FIRE4 Load_Fire OFM_STORE top
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'LOAD_WEIGHT_DMA'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model LOAD_WEIGHT_DMA -vendor xilinx -mg_file C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/LOAD_WEIGHT_DMA.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'top_mac_muladd_5ns_8s_8ns_8_1_1' to 'top_mac_muladd_5nbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'top_mac_muladd_5nbkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'LOAD_WEIGHT_DMA'.
+Command       create_rtl_model returned 0; 0.055 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.717 seconds; current allocated memory: 210.885 MB.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       gen_rtl LOAD_WEIGHT_DMA -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/systemc/LOAD_WEIGHT_DMA -synmodules LOAD_WEIGHT_DMA LOAD_IFM FIRE4 Load_Fire OFM_STORE top 
+Command       gen_rtl returned 0; 0.007 sec.
+Execute       gen_rtl LOAD_WEIGHT_DMA -style xilinx -f -lang vhdl -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/vhdl/LOAD_WEIGHT_DMA 
+Command       gen_rtl returned 0; 0.005 sec.
+Execute       gen_rtl LOAD_WEIGHT_DMA -style xilinx -f -lang vlog -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/verilog/LOAD_WEIGHT_DMA 
+Command       gen_rtl returned 0; 0.005 sec.
+Execute       gen_tb_info LOAD_WEIGHT_DMA -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/LOAD_WEIGHT_DMA -p C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db 
+Command       gen_tb_info returned 0; 0.027 sec.
+Execute       report -model LOAD_WEIGHT_DMA -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/report/LOAD_WEIGHT_DMA_csynth.rpt -f 
+Command       report returned 0; 0.034 sec.
+Execute       report -model LOAD_WEIGHT_DMA -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/report/LOAD_WEIGHT_DMA_csynth.xml -f -x 
+Command       report returned 0; 0.032 sec.
+Execute       report -model LOAD_WEIGHT_DMA -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/LOAD_WEIGHT_DMA.verbose.rpt -verbose -f 
+Command       report returned 0; 0.156 sec.
+Execute       db_write -model LOAD_WEIGHT_DMA -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/LOAD_WEIGHT_DMA.adb -f 
+Command       db_write returned 0; 0.11 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'LOAD_IFM'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model LOAD_IFM -vendor xilinx -mg_file C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/LOAD_IFM.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'top_mac_muladd_5ns_9s_9ns_9_1_1' to 'top_mac_muladd_5ncud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'top_mac_muladd_5ncud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'LOAD_IFM'.
+Command       create_rtl_model returned 0; 0.022 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.828 seconds; current allocated memory: 212.161 MB.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       gen_rtl LOAD_IFM -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/systemc/LOAD_IFM -synmodules LOAD_WEIGHT_DMA LOAD_IFM FIRE4 Load_Fire OFM_STORE top 
+Command       gen_rtl returned 0; 0.003 sec.
+Execute       gen_rtl LOAD_IFM -style xilinx -f -lang vhdl -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/vhdl/LOAD_IFM 
+Command       gen_rtl returned 0; 0.002 sec.
+Execute       gen_rtl LOAD_IFM -style xilinx -f -lang vlog -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/verilog/LOAD_IFM 
+Command       gen_rtl returned 0; 0.002 sec.
+Execute       gen_tb_info LOAD_IFM -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/LOAD_IFM -p C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db 
+Command       gen_tb_info returned 0; 0.011 sec.
+Execute       report -model LOAD_IFM -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/report/LOAD_IFM_csynth.rpt -f 
+Command       report returned 0; 0.011 sec.
+Execute       report -model LOAD_IFM -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/report/LOAD_IFM_csynth.xml -f -x 
+Command       report returned 0; 0.01 sec.
+Execute       report -model LOAD_IFM -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/LOAD_IFM.verbose.rpt -verbose -f 
+Command       report returned 0; 0.049 sec.
+Execute       db_write -model LOAD_IFM -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/LOAD_IFM.adb -f 
+Command       db_write returned 0; 0.041 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'FIRE4'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model FIRE4 -vendor xilinx -mg_file C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/FIRE4.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'top_mul_mul_8s_26s_34_1_1' to 'top_mul_mul_8s_26dEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'top_mac_muladd_5nbkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_mac_muladd_5ncud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_mul_mul_8s_26dEe': 56 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'FIRE4'.
+Command       create_rtl_model returned 0; 0.488 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.836 seconds; current allocated memory: 228.109 MB.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       gen_rtl FIRE4 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/systemc/FIRE4 -synmodules LOAD_WEIGHT_DMA LOAD_IFM FIRE4 Load_Fire OFM_STORE top 
+Command       gen_rtl returned 0; 0.034 sec.
+Execute       gen_rtl FIRE4 -style xilinx -f -lang vhdl -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/vhdl/FIRE4 
+Command       gen_rtl returned 0; 0.017 sec.
+Execute       gen_rtl FIRE4 -style xilinx -f -lang vlog -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/verilog/FIRE4 
+Command       gen_rtl returned 0; 0.019 sec.
+Execute       gen_tb_info FIRE4 -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/FIRE4 -p C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db 
+Command       gen_tb_info returned 0; 0.489 sec.
+Execute       report -model FIRE4 -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/report/FIRE4_csynth.rpt -f 
+Command       report returned 0; 0.5 sec.
+Execute       report -model FIRE4 -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/report/FIRE4_csynth.xml -f -x 
+Command       report returned 0; 0.453 sec.
+Execute       report -model FIRE4 -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/FIRE4.verbose.rpt -verbose -f 
+Command       report returned 0; 2.495 sec.
+Execute       db_write -model FIRE4 -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/FIRE4.adb -f 
+Command       db_write returned 0; 1.761 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Load_Fire'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model Load_Fire -vendor xilinx -mg_file C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/Load_Fire.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_0_0' to 'Load_Fire_WEIGHT1eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_0_1' to 'Load_Fire_WEIGHT1fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_0_2' to 'Load_Fire_WEIGHT1g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_0_3' to 'Load_Fire_WEIGHT1hbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_0_4' to 'Load_Fire_WEIGHT1ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_0_5' to 'Load_Fire_WEIGHT1jbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_0_6' to 'Load_Fire_WEIGHT1kbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_1_0' to 'Load_Fire_WEIGHT1lbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_1_1' to 'Load_Fire_WEIGHT1mb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_1_2' to 'Load_Fire_WEIGHT1ncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_1_3' to 'Load_Fire_WEIGHT1ocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_1_4' to 'Load_Fire_WEIGHT1pcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_1_5' to 'Load_Fire_WEIGHT1qcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_1_6' to 'Load_Fire_WEIGHT1rcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_2_0' to 'Load_Fire_WEIGHT1sc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_2_1' to 'Load_Fire_WEIGHT1tde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_2_2' to 'Load_Fire_WEIGHT1udo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_2_3' to 'Load_Fire_WEIGHT1vdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_2_4' to 'Load_Fire_WEIGHT1wdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_2_5' to 'Load_Fire_WEIGHT1xdS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_2_6' to 'Load_Fire_WEIGHT1yd2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_3_0' to 'Load_Fire_WEIGHT1zec' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_3_1' to 'Load_Fire_WEIGHT1Aem' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_3_2' to 'Load_Fire_WEIGHT1Bew' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_3_3' to 'Load_Fire_WEIGHT1CeG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_3_4' to 'Load_Fire_WEIGHT1DeQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_3_5' to 'Load_Fire_WEIGHT1Ee0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_3_6' to 'Load_Fire_WEIGHT1Ffa' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_4_0' to 'Load_Fire_WEIGHT1Gfk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_4_1' to 'Load_Fire_WEIGHT1Hfu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_4_2' to 'Load_Fire_WEIGHT1IfE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_4_3' to 'Load_Fire_WEIGHT1JfO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_4_4' to 'Load_Fire_WEIGHT1KfY' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_4_5' to 'Load_Fire_WEIGHT1Lf8' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_4_6' to 'Load_Fire_WEIGHT1Mgi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_5_0' to 'Load_Fire_WEIGHT1Ngs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_5_1' to 'Load_Fire_WEIGHT1OgC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_5_2' to 'Load_Fire_WEIGHT1PgM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_5_3' to 'Load_Fire_WEIGHT1QgW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_5_4' to 'Load_Fire_WEIGHT1Rg6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_5_5' to 'Load_Fire_WEIGHT1Shg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_5_6' to 'Load_Fire_WEIGHT1Thq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_6_0' to 'Load_Fire_WEIGHT1UhA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_6_1' to 'Load_Fire_WEIGHT1VhK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_6_2' to 'Load_Fire_WEIGHT1WhU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_6_3' to 'Load_Fire_WEIGHT1Xh4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_6_4' to 'Load_Fire_WEIGHT1Yie' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_6_5' to 'Load_Fire_WEIGHT1Zio' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_6_6' to 'Load_Fire_WEIGHT10iy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_7_0' to 'Load_Fire_WEIGHT11iI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_7_1' to 'Load_Fire_WEIGHT12iS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_7_2' to 'Load_Fire_WEIGHT13i2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_7_3' to 'Load_Fire_WEIGHT14jc' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_7_4' to 'Load_Fire_WEIGHT15jm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_7_5' to 'Load_Fire_WEIGHT16jw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_V_7_6' to 'Load_Fire_WEIGHT17jG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_0_0' to 'Load_Fire_WEIGHT18jQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_0_1' to 'Load_Fire_WEIGHT19j0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_0_2' to 'Load_Fire_WEIGHT1bak' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_0_3' to 'Load_Fire_WEIGHT1bbk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_0_4' to 'Load_Fire_WEIGHT1bck' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_0_5' to 'Load_Fire_WEIGHT1bdk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_0_6' to 'Load_Fire_WEIGHT1bek' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_1_0' to 'Load_Fire_WEIGHT1bfk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_1_1' to 'Load_Fire_WEIGHT1bgk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_1_2' to 'Load_Fire_WEIGHT1bhl' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_1_3' to 'Load_Fire_WEIGHT1bil' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_1_4' to 'Load_Fire_WEIGHT1bjl' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_1_5' to 'Load_Fire_WEIGHT1bkl' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_1_6' to 'Load_Fire_WEIGHT1bll' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_2_0' to 'Load_Fire_WEIGHT1bml' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_2_1' to 'Load_Fire_WEIGHT1bnm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_2_2' to 'Load_Fire_WEIGHT1bom' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_2_3' to 'Load_Fire_WEIGHT1bpm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_2_4' to 'Load_Fire_WEIGHT1bqm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_2_5' to 'Load_Fire_WEIGHT1brm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_2_6' to 'Load_Fire_WEIGHT1bsm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_3_0' to 'Load_Fire_WEIGHT1btn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_3_1' to 'Load_Fire_WEIGHT1bun' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_3_2' to 'Load_Fire_WEIGHT1bvn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_3_3' to 'Load_Fire_WEIGHT1bwn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_3_4' to 'Load_Fire_WEIGHT1bxn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_3_5' to 'Load_Fire_WEIGHT1byn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_3_6' to 'Load_Fire_WEIGHT1bzo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_4_0' to 'Load_Fire_WEIGHT1bAo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_4_1' to 'Load_Fire_WEIGHT1bBo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_4_2' to 'Load_Fire_WEIGHT1bCo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_4_3' to 'Load_Fire_WEIGHT1bDo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_4_4' to 'Load_Fire_WEIGHT1bEo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_4_5' to 'Load_Fire_WEIGHT1bFp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_4_6' to 'Load_Fire_WEIGHT1bGp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_5_0' to 'Load_Fire_WEIGHT1bHp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_5_1' to 'Load_Fire_WEIGHT1bIp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_5_2' to 'Load_Fire_WEIGHT1bJp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_5_3' to 'Load_Fire_WEIGHT1bKp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_5_4' to 'Load_Fire_WEIGHT1bLp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_5_5' to 'Load_Fire_WEIGHT1bMq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_5_6' to 'Load_Fire_WEIGHT1bNq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_6_0' to 'Load_Fire_WEIGHT1bOq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_6_1' to 'Load_Fire_WEIGHT1bPq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_6_2' to 'Load_Fire_WEIGHT1bQq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_6_3' to 'Load_Fire_WEIGHT1bRq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_6_4' to 'Load_Fire_WEIGHT1bSr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_6_5' to 'Load_Fire_WEIGHT1bTr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_6_6' to 'Load_Fire_WEIGHT1bUr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_7_0' to 'Load_Fire_WEIGHT1bVr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_7_1' to 'Load_Fire_WEIGHT1bWr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_7_2' to 'Load_Fire_WEIGHT1bXr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_7_3' to 'Load_Fire_WEIGHT1bYs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_7_4' to 'Load_Fire_WEIGHT1bZs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_7_5' to 'Load_Fire_WEIGHT1b0s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_WEIGHT1_DB_V_7_6' to 'Load_Fire_WEIGHT1b1s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_IFM_DB_V_0' to 'Load_Fire_IFM_DB_b2s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_IFM_DB_V_1' to 'Load_Fire_IFM_DB_b3s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_IFM_DB_V_2' to 'Load_Fire_IFM_DB_b4t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_IFM_DB_V_3' to 'Load_Fire_IFM_DB_b5t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_IFM_DB_V_4' to 'Load_Fire_IFM_DB_b6t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_IFM_DB_V_5' to 'Load_Fire_IFM_DB_b7t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Load_Fire_IFM_DB_V_6' to 'Load_Fire_IFM_DB_b8t' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Load_Fire'.
+Command       create_rtl_model returned 0; 0.791 sec.
+INFO: [HLS 200-111]  Elapsed time: 10.294 seconds; current allocated memory: 241.781 MB.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       gen_rtl Load_Fire -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/systemc/Load_Fire -synmodules LOAD_WEIGHT_DMA LOAD_IFM FIRE4 Load_Fire OFM_STORE top 
+Command       gen_rtl returned 0; 0.013 sec.
+Execute       gen_rtl Load_Fire -style xilinx -f -lang vhdl -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/vhdl/Load_Fire 
+Command       gen_rtl returned 0; 0.01 sec.
+Execute       gen_rtl Load_Fire -style xilinx -f -lang vlog -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/verilog/Load_Fire 
+Command       gen_rtl returned 0; 0.01 sec.
+Execute       gen_tb_info Load_Fire -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/Load_Fire -p C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db 
+Command       gen_tb_info returned 0; 0.1 sec.
+Execute       report -model Load_Fire -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/report/Load_Fire_csynth.rpt -f 
+Command       report returned 0; 0.101 sec.
+Execute       report -model Load_Fire -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/report/Load_Fire_csynth.xml -f -x 
+Command       report returned 0; 0.092 sec.
+Execute       report -model Load_Fire -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/Load_Fire.verbose.rpt -verbose -f 
+Command       report returned 0; 1.595 sec.
+Execute       db_write -model Load_Fire -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/Load_Fire.adb -f 
+Command       db_write returned 0; 0.293 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'OFM_STORE'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model OFM_STORE -vendor xilinx -mg_file C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/OFM_STORE.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'top_mac_muladd_5ncud': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'OFM_STORE'.
+Command       create_rtl_model returned 0; 0.04 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.46 seconds; current allocated memory: 245.303 MB.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       gen_rtl OFM_STORE -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/systemc/OFM_STORE -synmodules LOAD_WEIGHT_DMA LOAD_IFM FIRE4 Load_Fire OFM_STORE top 
+Command       gen_rtl returned 0; 0.004 sec.
+Execute       gen_rtl OFM_STORE -style xilinx -f -lang vhdl -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/vhdl/OFM_STORE 
+Command       gen_rtl returned 0; 0.003 sec.
+Execute       gen_rtl OFM_STORE -style xilinx -f -lang vlog -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/verilog/OFM_STORE 
+Command       gen_rtl returned 0; 0.004 sec.
+Execute       gen_tb_info OFM_STORE -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/OFM_STORE -p C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db 
+Command       gen_tb_info returned 0; 0.033 sec.
+Execute       report -model OFM_STORE -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/report/OFM_STORE_csynth.rpt -f 
+Command       report returned 0; 0.028 sec.
+Execute       report -model OFM_STORE -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/report/OFM_STORE_csynth.xml -f -x 
+Command       report returned 0; 0.034 sec.
+Execute       report -model OFM_STORE -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/OFM_STORE.verbose.rpt -verbose -f 
+Command       report returned 0; 0.133 sec.
+Execute       db_write -model OFM_STORE -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/OFM_STORE.adb -f 
+Command       db_write returned 0; 0.247 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'top'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model top -vendor xilinx -mg_file C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/input_dma_W_V_data' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/input_dma_W_V_last' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/input_dma_I_V_data' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/input_dma_I_V_last' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/input_dma_B_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/input_dma_B_V_last' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/output_dma_O_V_data' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/output_dma_O_V_last' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/row' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/col' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/flag' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/num' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/N' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/custom_k' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/custom_Tr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top/custom_Tc' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'top' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'row', 'col', 'flag', 'num', 'N', 'custom_k', 'custom_Tr' and 'custom_Tc' to AXI-Lite port CRTL_BUS.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'top'.
+Command       create_rtl_model returned 0; 0.211 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.981 seconds; current allocated memory: 248.904 MB.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       gen_rtl top -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/systemc/top -synmodules LOAD_WEIGHT_DMA LOAD_IFM FIRE4 Load_Fire OFM_STORE top 
+Command       gen_rtl returned 0; 0.006 sec.
+Execute       gen_rtl top -istop -style xilinx -f -lang vhdl -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/vhdl/top 
+Command       gen_rtl returned 0; 0.071 sec.
+Execute       gen_rtl top -istop -style xilinx -f -lang vlog -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/verilog/top 
+Command       gen_rtl returned 0; 0.038 sec.
+Execute       export_constraint_db -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.constraint.tcl -f -tool general 
+Command       export_constraint_db returned 0; 0 sec.
+Execute       report -model top -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.design.xml -verbose -f -dv 
+Command       report returned 0; 1.268 sec.
+Execute       report -model top -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.sdaccel.xml -verbose -f -sdaccel 
+Command       report returned 0; 0.102 sec.
+Execute       gen_tb_info top -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top -p C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db 
+Command       gen_tb_info returned 0; 0.01 sec.
+Execute       report -model top -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/report/top_csynth.rpt -f 
+Command       report returned 0; 0.039 sec.
+Execute       report -model top -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/syn/report/top_csynth.xml -f -x 
+Command       report returned 0; 0.035 sec.
+Execute       report -model top -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.verbose.rpt -verbose -f 
+Command       report returned 0; 1.607 sec.
+Execute       db_write -model top -o C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.adb -f 
+Command       db_write returned 0; 0.24 sec.
+Execute       sc_get_clocks top 
+Command       sc_get_clocks returned 0; 0 sec.
+Execute       sc_get_portdomain top 
+Command       sc_get_portdomain returned 0; 0 sec.
+INFO: [HLS 200-0] Model list for RTL component generation: LOAD_WEIGHT_DMA LOAD_IFM FIRE4 Load_Fire OFM_STORE top
+INFO: [HLS 200-0] Handling components in module [LOAD_WEIGHT_DMA] ... 
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/LOAD_WEIGHT_DMA.compgen.tcl 
+INFO: [HLS 200-0] Found component top_mac_muladd_5nbkb.
+INFO: [HLS 200-0] Append model top_mac_muladd_5nbkb
+Command       ap_source returned 0; 0.026 sec.
+INFO: [HLS 200-0] Handling components in module [LOAD_IFM] ... 
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/LOAD_IFM.compgen.tcl 
+INFO: [HLS 200-0] Found component top_mac_muladd_5ncud.
+INFO: [HLS 200-0] Append model top_mac_muladd_5ncud
+Command       ap_source returned 0; 0.024 sec.
+INFO: [HLS 200-0] Handling components in module [FIRE4] ... 
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/FIRE4.compgen.tcl 
+INFO: [HLS 200-0] Found component top_mul_mul_8s_26dEe.
+INFO: [HLS 200-0] Append model top_mul_mul_8s_26dEe
+Command       ap_source returned 0; 0.025 sec.
+INFO: [HLS 200-0] Handling components in module [Load_Fire] ... 
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/Load_Fire.compgen.tcl 
+INFO: [HLS 200-0] Found component Load_Fire_WEIGHT1eOg.
+INFO: [HLS 200-0] Append model Load_Fire_WEIGHT1eOg
+INFO: [HLS 200-0] Found component Load_Fire_IFM_V_0.
+INFO: [HLS 200-0] Append model Load_Fire_IFM_V_0
+Command       ap_source returned 0; 0.025 sec.
+INFO: [HLS 200-0] Handling components in module [OFM_STORE] ... 
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/OFM_STORE.compgen.tcl 
+Command       ap_source returned 0; 0.024 sec.
+INFO: [HLS 200-0] Handling components in module [top] ... 
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.compgen.tcl 
+INFO: [HLS 200-0] Found component top_OFM_V_0.
+INFO: [HLS 200-0] Append model top_OFM_V_0
+INFO: [HLS 200-0] Found component top_BIAS_DB_V.
+INFO: [HLS 200-0] Append model top_BIAS_DB_V
+INFO: [HLS 200-0] Found component top_CRTL_BUS_s_axi.
+INFO: [HLS 200-0] Append model top_CRTL_BUS_s_axi
+Command       ap_source returned 0; 0.043 sec.
+INFO: [HLS 200-0] Append model LOAD_WEIGHT_DMA
+INFO: [HLS 200-0] Append model LOAD_IFM
+INFO: [HLS 200-0] Append model FIRE4
+INFO: [HLS 200-0] Append model Load_Fire
+INFO: [HLS 200-0] Append model OFM_STORE
+INFO: [HLS 200-0] Append model top
+INFO: [HLS 200-0] Generating RTL model list ...
+INFO: [HLS 200-0] All models in this session: top_mac_muladd_5nbkb top_mac_muladd_5ncud top_mul_mul_8s_26dEe Load_Fire_WEIGHT1eOg Load_Fire_IFM_V_0 top_OFM_V_0 top_BIAS_DB_V top_CRTL_BUS_s_axi LOAD_WEIGHT_DMA LOAD_IFM FIRE4 Load_Fire OFM_STORE top
+INFO: [HLS 200-0] To file: write model top_mac_muladd_5nbkb
+INFO: [HLS 200-0] To file: write model top_mac_muladd_5ncud
+INFO: [HLS 200-0] To file: write model top_mul_mul_8s_26dEe
+INFO: [HLS 200-0] To file: write model Load_Fire_WEIGHT1eOg
+INFO: [HLS 200-0] To file: write model Load_Fire_IFM_V_0
+INFO: [HLS 200-0] To file: write model top_OFM_V_0
+INFO: [HLS 200-0] To file: write model top_BIAS_DB_V
+INFO: [HLS 200-0] To file: write model top_CRTL_BUS_s_axi
+INFO: [HLS 200-0] To file: write model LOAD_WEIGHT_DMA
+INFO: [HLS 200-0] To file: write model LOAD_IFM
+INFO: [HLS 200-0] To file: write model FIRE4
+INFO: [HLS 200-0] To file: write model Load_Fire
+INFO: [HLS 200-0] To file: write model OFM_STORE
+INFO: [HLS 200-0] To file: write model top
+INFO: [HLS 200-0] Finished generating RTL model list.
+
+
+INFO: [HLS 200-0] RTL Generation done.
+INFO: [HLS 200-0] CAS Generation done.
+INFO: [HLS 200-0] CBC Generation done.
+Execute       export_ssdm C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/a.export.ll 
+Command       export_ssdm returned 0; 0.024 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
+Command         ap_source returned 0; 0.001 sec.
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
+Command       ap_source returned 0; 0 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
+Command       ap_source returned 0; 0 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command             ap_source returned 0; 0.001 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command             ap_source returned 0; 0.002 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command               ap_source returned 0; 0.003 sec.
+Execute               source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command               ap_source returned 0; 0.006 sec.
+Command             ap_source returned 0; 0.009 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command             ap_source returned 0; 0.01 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command             ap_source returned 0; 0.009 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command             ap_source returned 0; 0.002 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command             ap_source returned 0; 0.001 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source returned 0; 0.072 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command             ap_source returned 0; 0.001 sec.
+Command           ap_source returned 0; 0.11 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.111 sec.
+Command       ap_source returned 0; 0.112 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command         ap_source returned 0; 0.001 sec.
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.022 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/LOAD_WEIGHT_DMA.compgen.tcl 
+Command       ap_source returned 0; 0.022 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/LOAD_IFM.compgen.tcl 
+Command       ap_source returned 0; 0.017 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/FIRE4.compgen.tcl 
+Command       ap_source returned 0; 0.025 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/Load_Fire.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'Load_Fire_WEIGHT1eOg_ram (RAM_1P_LUTRAM)' using distributed RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'Load_Fire_IFM_V_0_ram (RAM)' using block RAMs with power-on initialization.
+Command       ap_source returned 0; 0.046 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/OFM_STORE.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'top_OFM_V_0_ram (RAM_S2P_BRAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'top_BIAS_DB_V_ram (RAM)' using distributed RAMs with power-on initialization.
+Execute         source ./CRTL_BUS.slave.tcl 
+Command         ap_source returned 0; 0.001 sec.
+Command       ap_source returned 0; 0.084 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
+Command         ap_source returned 0; 0.001 sec.
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
+Command       ap_source returned 0; 0 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command             ap_source returned 0; 0.001 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command             ap_source returned 0; 0.002 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command               ap_source returned 0; 0.003 sec.
+Execute               source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command               ap_source returned 0; 0.006 sec.
+Command             ap_source returned 0; 0.009 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command             ap_source returned 0; 0.009 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command             ap_source returned 0; 0.007 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command             ap_source returned 0; 0.003 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source returned 0; 0.079 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command             ap_source returned 0; 0.001 sec.
+Command           ap_source returned 0; 0.112 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.115 sec.
+Command       ap_source returned 0; 0.115 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command         ap_source returned 0; 0.002 sec.
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.tbgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.tbgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/LOAD_WEIGHT_DMA.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/LOAD_IFM.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/FIRE4.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/Load_Fire.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/OFM_STORE.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/LOAD_WEIGHT_DMA.compgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/LOAD_IFM.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/FIRE4.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/Load_Fire.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/OFM_STORE.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.compgen.tcl 
+Command       ap_source returned 0; 0.053 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/LOAD_WEIGHT_DMA.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/LOAD_IFM.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/FIRE4.compgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/Load_Fire.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/OFM_STORE.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.constraint.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.tbgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.tbgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.tbgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/top.constraint.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       sc_get_clocks top 
+Command       sc_get_clocks returned 0; 0 sec.
+Execute       source C:/PITT/ZCU102/UNet-2018/LURAM-Test/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:46 ; elapsed = 00:01:09 . Memory (MB): peak = 367.363 ; gain = 311.656
+INFO: [SYSC 207-301] Generating SystemC RTL for top.
+INFO: [VHDL 208-304] Generating VHDL RTL for top.
+INFO: [VLOG 209-307] Generating Verilog RTL for top.
+Command     autosyn returned 0; 35.264 sec.
+Command   csynth_design returned 0; 67.874 sec.
+Command ap_source returned 0; 68.368 sec.
+Execute cleanup_all 
+Command cleanup_all returned 0; 0.058 sec.

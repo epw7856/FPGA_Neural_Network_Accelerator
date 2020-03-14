@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="top" xd:componentRef="top" xd:initiationInterval="x" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_CRTL_BUS" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="input_dma_W.data.data1" xd:originalName="input_dma_W" xd:direction="in" xd:interfaceRef="input_dma_W" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="31:0" xd:dataWidth="32"/>
+  <xd:arg xd:name="input_dma_W.data.data2" xd:originalName="input_dma_W" xd:direction="in" xd:interfaceRef="input_dma_W" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="63:32" xd:dataWidth="32"/>
+  <xd:arg xd:name="input_dma_W.last" xd:originalName="input_dma_W" xd:direction="in" xd:interfaceRef="input_dma_W" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="input_dma_I.data.data1" xd:originalName="input_dma_I" xd:direction="in" xd:interfaceRef="input_dma_I" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="31:0" xd:dataWidth="32"/>
+  <xd:arg xd:name="input_dma_I.data.data2" xd:originalName="input_dma_I" xd:direction="in" xd:interfaceRef="input_dma_I" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="63:32" xd:dataWidth="32"/>
+  <xd:arg xd:name="input_dma_I.last" xd:originalName="input_dma_I" xd:direction="in" xd:interfaceRef="input_dma_I" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="input_dma_B.data" xd:originalName="input_dma_B" xd:direction="in" xd:interfaceRef="input_dma_B" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:arg xd:name="input_dma_B.last" xd:originalName="input_dma_B" xd:direction="in" xd:interfaceRef="input_dma_B" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="output_dma_O.data.data1" xd:originalName="output_dma_O" xd:direction="out" xd:interfaceRef="output_dma_O" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="31:0" xd:dataWidth="32"/>
+  <xd:arg xd:name="output_dma_O.data.data2" xd:originalName="output_dma_O" xd:direction="out" xd:interfaceRef="output_dma_O" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="63:32" xd:dataWidth="32"/>
+  <xd:arg xd:name="output_dma_O.last" xd:originalName="output_dma_O" xd:direction="out" xd:interfaceRef="output_dma_O" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="row" xd:originalName="row" xd:direction="in" xd:interfaceRef="s_axi_CRTL_BUS" xd:busTypeRef="axilite" xd:offset="0x10" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="col" xd:originalName="col" xd:direction="in" xd:interfaceRef="s_axi_CRTL_BUS" xd:busTypeRef="axilite" xd:offset="0x18" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="flag" xd:originalName="flag" xd:direction="in" xd:interfaceRef="s_axi_CRTL_BUS" xd:busTypeRef="axilite" xd:offset="0x20" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="num" xd:originalName="num" xd:direction="in" xd:interfaceRef="s_axi_CRTL_BUS" xd:busTypeRef="axilite" xd:offset="0x28" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="N" xd:originalName="N" xd:direction="in" xd:interfaceRef="s_axi_CRTL_BUS" xd:busTypeRef="axilite" xd:offset="0x30" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="custom_k" xd:originalName="custom_k" xd:direction="in" xd:interfaceRef="s_axi_CRTL_BUS" xd:busTypeRef="axilite" xd:offset="0x38" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="custom_Tr" xd:originalName="custom_Tr" xd:direction="in" xd:interfaceRef="s_axi_CRTL_BUS" xd:busTypeRef="axilite" xd:offset="0x40" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="custom_Tc" xd:originalName="custom_Tc" xd:direction="in" xd:interfaceRef="s_axi_CRTL_BUS" xd:busTypeRef="axilite" xd:offset="0x48" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="223110" xd:FF="209692" xd:BRAM="1058" xd:DSP="2303"/>
+</xd:acceleratorMap>
