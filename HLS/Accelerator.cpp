@@ -24,10 +24,15 @@ void loadWeights
 
 	ConvParamData weightStore;
 
-	// Loop for kernel # row
+	// The weights from the stream have 4 dimensions: I x J x M x N,
+	// where I is the number of OFMs, J is the number of IFMs, M is the
+	// number of rows within the kernel, and N is the number of columns
+	// in the kernel.
+
+	// Loop for OFM # kernel
 	for(int i = 0; i < Divided_Tm_2; ++i)
 	{
-		// Loop for kernel # column
+		// Loop for IFM # kernel
 		for(int j = 0; j < Tn; ++j)
 		{
 			// Loop for row within a kernel window
@@ -42,16 +47,16 @@ void loadWeights
 #pragma HLS PIPELINE II=1
 #pragma HLS dependence variable=localWeights intra false
 
-					// Read the weight buffer data from the AXI stream
+					// Read the next set of weight buffer data from the AXI stream
 					weightStore = streamWeights.read();
 
-					// Load first half of the weights
-					localWeights[i][j][m][n] = weightStore.data.data1;
+					// Load first half of the weight set
+					localWeights[i][j][m][n] = weightStore.data.buffer1;
 
-					// Load second half of the weights during the same pass
+					// Load second half of the weight set during the same pass
 					if(i + Divided_Tm_2 < Tm)
 					{
-						localWeights[i+Divided_Tm_2][j][m][n] = weightStore.data.data2;
+						localWeights[i+Divided_Tm_2][j][m][n] = weightStore.data.buffer2;
 					}
 
 				}
@@ -60,75 +65,106 @@ void loadWeights
 	}
 }
 
-
-
 /// <summary>
 ///	Function to load input feature map data into local buffers. Similar to LOAD_WEIGHT_DMA
 ///	function. The total number of input feature maps loaded per function call is equal to:
 /// IFM tiling parameter * Row iteration loop tiling parameter * Col iteration loop tiling parameter
 /// </summary>
-void loadInputfeatureMap(hls::stream<ConvParamData> &inputFeatureMap,
-		FpgaData (* IFM)[Tr][Tc],
+void loadInputfeatureMap
+(
+		hls::stream<ConvParamData>& inputFeatureMap,
+		FpgaData (*localIFM)[Tr][Tc],
 		int custom_Tr,
-		int custom_Tc){
+		int custom_Tc
+)
+{
 
+	ConvParamData ifmStore;
 
-	ConvParamData ifm_input_dma;
-	for(int i=0;i<Divided_Tn_2;i++){
-		for(int j=0;j<custom_Tr;j++){
+	// The input feature map data from the stream has 3 dimensions: I x J x M,
+	// when I is the tensor direction (i.e. R, G, or B channel), J is the feature
+	// map rows, and M is the feature map columns
+
+	// Loop tensor channel #
+	for(int i = 0; i < Divided_Tn_2; ++i)
+	{
+
+		// Loop feature map rows
+		for(int j = 0; j < custom_Tr; ++j)
+		{
 #pragma HLS loop_tripcount min=13 max=13 avg=13
-			for(int m=0;m<custom_Tc;m++){
+
+			// Loop feature map columns
+			for(int m = 0; m < custom_Tc; ++m)
+			{
 #pragma HLS loop_tripcount min=13 max=13 avg=13
 #pragma HLS PIPELINE II=1
 #pragma HLS dependence variable=IFM intra false
 
-				// Load first IFM buffer
-				ifm_input_dma=inputFeatureMap.read();
-				IFM[i][j][m]=ifm_input_dma.data.data1;
+				// Read the next set of IFM buffer data from the AXI stream
+				ifmStore = inputFeatureMap.read();
 
-				//Load second IFM buffer
-				if(i+Divided_Tn_2<Tn)
-					IFM[i+Divided_Tn_2][j][m]=ifm_input_dma.data.data2;
+				// Load first half of the IFM set
+				localIFM[i][j][m] = ifmStore.data.buffer1;
+
+				// Load second half of the IFM set
+				if(i + Divided_Tn_2 < Tn)
+				{
+					localIFM[i+Divided_Tn_2][j][m] = ifmStore.data.buffer2;
+				}
+
 			}
 		}
 	}
 }
 
-
-
 /// <summary>
-///	Function to perform convolution operation using local weight and input feature map buffers. The
+///	Function to perform convolution operation using weight and input feature map buffers. The
 ///	resulting output feature maps are stored in local buffers (not written to a stream). For each function
 /// call, the total number of output feature maps produced is equal to the OFM loop tiling parameter.
 /// </summary>
-void performConvolution(  FpgaData localWeights[Tm][Tn][K][K],
-			FpgaData (* IFM)[Tr][Tc],
-			FpgaData OFM[Tm][Tr][Tc],
-			int row,
-			int col,
-			int custom_k,
-			int custom_Tr,
-			int custom_Tc){
+void performConvolution
+(  
+		FpgaData localWeights[Tm][Tn][K][K],
+		FpgaData (*localIFM)[Tr][Tc],
+		FpgaData localOFM[Tm][Tr][Tc],
+		int rowIndex,
+		int colIndex,
+		int custom_K,
+		int custom_Tr,
+		int custom_Tc
+)
+{
 
-
-	for(int i=0;i<custom_k;i++){
+	for(int i = 0; i < custom_K; ++i)
+	{
 #pragma HLS loop_tripcount min=3 max=3 avg=3
-		for(int j=0;j<custom_k;j++){
+		
+		for(int j = 0; j < custom_K; ++j)
+		{
 #pragma HLS loop_tripcount min=3 max=3 avg=3
-			for(int trr=row;(trr<row+custom_Tr);trr++){
+			
+			for(int trr = rowIndex; trr < (rowIndex + custom_Tr); ++trr)
+			{
 #pragma HLS loop_tripcount min=13 max=13 avg=13
-				for(int tcc=col;(tcc<col+custom_Tc);tcc++){
+				
+				for(int tcc = colIndex; tcc < (colIndex + custom_Tc); ++tcc)
+				{
 #pragma HLS loop_tripcount min=13 max=13 avg=13
 #pragma HLS PIPELINE II=1
 #pragma HLS dependence variable=OFM inter false
-					for(int too=0;too<Tm; too++){
-						for(int tii=0;tii<Tn;tii++){
+					
+					for(int too = 0; too < Tm; ++too)
+					{
+						
+						for(int tii = 0; tii < Tn; ++tii)
+						{
 
-							FpgaData add_res1;
+							FpgaData intermediateCalculation;
 
 							// Perform convolution operation
-							add_res1 = localWeights[too][tii][i][j]*IFM[tii][trr-row][tcc-col];
-							OFM[too][trr-row][tcc-col] = OFM[too][trr-row][tcc-col] + add_res1;
+							intermediateCalculation = localWeights[too][tii][i][j] * localIFM[tii][trr-rowIndex][tcc-colIndex];
+							localOFM[too][trr-rowIndex][tcc-colIndex] = localOFM[too][trr-rowIndex][tcc-colIndex] + intermediateCalculation;
 						}
 					}
 				}
@@ -141,57 +177,77 @@ void performConvolution(  FpgaData localWeights[Tm][Tn][K][K],
 ///	Function to add bias values to output feature maps and write an output stream. After the
 /// write stream is created, all local OFM buffer data is reset to 0.
 /// </summary>
-void writeOFM( hls::stream<ConvParamData> &outputFeatureMap,
-				hls::stream<BiasData> &bias,
-				FpgaData OFM[Tm][Tr][Tc],
-				FpgaData BIAS[Tm],
-				int custom_Tr,
-				int custom_Tc){
+void writeOFM
+(
+		hls::stream<ConvParamData>& outputFeatureMap,
+		hls::stream<BiasData>& bias,
+		FpgaData localOFM[Tm][Tr][Tc],
+		FpgaData localBias[Tm],
+		int custom_Tr,
+		int custom_Tc
+)
+{
+	ConvParamData ofmStore;
+	BiasData biasStore;
 
-	ConvParamData outputFeatureMap_data;
-	BiasData bias_input_dma;
-
-	for(int i=0;i<Tm;i++){
+	// Read bias data from stream
+	for(int i = 0; i < Tm; ++i)
+	{
 #pragma HLS PIPELINE II=1
-		bias_input_dma=bias.read();
-		BIAS[i]=bias_input_dma.data;
+
+		biasStore = bias.read();
+		localBias[i] = biasStore.data;
 	}
 
-	for(int i=0;i<Divided_Tm_2;i++){
-		for(int j=0;j<custom_Tr;j++){
+	for(int i = 0; i < Divided_Tm_2; ++i)
+	{
+
+		for(int j = 0; j < custom_Tr; ++j)
+		{
 #pragma HLS loop_tripcount min=13 max=13 avg=13
-			for(int k=0;k<custom_Tc;k++){
+
+			for(int k = 0; k < custom_Tc; ++k)
+			{
 #pragma HLS loop_tripcount min=13 max=13 avg=13
 #pragma HLS PIPELINE II=1
 #pragma HLS dependence variable=OFM intra false
 
-				outputFeatureMap_data.last=0;
+				ofmStore.lastElement = false;
+
 				// Signal last OFM data value and write to OFM data struct
-				if (i==Divided_Tm_2-1 && j==custom_Tr-1 && k==custom_Tc-1){
-					outputFeatureMap_data.last=1;
-					}
-				// Write OFM data to struct and then output stream
-				outputFeatureMap_data.data.data1=OFM[i][j][k]+BIAS[i];
-				outputFeatureMap_data.data.data2=OFM[i+Divided_Tm_2][j][k]+BIAS[i];
-				outputFeatureMap.write(outputFeatureMap_data);
+				if ((i == Divided_Tm_2 - 1) &&
+					(j == custom_Tr - 1) &&
+					(k == custom_Tc - 1))
+				{
+					ofmStore.lastElement = true;
+				}
+
+				// Write OFM data to struct and stream output
+				ofmStore.data.buffer1 = localOFM[i][j][k] + localBias[i];
+				ofmStore.data.buffer2 = localOFM[i+Divided_Tm_2][j][k] + localBias[i];
+
+				outputFeatureMap.write(ofmStore);
 			}
 		}
 	}
-	for(int j=0;j<custom_Tr;j++){
+
+	for(int j = 0; j < custom_Tr; ++j)
+	{
 #pragma HLS loop_tripcount min=13 max=13 avg=13
-		for(int k=0;k<custom_Tc;k++){
+
+		for(int k = 0; k < custom_Tc; ++k)
+		{
 #pragma HLS loop_tripcount min=13 max=13 avg=13
 #pragma HLS PIPELINE II=1
-			for(int i=0;i<Tm;i++){
 
+			for(int i = 0; i < Tm; ++i)
+			{
 				// Reset output feature maps
-				OFM[i][j][k] = 0;
+				localOFM[i][j][k] = 0;
 			}
 		}
 	}
 }
-
-
 
 /// <summary>
 ///	Function to iterate through the number of sets of input feature maps and call downstream
@@ -267,7 +323,7 @@ void accelerator
 		hls::stream<ConvParamData>& streamOutputFeatureMap,
 		int rowIndex,
 		int colIndex,
-		int flag,
+		int maxPoolingFlag,
 		int currentBuffer,
 		int numIFMs,
 		int custom_K,
@@ -280,7 +336,7 @@ void accelerator
 #pragma HLS INTERFACE s_axilite port=return bundle=CRTL_BUS
 #pragma HLS INTERFACE s_axilite port=rowIndex bundle=CRTL_BUS
 #pragma HLS INTERFACE s_axilite port=colIndex bundle=CRTL_BUS
-#pragma HLS INTERFACE s_axilite port=flag bundle=CRTL_BUS
+#pragma HLS INTERFACE s_axilite port=maxPoolingFlag bundle=CRTL_BUS
 #pragma HLS INTERFACE s_axilite port=currentBuffer bundle=CRTL_BUS
 #pragma HLS INTERFACE s_axilite port=numIFMs bundle=CRTL_BUS
 #pragma HLS INTERFACE s_axilite port=custom_K bundle=CRTL_BUS

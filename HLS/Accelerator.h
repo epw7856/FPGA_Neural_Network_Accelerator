@@ -25,22 +25,22 @@
 // Struct containing 2 32-bit float values, 64 bit total. Used for input and output feature maps and weights streams.
 struct DoubleBuffer
 {
-	FpgaData data1;
-	FpgaData data2;
+	FpgaData buffer1;
+	FpgaData buffer2;
 };
 
 // Struct containing 2 32-bit float values and a single bit boolean. Used for feature map streams.
 struct ConvParamData
 {
 	DoubleBuffer data;
-	bool last;
+	bool lastElement;
 };
 
 // Struct containing a 32-bit float value and a single bit boolean. Used for bias value streams.
 struct BiasData
 {
 	FpgaData data;
-	bool last;
+	bool lastElement;
 };
 
 // Struct containing 2 32-bit float values (64 bit total). Used for data transfers via fiber and the Aurora IP cores.
