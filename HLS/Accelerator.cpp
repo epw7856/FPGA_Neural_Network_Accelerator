@@ -185,13 +185,13 @@ void startProcessing
 		hls::stream<FeatureMapData>& streamInputFeatureMap,
 		FpgaData localWeights[Tm][Tn][K][K],
 		FpgaData localWeightsDB[Tm][Tn][K][K],
-		FpgaData IFM[Tn][Tr][Tc],
-		FpgaData IFM_DB[Tn][Tr][Tc],
-		FpgaData OFM[Tm][Tr][Tc],
-		int row,
+		FpgaData localIFM[Tn][Tr][Tc],
+		FpgaData localIFM_DB[Tn][Tr][Tc],
+		FpgaData localOFM[Tm][Tr][Tc],
+		int rowIndex,
 		int col,
-		int N,
-		int custom_k,
+		int numIFMs,
+		int custom_K,
 		int custom_Tr,
 		int custom_Tc
 )
@@ -200,22 +200,22 @@ void startProcessing
 
 	// Loop will iterate through the total number of ifm's (N) in increments of the ifm
 	// loop tiling parameter (Tn).
-	for(int i=0;i<N;i+=Tn){
+	for(int i=0;i<numIFMs;i+=Tn){
 #pragma HLS loop_tripcount min=6 max=6 avg=6
 		if(idx%2==0){
 			// Load weight data
-			LOAD_WEIGHT_DMA(streamWeights,localWeights,custom_k);
+			LOAD_WEIGHT_DMA(streamWeights,localWeights,custom_K);
 			// Load input feature map data
-			LOAD_IFM(streamInputFeatureMap,IFM,custom_Tr,custom_Tc);
+			LOAD_IFM(streamInputFeatureMap,localIFM,custom_Tr,custom_Tc);
 			// Perform convolution and store local output feature map
-			FIRE(localWeightsDB,IFM_DB,OFM, row, col,custom_k,custom_Tr,custom_Tc);
+			FIRE(localWeightsDB,localIFM_DB,localOFM, rowIndex, col,custom_K,custom_Tr,custom_Tc);
 		}else{
 			// Load weight data
-			LOAD_WEIGHT_DMA(streamWeights,localWeightsDB,custom_k);
+			LOAD_WEIGHT_DMA(streamWeights,localWeightsDB,custom_K);
 			// Load input feature map data
-			LOAD_IFM(streamInputFeatureMap,IFM_DB,custom_Tr,custom_Tc);
+			LOAD_IFM(streamInputFeatureMap,localIFM_DB,custom_Tr,custom_Tc);
 			// Perform convolution and store local output feature map
-			FIRE(localWeights,IFM,OFM, row, col,custom_k,custom_Tr,custom_Tc);
+			FIRE(localWeights,localIFM,localOFM, rowIndex, col,custom_K,custom_Tr,custom_Tc);
 		}
 		idx+=1;
 	}
