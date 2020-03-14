@@ -14,28 +14,46 @@
 /// The total number of filters loaded per function call is equal to:
 /// OFM tiling parameter * IFM tiling parameter * (Filter dimension)^2
 /// </summary>
-void LOAD_WEIGHT_DMA(hls::stream<FeatureMapData> &weights,
-					 FpgaData localWeights[Tm][Tn][K][K],
-					 int custom_k){
+void loadWeights
+(
+		hls::stream<ConvParamData>& streamWeights,
+		FpgaData localWeights[Tm][Tn][K][K],
+		int custom_K
+)
+{
 
-	FeatureMapData weight_input_dma;
+	ConvParamData weightStore;
 
-	for(int i=0;i<Divided_Tm_2;i++){
-		for(int j=0;j<Tn;j++){
-			for(int m=0;m<custom_k;m++){
+	// Loop for kernel # row
+	for(int i = 0; i < Divided_Tm_2; ++i)
+	{
+		// Loop for kernel # column
+		for(int j = 0; j < Tn; ++j)
+		{
+			// Loop for row within a kernel window
+			for(int m = 0; m < custom_K; ++m)
+			{
 #pragma HLS loop_tripcount min=3 max=3 avg=3
-				for(int l=0;l<custom_k;l++){
+
+				// Loop for the column within a kernel window
+				for(int n = 0; n < custom_K; ++n)
+				{
 #pragma HLS loop_tripcount min=3 max=3 avg=3
 #pragma HLS PIPELINE II=1
 #pragma HLS dependence variable=localWeights intra false
 
-					// Load first weight buffer
-					weight_input_dma=weights.read();
-					localWeights[i][j][m][l]=weight_input_dma.data.data1;
+					// Read the weight buffer data from the AXI stream
+					weightStore = streamWeights.read();
 
-					// Load second weight buffer
-					if(i+Divided_Tm_2<Tm)
-						localWeights[i+Divided_Tm_2][j][m][l]=weight_input_dma.data.data2;
+					// Load first half of the weights
+					localWeights[i][j][m][n] = weightStore.data.data1;
+
+					// Load second half of the weights during the same pass
+					if(i + Divided_Tm_2 < Tm)
+					{
+						localWeights[i+Divided_Tm_2][j][m][n] = weightStore.data.data2;
+					}
+
 				}
 			}
 		}
@@ -49,13 +67,13 @@ void LOAD_WEIGHT_DMA(hls::stream<FeatureMapData> &weights,
 ///	function. The total number of input feature maps loaded per function call is equal to:
 /// IFM tiling parameter * Row iteration loop tiling parameter * Col iteration loop tiling parameter
 /// </summary>
-void LOAD_IFM(hls::stream<FeatureMapData> &inputFeatureMap,
+void loadInputfeatureMap(hls::stream<ConvParamData> &inputFeatureMap,
 		FpgaData (* IFM)[Tr][Tc],
 		int custom_Tr,
 		int custom_Tc){
 
 
-	FeatureMapData ifm_input_dma;
+	ConvParamData ifm_input_dma;
 	for(int i=0;i<Divided_Tn_2;i++){
 		for(int j=0;j<custom_Tr;j++){
 #pragma HLS loop_tripcount min=13 max=13 avg=13
@@ -83,7 +101,7 @@ void LOAD_IFM(hls::stream<FeatureMapData> &inputFeatureMap,
 ///	resulting output feature maps are stored in local buffers (not written to a stream). For each function
 /// call, the total number of output feature maps produced is equal to the OFM loop tiling parameter.
 /// </summary>
-void FIRE(  FpgaData localWeights[Tm][Tn][K][K],
+void performConvolution(  FpgaData localWeights[Tm][Tn][K][K],
 			FpgaData (* IFM)[Tr][Tc],
 			FpgaData OFM[Tm][Tr][Tc],
 			int row,
@@ -123,14 +141,14 @@ void FIRE(  FpgaData localWeights[Tm][Tn][K][K],
 ///	Function to add bias values to output feature maps and write an output stream. After the
 /// write stream is created, all local OFM buffer data is reset to 0.
 /// </summary>
-void writeOFM( hls::stream<FeatureMapData> &outputFeatureMap,
+void writeOFM( hls::stream<ConvParamData> &outputFeatureMap,
 				hls::stream<BiasData> &bias,
 				FpgaData OFM[Tm][Tr][Tc],
 				FpgaData BIAS[Tm],
 				int custom_Tr,
 				int custom_Tc){
 
-	FeatureMapData outputFeatureMap_data;
+	ConvParamData outputFeatureMap_data;
 	BiasData bias_input_dma;
 
 	for(int i=0;i<Tm;i++){
@@ -177,47 +195,58 @@ void writeOFM( hls::stream<FeatureMapData> &outputFeatureMap,
 
 /// <summary>
 ///	Function to iterate through the number of sets of input feature maps and call downstream
-///	functions that load data into local arrays and perform convolution operations.
+///	functions that load data into stack-allocated arrays and perform convolution operations.
 /// </summary>
 void startProcessing
 (
-		hls::stream<FeatureMapData>& streamWeights,
-		hls::stream<FeatureMapData>& streamInputFeatureMap,
+		hls::stream<ConvParamData>& streamWeights,
+		hls::stream<ConvParamData>& streamInputFeatureMap,
 		FpgaData localWeights[Tm][Tn][K][K],
 		FpgaData localWeightsDB[Tm][Tn][K][K],
 		FpgaData localIFM[Tn][Tr][Tc],
 		FpgaData localIFM_DB[Tn][Tr][Tc],
 		FpgaData localOFM[Tm][Tr][Tc],
 		int rowIndex,
-		int col,
+		int colIndex,
 		int numIFMs,
 		int custom_K,
 		int custom_Tr,
 		int custom_Tc
 )
 {
-	int idx = 0;
+	int partitionSegment = 0;
 
 	// Loop will iterate through the total number of ifm's (N) in increments of the ifm
 	// loop tiling parameter (Tn).
-	for(int i=0;i<numIFMs;i+=Tn){
+	for(int i = 0 ; i < numIFMs; i += Tn)
+	{
 #pragma HLS loop_tripcount min=6 max=6 avg=6
-		if(idx%2==0){
+
+		// Double buffer the current IFM set
+		if(partitionSegment % 2 == 0)
+		{
 			// Load weight data
-			LOAD_WEIGHT_DMA(streamWeights,localWeights,custom_K);
+			loadWeights(streamWeights, localWeights, custom_K);
+
 			// Load input feature map data
-			LOAD_IFM(streamInputFeatureMap,localIFM,custom_Tr,custom_Tc);
+			loadInputfeatureMap(streamInputFeatureMap,localIFM,custom_Tr,custom_Tc);
+
 			// Perform convolution and store local output feature map
-			FIRE(localWeightsDB,localIFM_DB,localOFM, rowIndex, col,custom_K,custom_Tr,custom_Tc);
-		}else{
-			// Load weight data
-			LOAD_WEIGHT_DMA(streamWeights,localWeightsDB,custom_K);
-			// Load input feature map data
-			LOAD_IFM(streamInputFeatureMap,localIFM_DB,custom_Tr,custom_Tc);
-			// Perform convolution and store local output feature map
-			FIRE(localWeights,localIFM,localOFM, rowIndex, col,custom_K,custom_Tr,custom_Tc);
+			performConvolution(localWeightsDB,localIFM_DB,localOFM, rowIndex, colIndex,custom_K,custom_Tr,custom_Tc);
 		}
-		idx+=1;
+		else
+		{
+			// Load weight data
+			loadWeights(streamWeights,localWeightsDB,custom_K);
+
+			// Load input feature map data
+			loadInputfeatureMap(streamInputFeatureMap,localIFM_DB,custom_Tr,custom_Tc);
+
+			// Perform convolution and store local output feature map
+			performConvolution(localWeights,localIFM,localOFM, rowIndex, colIndex,custom_K,custom_Tr,custom_Tc);
+		}
+
+		partitionSegment++;
 	}
 }
 
@@ -232,10 +261,10 @@ void startProcessing
 /// </summary>
 void accelerator
 (
-		hls::stream<FeatureMapData>& streamWeights,
-		hls::stream<FeatureMapData>& streamInputFeatureMap,
+		hls::stream<ConvParamData>& streamWeights,
+		hls::stream<ConvParamData>& streamInputFeatureMap,
 		hls::stream<BiasData>& streamBias,
-		hls::stream<FeatureMapData>& streamOutputFeatureMap,
+		hls::stream<ConvParamData>& streamOutputFeatureMap,
 		int rowIndex,
 		int colIndex,
 		int flag,
@@ -291,8 +320,9 @@ void accelerator
 	static FpgaData localBias[Tm];
 	static FpgaData localBias_DB[Tm];
 
+
 	// ***** Start Data Processing *****
-	// Enable parallel path computations for double buffering
+	// Enable parallel path computations for double buffering. This parameter is originates from the PS scheduler.
 	if(currentBuffer % 2 == 0)
 	{
 		startProcessing(streamWeights, streamInputFeatureMap, localWeights, localWeights_DB, localIFM,

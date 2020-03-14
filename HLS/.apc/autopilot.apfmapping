@@ -2,8 +2,8 @@
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
     <originFiles name="Accelerator.cpp" path="C:\Users\Eric\Documents\GitHub\FPGA\Accelerator.cpp"/>
-    <originFiles name="Accelerator.cpp" path="C:\Users\Eric\Documents\GitHub\FPGA\HLS\Accelerator.cpp"/>
     <originFiles name="Accelerator.h" path="C:\Users\Eric\Documents\GitHub\FPGA\HLS\Accelerator.h"/>
+    <originFiles name="Accelerator.cpp" path="C:\Users\Eric\Documents\GitHub\FPGA\HLS\Accelerator.cpp"/>
   </source>
   <testbench/>
 </autopilotfilemapping:AutoPilotFileMapping>

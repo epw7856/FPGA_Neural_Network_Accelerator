@@ -30,7 +30,7 @@ struct DoubleBuffer
 };
 
 // Struct containing 2 32-bit float values and a single bit boolean. Used for feature map streams.
-struct FeatureMapData
+struct ConvParamData
 {
 	DoubleBuffer data;
 	bool last;
@@ -49,7 +49,8 @@ struct AuroraData
 	DoubleBuffer data;
 };
 
-// The following constants define the structure of a convolutional layer of the UNET architecture
+// The following constants define the structure of a convolutional layer of the UNET architecture. The naming convention
+// matches that within the academic paper "Optimizing FPGA-based Accelerator Design for Deep Convolutional Neural Networks"
 const int Tm = 64;					// Number of output feature maps tiling parameter
 const int Divided_Tm_2 = 32;		// Const calculated here for performance improvement
 const int Divided_Tm_4 = 16;		// Const calculated here for performance improvement
