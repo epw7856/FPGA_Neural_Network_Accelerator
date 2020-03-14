@@ -16,9 +16,9 @@
 /// </summary>
 void loadWeights
 (
-		hls::stream<ConvParamData>& streamWeights,
-		FpgaData localWeights[Tm][Tn][K][K],
-		int custom_K
+	hls::stream<ConvParamData>& streamWeights,
+	FpgaData localWeights[Tm][Tn][K][K],
+	int custom_K
 )
 {
 
@@ -72,10 +72,10 @@ void loadWeights
 /// </summary>
 void loadInputfeatureMap
 (
-		hls::stream<ConvParamData>& inputFeatureMap,
-		FpgaData (*localIFM)[Tr][Tc],
-		int custom_Tr,
-		int custom_Tc
+	hls::stream<ConvParamData>& inputFeatureMap,
+	FpgaData (*localIFM)[Tr][Tc],
+	int custom_Tr,
+	int custom_Tc
 )
 {
 
@@ -125,14 +125,14 @@ void loadInputfeatureMap
 /// </summary>
 void performConvolution
 (  
-		FpgaData localWeights[Tm][Tn][K][K],
-		FpgaData (*localIFM)[Tr][Tc],
-		FpgaData localOFM[Tm][Tr][Tc],
-		int rowIndex,
-		int colIndex,
-		int custom_K,
-		int custom_Tr,
-		int custom_Tc
+	FpgaData localWeights[Tm][Tn][K][K],
+	FpgaData (*localIFM)[Tr][Tc],
+	FpgaData localOFM[Tm][Tr][Tc],
+	int rowIndex,
+	int colIndex,
+	int custom_K,
+	int custom_Tr,
+	int custom_Tc
 )
 {
 
@@ -179,12 +179,12 @@ void performConvolution
 /// </summary>
 void writeOFM
 (
-		hls::stream<ConvParamData>& outputFeatureMap,
-		hls::stream<BiasData>& bias,
-		FpgaData localOFM[Tm][Tr][Tc],
-		FpgaData localBias[Tm],
-		int custom_Tr,
-		int custom_Tc
+	hls::stream<ConvParamData>& outputFeatureMap,
+	hls::stream<BiasData>& bias,
+	FpgaData localOFM[Tm][Tr][Tc],
+	FpgaData localBias[Tm],
+	int custom_Tr,
+	int custom_Tc
 )
 {
 
@@ -256,19 +256,19 @@ void writeOFM
 /// </summary>
 void startProcessing
 (
-		hls::stream<ConvParamData>& streamWeights,
-		hls::stream<ConvParamData>& streamInputFeatureMap,
-		FpgaData localWeights[Tm][Tn][K][K],
-		FpgaData localWeightsDB[Tm][Tn][K][K],
-		FpgaData localIFM[Tn][Tr][Tc],
-		FpgaData localIFM_DB[Tn][Tr][Tc],
-		FpgaData localOFM[Tm][Tr][Tc],
-		int rowIndex,
-		int colIndex,
-		int numIFMs,
-		int custom_K,
-		int custom_Tr,
-		int custom_Tc
+	hls::stream<ConvParamData>& streamWeights,
+	hls::stream<ConvParamData>& streamInputFeatureMap,
+	FpgaData localWeights[Tm][Tn][K][K],
+	FpgaData localWeightsDB[Tm][Tn][K][K],
+	FpgaData localIFM[Tn][Tr][Tc],
+	FpgaData localIFM_DB[Tn][Tr][Tc],
+	FpgaData localOFM[Tm][Tr][Tc],
+	int rowIndex,
+	int colIndex,
+	int numIFMs,
+	int custom_K,
+	int custom_Tr,
+	int custom_Tc
 )
 {
 
@@ -319,18 +319,18 @@ void startProcessing
 /// </summary>
 void accelerator
 (
-		hls::stream<ConvParamData>& streamWeights,
-		hls::stream<ConvParamData>& streamInputFeatureMap,
-		hls::stream<BiasData>& streamBias,
-		hls::stream<ConvParamData>& streamOutputFeatureMap,
-		int rowIndex,
-		int colIndex,
-		int maxPoolingFlag,
-		int currentBuffer,
-		int numIFMs,
-		int custom_K,
-		int custom_Tr,
-		int custom_Tc
+	hls::stream<ConvParamData>& streamWeights,
+	hls::stream<ConvParamData>& streamInputFeatureMap,
+	hls::stream<BiasData>& streamBias,
+	hls::stream<ConvParamData>& streamOutputFeatureMap,
+	int rowIndex,
+	int colIndex,
+	int maxPoolingFlag,
+	int currentBuffer,
+	int numIFMs,
+	int custom_K,
+	int custom_Tr,
+	int custom_Tc
 )
 {
 

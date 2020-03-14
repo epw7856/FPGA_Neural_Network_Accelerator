@@ -27,13 +27,12 @@
 								<option id="gnu.cpp.compiler.option.include.paths.632571574" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include"/>
+									<listOptionValue builtIn="false" value="C:/Users/Eric/Documents/GitHub/test/HLS"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include/etc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/auto_cc/include"/>
-									<listOptionValue builtIn="false" value="C:/Users/Eric/Documents/GitHub/FPGA"/>
-									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/systemc/include"/>
-									<listOptionValue builtIn="false" value="C:/Users/Eric/Documents/GitHub/test/HLS"/>
 									<listOptionValue builtIn="false" value="C:/Users/Eric/Documents/Xilinx/UNet-2018"/>
 									<listOptionValue builtIn="false" value="C:/PITT/ZCU102/UNet-2018"/>
+									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="H:/FPGA_Research"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.preprocessor.def.262404100" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false" valueType="definedSymbols">
@@ -49,13 +48,12 @@
 								<option id="gnu.c.compiler.option.include.paths.1255969791" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include"/>
+									<listOptionValue builtIn="false" value="C:/Users/Eric/Documents/GitHub/test/HLS"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include/etc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/auto_cc/include"/>
-									<listOptionValue builtIn="false" value="C:/Users/Eric/Documents/GitHub/FPGA"/>
-									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/systemc/include"/>
-									<listOptionValue builtIn="false" value="C:/Users/Eric/Documents/GitHub/test/HLS"/>
 									<listOptionValue builtIn="false" value="C:/Users/Eric/Documents/Xilinx/UNet-2018"/>
 									<listOptionValue builtIn="false" value="C:/PITT/ZCU102/UNet-2018"/>
+									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="H:/FPGA_Research"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1156532386" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
@@ -121,13 +119,12 @@
 								<option id="gnu.cpp.compiler.option.include.paths.1774352084" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include"/>
+									<listOptionValue builtIn="false" value="C:/Users/Eric/Documents/GitHub/test/HLS"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include/etc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/auto_cc/include"/>
-									<listOptionValue builtIn="false" value="C:/Users/Eric/Documents/GitHub/FPGA"/>
-									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/systemc/include"/>
-									<listOptionValue builtIn="false" value="C:/Users/Eric/Documents/GitHub/test/HLS"/>
 									<listOptionValue builtIn="false" value="C:/Users/Eric/Documents/Xilinx/UNet-2018"/>
 									<listOptionValue builtIn="false" value="C:/PITT/ZCU102/UNet-2018"/>
+									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="H:/FPGA_Research"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1688206089" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
@@ -138,13 +135,12 @@
 								<option id="gnu.c.compiler.option.include.paths.34522596" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include"/>
+									<listOptionValue builtIn="false" value="C:/Users/Eric/Documents/GitHub/test/HLS"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include/etc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/auto_cc/include"/>
-									<listOptionValue builtIn="false" value="C:/Users/Eric/Documents/GitHub/FPGA"/>
-									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/systemc/include"/>
-									<listOptionValue builtIn="false" value="C:/Users/Eric/Documents/GitHub/test/HLS"/>
 									<listOptionValue builtIn="false" value="C:/Users/Eric/Documents/Xilinx/UNet-2018"/>
 									<listOptionValue builtIn="false" value="C:/PITT/ZCU102/UNet-2018"/>
+									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="H:/FPGA_Research"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1319507567" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
