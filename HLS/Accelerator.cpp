@@ -187,6 +187,7 @@ void writeOFM
 		int custom_Tc
 )
 {
+
 	ConvParamData ofmStore;
 	BiasData biasStore;
 
@@ -270,6 +271,7 @@ void startProcessing
 		int custom_Tc
 )
 {
+
 	int partitionSegment = 0;
 
 	// Loop will iterate through the total number of ifm's (N) in increments of the ifm
