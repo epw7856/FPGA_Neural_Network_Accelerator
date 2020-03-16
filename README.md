@@ -1,2 +1,2 @@
 # FPGA_Accelerator
-MPSoC Accelerator for Convolutional Neural Networks
+Xilinx ZCU102 MPSoC Accelerator for Convolutional Neural Networks and Image Processing
