@@ -1,9 +1,10 @@
 /*
- * Author: Xinyi Zhang and Weiwen Jiang
- * Affiliation: University of Pittsburgh
  *
  * This code is the standalone PS scheduler to trigger the PL convolution accelerator.
  * This application targets a single APU of the ZCU102 board.
+ *
+ * Author: Eric Walker
+ * Affiliation: University of Pittsburgh
  *
  */
  
