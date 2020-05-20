@@ -1,4 +1,4 @@
-# FPGA_Accelerator
+# FPGA Deep Learning Accelerator
 Xilinx ZCU102 MPSoC Accelerator for Image Processing via Convolutional Neural Networks.
 
 The \HLS folder within this repo contains the Xilinx High Level Synthesis implementation of the accelerator IP that is configured to live in the FPGA fabric of the board. The IP core is written in C++ and the output product of the HLS synthesis process is a zip file of the IP package.
